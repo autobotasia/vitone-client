@@ -1,0 +1,2 @@
+/*! (C) Copyright 2018 LanguageTooler GmbH. All rights reserved. */
+class Debounce{constructor(t,i=250){this.callImmediately=(()=>{this._args&&this._wrappedFunc(...this._args),this.cancelCall()}),this._wrappedFunc=t,this._timeout=i,this._args=null,this._timeoutId=void 0}call(...t){this.cancelCall(),this._args=t,this._timeoutId=window.setTimeout(this.callImmediately,this._timeout)}callAfter(t){clearTimeout(this._timeoutId),setTimeout(this.callImmediately,t)}cancelCall(){this._timeoutId&&(clearTimeout(this._timeoutId),this._timeoutId=void 0,this._args=null)}}

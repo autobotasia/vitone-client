@@ -1,0 +1,1136 @@
+{
+   "accessDeniedError2": {
+      "description": "Message shown when the server denies access (unclear reason)",
+      "message": "Сервер надіслав повідомлення \"Доступ заборонено\" - будь ласка, перевірте ваш email та пароль у вікні налаштувань ще раз"
+   },
+   "addToDictionaryTitle": {
+      "description": "Title hover shown in the popup to accept a word to the internal dictionary",
+      "message": "додати \"$word$\" до персонального словника",
+      "placeholders": {
+         "word": {
+            "content": "$1",
+            "example": "foobar"
+         }
+      }
+   },
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Перевіряйте граматику та стиль текстів будь-де у мережі"
+   },
+   "appName": {
+      "description": "The name of the application, displayed in the web store.",
+      "message": "Коректор граматики та орфографії – LanguageTool"
+   },
+   "appStoreDesc1": {
+      "description": "Description item 1 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Finds many errors that a simple spell checker cannot detect"
+   },
+   "appStoreDesc10": {
+      "description": "Description paragraph 1 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Цим розширенням ви можете перевіряти тексти за допомогою безкоштовної програми перевірки граматики та стилю LanguageTool. LanguageTool знаходить багато помилок, які проста перевірка орфографії не може визначити, наприклад вживання неправильного відмінка після прийменника, повтор слів, невластиві мові сполуки тощо. LanguageTool підтримує понад 25 мов, зокрема англійську, іспанську, французьку, німецьку, польську і українську."
+   },
+   "appStoreDesc2": {
+      "description": "Description item 2 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "No registration needed"
+   },
+   "appStoreDesc20": {
+      "description": "Description paragraph 2 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "LanguageTool розроблено з акцентом на простоту використання. За натиском кнопки або налаштовної комбінації клавіш, LanguageTool миттєво перевірить орфографію та граматику вибраного тексту. LanguageTool сумісний із більшістю текстів, незалежно від джерела, включно з соціальними мережами, наприклад Twitter або LinkedIn, та онлайн службами, до прикладу Gmail. Невелика кількість сайтів, наприклад docs.google.com та chrome.google.com, наразі не підтримуються - натомість використовуйте https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm для Google Docs."
+   },
+   "appStoreDesc3": {
+      "description": "Description item 3 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Supports more than 25 languages (see below)"
+   },
+   "appStoreDesc30": {
+      "description": "Description paragraph 3 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "З LanguageTool наша мета — надати користувачам повнофункціональну перевірку граматики та стилю, що допоможе отримати контроль і впевненість у їхніх текстах. Хоча LanguageTool є важливим розширенням для тих, хто пише нерідною мовою, він також достатньо розумний, щоб знайти помилки, які часто роблять ті, хто пише рідною і покращить написання загалом. Корекція граматики та орфографії працює з усіма варіантами поширених мов; розрізняючи, наприклад, американську і британську англійську. LanguageTool також підтримує особистий словник для винятків, або слів, які ви часто вживаєте, але яких немає у традиційному словнику. LanguageTool впізнає ці слова, коли перевірятиме подальші тексти."
+   },
+   "appStoreDesc4": {
+      "description": "Description item 4 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Works on almost any website including Gmail, Facebook, twitter"
+   },
+   "appStoreDesc5": {
+      "description": "Description paragraph 0 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Користуєтесь Google Docs? Будь ласка, використовуйте https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm"
+   },
+   "appStoreDesc60": {
+      "description": "Description paragraph 5 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "На відміну від Grammarly, LanguageTool працює з багатьма мовами та надає багато схожих можливостей."
+   },
+   "appStoreDesc70": {
+      "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Ми піклуємося про вашу конфіденційність: за замовчуванням дане розширення відсилатиме текст на перевірку до https://languagetool.org безпечно зашифрованим з'єднанням. Для використання розширення обліковий запис не потрібен. Ми не зберігаємо вашу IP адресу. Докладніше про нашу політику конфіденційності: https://languagetool.org/privacy/"
+   },
+   "appStoreDesc80": {
+      "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "List of supported languages: English (Australian, Canadian, GB, New Zealand, South African, US), French, German (Austria, Germany, Swiss), Asturian, Belarusian, Breton, Catalan (also Valencian), Chinese, Danish, Dutch, Esperanto, Galician, Greek, Italian, Japanese, Khmer, Persian, Polish, Portuguese (Brazil, Portugal, Angola, Mozambique), Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Tagalog, Tamil, Ukrainian"
+   },
+   "ast": {
+      "description": "language name",
+      "message": "Астурійська"
+   },
+   "autoCheckDesc": {
+      "description": "Options dialog: auto-check on all domains by default",
+      "message": "За замовчуванням перевіряти всі домени автоматично"
+   },
+   "autoCheckOnDomainsDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the check text will run automatically in background",
+      "message": "Автоматично перевіряти текст на цих доменах (один домен на рядок):"
+   },
+   "be": {
+      "description": "language name",
+      "message": "Білоруська"
+   },
+   "br": {
+      "description": "language name",
+      "message": "Бретонська"
+   },
+   "ca": {
+      "description": "language name",
+      "message": "Каталонська"
+   },
+   "ca_ES_valencia": {
+      "description": "language name",
+      "message": "Каталанський (Валенсія)"
+   },
+   "close": {
+      "description": "Link that closes the window",
+      "message": "Закрити"
+   },
+   "cloudServer": {
+      "description": "Radio button label for the cloud server setting (the default)",
+      "message": "Хмарний сервіс (languagetool.org)"
+   },
+   "connectionProblem": {
+      "description": "Message shown to the user when extension can't connect to server",
+      "message": "Не вдається з’єднатись із $serverUrl$",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://api.languagetool.org/v2"
+         }
+      }
+   },
+   "contextMenuValidate": {
+      "description": "Check text item in context menu",
+      "message": "Check spelling and grammar..."
+   },
+   "continue": {
+      "description": "Link shown below the privacy note on first use",
+      "message": "Продовжити і не питати більше"
+   },
+   "da": {
+      "description": "language name",
+      "message": "Данська"
+   },
+   "da_DK": {
+      "description": "language name",
+      "message": "Датська (Данія)"
+   },
+   "de": {
+      "description": "language name",
+      "message": "Німецька"
+   },
+   "de_AT": {
+      "description": "language name",
+      "message": "Німецька (Австрія)"
+   },
+   "de_CH": {
+      "description": "language name",
+      "message": "Німецька (Швейцарія)"
+   },
+   "de_DE": {
+      "description": "language name",
+      "message": "Німецька (Німеччина)"
+   },
+   "de_DE_x_simple_language": {
+      "description": "language name",
+      "message": "Німецька (спрощена)"
+   },
+   "defaultServerLink": {
+      "description": "Options dialog: Link to reset the URL of the API server to the default value",
+      "message": "Використовувати типовий"
+   },
+   "dialogPremiumButton": {
+      "description": "Button for when there are hidden matches (errors that only premium users can see)",
+      "message": "Детальніше"
+   },
+   "dialogPremiumHeadlinePlural": {
+      "description": "Headline for when there are hidden matches (errors that only premium users can see)",
+      "message": "Знайдено ще $count$ помилок",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "dialogPremiumHeadlineSingular": {
+      "description": "Headline for when there are hidden matches (errors that only premium users can see)",
+      "message": "Знайдено ще 1 орфографічну помилку"
+   },
+   "dialogPremiumText": {
+      "description": "Text for when there are hidden matches (errors that only premium users can see)",
+      "message": "Отримуйте ще більше підказок по стилістиці, пунктуації та граматиці, використовуючи LanguageTool Premium"
+   },
+   "dialogSelectLanguageLabel": {
+      "description": "Label of dropdown where user can select a language for his text",
+      "message": "Select language"
+   },
+   "dialogTextTooLongButton": {
+      "description": "Button shown when text is too long",
+      "message": "Детальніше"
+   },
+   "dialogTextTooLongHeadline": {
+      "description": "Text shown when text is too long",
+      "message": "Цей текст дещо задовгий"
+   },
+   "dialogTextTooLongText": {
+      "description": "Text shown when text is too long",
+      "message": "Перейдіть на Преміум версію та отримуйте розширені підказки по граматиці та стилю для довгих текстів"
+   },
+   "dialogTextTooShortHeadline": {
+      "description": "Text shown when text is too short for checking",
+      "message": "Text is too short"
+   },
+   "dialogTextTooShortText": {
+      "description": "Text shown when text is too short for checking",
+      "message": "Please enter at least 5 characters to start checking for mistakes"
+   },
+   "dialogUnsupportedLanguageHeadline": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "This language is not supported"
+   },
+   "dialogUnsupportedLanguageLabel": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "Unsupported language"
+   },
+   "dialogUnsupportedLanguageText": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "LanguageTool supports 20+ other languages (e.g. English, German, Spanish, French, Portuguese, Dutch or Russian)."
+   },
+   "domainsDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the reminder icon is disabled",
+      "message": "Вимкнути перевірку для цих доменів"
+   },
+   "el": {
+      "description": "language name",
+      "message": "Грецька"
+   },
+   "en": {
+      "description": "language name",
+      "message": "Англійська"
+   },
+   "en_AU": {
+      "description": "language name",
+      "message": "Англійська (Австралія)"
+   },
+   "en_CA": {
+      "description": "language name",
+      "message": "Англійська (Канада)"
+   },
+   "en_GB": {
+      "description": "language name",
+      "message": "Англійська (Велика Британія)"
+   },
+   "en_NZ": {
+      "description": "language name",
+      "message": "Англійська (Новозеландія)"
+   },
+   "en_US": {
+      "description": "language name",
+      "message": "Англійська (США)"
+   },
+   "en_ZA": {
+      "description": "language name",
+      "message": "Англійська (Південна Африка)"
+   },
+   "enableEverywhereButton": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Увімкнути для всіх текстових полів"
+   },
+   "enableHereButton": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Увімкнути лише для цього текстового поля"
+   },
+   "enableInDialog": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Натисніть, щоб увімкнути перевірку\u003Cbr> орфографії та граматики"
+   },
+   "enableRuleTooltip": {
+      "description": "Shown when user hover cursor over enable rule button on options page",
+      "message": "Активувати правило"
+   },
+   "eo": {
+      "description": "language name",
+      "message": "Есперанто"
+   },
+   "errorsIgnoredByDictionary": {
+      "description": "Message shown in popup with count of errors which are ignored because misspelled word contains in user dictionary",
+      "message": "Кілька слів було проігноровано",
+      "placeholders": {
+         "countIgnoredByDictionary": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "errorsIgnoredByDictionarySingular": {
+      "description": "Message shown in popup with count of errors which are ignored because misspelled word contains in user dictionary",
+      "message": "Одне слово було проігноровано"
+   },
+   "errorsIgnoredByRules": {
+      "description": "Message shown in popup with count of errors which are ignored because error rule is ignored",
+      "message": "Кілька правил було проігноровано",
+      "placeholders": {
+         "countIgnoredByRules": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "errorsIgnoredByRulesSingular": {
+      "description": "Message shown in popup with count of errors which are ignored because error rule is ignored",
+      "message": "Одне правило було проігноровано"
+   },
+   "es": {
+      "description": "language name",
+      "message": "Іспанська"
+   },
+   "experimentalLink": {
+      "description": "Link to show experimental settings",
+      "message": "Експериментальні налаштування (лише для досвідчених користувачів)"
+   },
+   "extensionUpdatedHeadline": {
+      "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field",
+      "message": "Це розширення було оновлено"
+   },
+   "extensionUpdatedText": {
+      "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field.",
+      "message": "Будь ласка, натисніть на іконку $iconHtml$ на панелі інструментів браузера або перезавантажте сторінку, щоб знову активувати перевірку орфографії та граматики.",
+      "placeholders": {
+         "iconHtml": {
+            "content": "$1",
+            "example": "\u003Cspan class='lt-placeholder-icon'>\u003C/span>"
+         }
+      }
+   },
+   "fa": {
+      "description": "language name",
+      "message": "Перська"
+   },
+   "feedbackButton": {
+      "description": "Label for submit button of feedback form",
+      "message": "Надіслати повідомлення"
+   },
+   "feedbackDirectMail": {
+      "description": "Text shown on feedback form",
+      "message": "Якщо ви хочете надіслати скріншот, ви можете надіслати нам лист на адресу $email$.",
+      "placeholders": {
+         "email": {
+            "content": "$1",
+            "example": "feedback@languagetool.org"
+         }
+      }
+   },
+   "feedbackError": {
+      "description": "Error message, shown to the user when his feedback message wasn't successfully sent",
+      "message": "Вибачте. Не вдається надіслати ваше повідомлення. Будь ласка, спробуйте пізніше ще раз."
+   },
+   "feedbackHeadline": {
+      "description": "Headline of feedback contact form",
+      "message": "Надішліть свій відгук на LanguageTool"
+   },
+   "feedbackSenderPlaceholder": {
+      "description": "Placeholder text shown in the email text field of the feedback form",
+      "message": "Введіть ваш email …"
+   },
+   "feedbackSuccess": {
+      "description": "Success message, shown to the user when his feedback message was successfully sent",
+      "message": "Дякуємо! Ми постараємось відповісти на ваше запитання якомога швидше."
+   },
+   "feedbackTextPlaceholder": {
+      "description": "Placeholder text shown in the message text field of the feedback form",
+      "message": "Введіть ваше повідомлення …"
+   },
+   "fr": {
+      "description": "language name",
+      "message": "Французька"
+   },
+   "gl": {
+      "description": "language name",
+      "message": "Галісійська"
+   },
+   "googleDocsNotSupported": {
+      "description": "Google Docs is too complex to be supported, so we show this error",
+      "message": "Перепрошуємо, цей додаток не підтримує Google Docs. Натомість встановіть \u003Ca target='_blank' href='$url$'>додаток\u003C/a>, що оптимізований для Google Docs. Після встановлення, виберіть меню «Доповнення» в Google Docs.",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm"
+         }
+      }
+   },
+   "googleDocsPluginInstructions": {
+      "description": "Instructions on how to use the google docs plugin. See second sentence of googleDocsNotSupported on how to use it.",
+      "message": "\u003Ch3>Using LanguageTool with Google Docs\u003C/h3> In the Google Docs menu please click on \u003Cstrong>Add-ons\u003C/strong>, then \u003Cstrong>LanguageTool\u003C/strong> to check your text."
+   },
+   "googleDocsPluginTeaserButton": {
+      "description": "Text of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "Enable LanguageTool for Google Docs"
+   },
+   "googleDocsPluginTeaserHeadline": {
+      "description": "Headline of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "Additional add-on required for grammar checking"
+   },
+   "googleDocsPluginTeaserText": {
+      "description": "Text of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "LanguageTool works out of the box with Facebook, Gmail, Twitter and many others. For Google Docs an additional add-on is needed."
+   },
+   "grammarError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Граматичні та інші помилки"
+   },
+   "havePremiumAccountDesc": {
+      "description": "Options dialog: checkbox for premium access",
+      "message": "Використати мій обліковий запис на \u003Ca href='$url$'>languagetoolplus.com\u003C/a>:",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://languagetoolplus.com"
+         }
+      }
+   },
+   "historicPremiumErrorsButton": {
+      "description": "Button for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version.",
+      "message": "Детальніше"
+   },
+   "historicPremiumErrorsHeadline": {
+      "description": "Introduction headline for premium teaser",
+      "message": "А ви знаєте?"
+   },
+   "historicPremiumErrorsText": {
+      "description": "Text for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version.",
+      "message": "З LanguageTool Premium ви могли б уникнути \u003Cstrong>$count$ граматичних та стилістичних помилок \u003C/strong> за останні дні.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "9"
+         }
+      }
+   },
+   "historicPremiumErrorsText2": {
+      "description": "Text for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version. Important: The count needs to be at the beginning of the sentence!",
+      "message": "\u003Cstrong>$count$ граматичних та стилістичних помилок\u003C/strong> можна було б уникнути з LanguageTool Premium за останні дні.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "9"
+         }
+      }
+   },
+   "ignoreDomainsCheckDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the check text won't run automatically in background",
+      "message": "Не перевіряти автоматично ці домени (один домен на рядок):"
+   },
+   "ignoreHere": {
+      "description": "Button that allows to ignore a misspelled word or grammar error in the current text field.",
+      "message": "Ігнорувати в цьому тексті"
+   },
+   "ignoredRules": {
+      "description": "Text shown at the bottom of the popup to turn on turned off rules again",
+      "message": "Ці правила було вимкнено, натисніть на правило, щоб увімкнути його:"
+   },
+   "ignoredRulesDesc": {
+      "description": "Shown as title of ignored rules block on options page",
+      "message": "Правила, які ігноруються"
+   },
+   "incompleteResult": {
+      "description": "Message shown in dialog when validation return incomplete result",
+      "message": "Results are incomplete: Text checking was stopped due to too many errors."
+   },
+   "invalidUsernameOrPassword": {
+      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "message": "Помилка: перевірте ваш email та пароль у вікні налаштувань"
+   },
+   "is": {
+      "description": "language name",
+      "message": "Ісландська"
+   },
+   "it": {
+      "description": "language name",
+      "message": "Італійська"
+   },
+   "ja": {
+      "description": "language name",
+      "message": "Японська"
+   },
+   "km": {
+      "description": "language name",
+      "message": "Кхмерська"
+   },
+   "language": {
+      "description": "Text shown in the popup to indicate the automatically detected language of the text checked",
+      "message": "Мова:"
+   },
+   "languagetoolNotSupported": {
+      "description": "Languagetool.org is test example, so we show this error",
+      "message": "The extension doesn't work on this website, as the website offers the same functionality"
+   },
+   "localServer": {
+      "description": "Radio button label for the local server setting, the one that needs manual set-up",
+      "message": "локальний сервер (localhost) – необхідно, щоб сервер LanguageTool був запущений локально"
+   },
+   "localServerDocs": {
+      "description": "Link to documentation for installing the server locally",
+      "message": "документація"
+   },
+   "lt": {
+      "description": "language name",
+      "message": "Литовська"
+   },
+   "ml": {
+      "description": "language name",
+      "message": "Малаяламська"
+   },
+   "moreDetails": {
+      "description": "Link shown to get more details about the error somewhere on the web (not shown for every error)",
+      "message": "Детальніше..."
+   },
+   "motherTongueDesc": {
+      "description": "Options dialog: text next to the 'mother tongue' selection",
+      "message": "Рідна мова:"
+   },
+   "motherTongueExpl": {
+      "description": "Options dialog: more descriptive text explaining what selection of mother tongue does",
+      "message": "Встановіть рідну мову, якщо хочете отримувати попередження про фальшивих друзів перекладача підчас перевірки тексту на іноземній мові."
+   },
+   "msOnlineOfficeNotSupported": {
+      "description": "Error shown when clicking the toolbar icon at Microsoft Word Online",
+      "message": "Нажаль Microsoft Word Online не підтримується цим розширенням - просто встановіть \u003Ca target='_blank' href='$url$'>це розширення\u003C/a> взамін.",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://appsource.microsoft.com/de-de/product/office/WA104381727"
+         }
+      }
+   },
+   "nl": {
+      "description": "language name",
+      "message": "Голландська"
+   },
+   "noErrorsFound2": {
+      "description": "Shown in popup when no errors have been found",
+      "message": "Ура, не знайдено жодної помилки!"
+   },
+   "onboardingHeadline": {
+      "description": "Text shown to the user when he accepted the privacy policy and is now ready to use the add-on",
+      "message": "Написане тепер буде покращено"
+   },
+   "onboardingIntro": {
+      "description": "Text shown to the user when he accepted the privacy policy and is now ready to use the add-on",
+      "message": "Ваш текст тепер буде перевірятись підчас вводу в більшості текстових полях."
+   },
+   "onboardingNote1": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Перезавантажте всі відкриті веб-сторінки, щоб активувати розширення"
+   },
+   "onboardingNote2": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Дане розширення не працює з текстовими полями на Chrome Web Store або addons.mozilla.org"
+   },
+   "onboardingNote3": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Щоб вимкнути розширення для веб-сайту, натисніть на іконку \"LT\" на панелі інструментів браузера"
+   },
+   "otherServer": {
+      "description": "Radio button label for the server URL if neither cloud nor local server is the correct choice",
+      "message": "Зовнішній сервер – необхідно, щоб на ньому був запущений сервер LanguageTool"
+   },
+   "password": {
+      "description": "Options dialog: password for languagetoolplus.com",
+      "message": "Пароль:"
+   },
+   "pl": {
+      "description": "language name",
+      "message": "Польська"
+   },
+   "popupOnboardingHeadline": {
+      "description": "Title shown on top of a list explaining how to use the LanguageTool addon",
+      "message": "Ласкаво просимо! Тепер ви можете використовувати LanguageTool:"
+   },
+   "popupOnboardingStep1": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Натисніть на будь-яке багаторядкове текстове поле (наприклад, на Gmail, Facebook, …)"
+   },
+   "popupOnboardingStep2": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "В правому нижньому кутку ви побачите іконку, яка виглядатиме як $icon1Html$ або $icon2Html$",
+      "placeholders": {
+         "icon1Html": {
+            "content": "$1",
+            "example": "\u003Cspan class='icon-1'>\u003C/span>"
+         },
+         "icon2Html": {
+            "content": "$2",
+            "example": "\u003Cspan class='icon-2'>\u003C/span>"
+         }
+      }
+   },
+   "popupOnboardingStep3": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Введіть який-небудь текст. Помилки будуть \u003Cu>підкреслені\u003C/u>"
+   },
+   "popupOnboardingStep4": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Натисніть на підкреслене слово, щоб отримати пропозиції щодо виправлення"
+   },
+   "popupOptionCaseText": {
+      "description": "Switch in toolbar popup",
+      "message": "Перевіряти верхній та нижній регістри"
+   },
+   "popupOptionCheckText": {
+      "description": "Switch in toolbar popup",
+      "message": "Перевіряти граматику та орфографію"
+   },
+   "popupOptionValidate": {
+      "description": "Validate button in toolbar popup",
+      "message": "Check selected text"
+   },
+   "popupPremiumHeadline": {
+      "description": "Premium hint in popup",
+      "message": "Пишіть як Pro"
+   },
+   "popupPremiumLink": {
+      "description": "Premium hint in popup",
+      "message": "Дізнатись більше"
+   },
+   "popupPremiumText": {
+      "description": "Premium hint in popup",
+      "message": "Оновіться до LanguageTool Premium, щоб не тільки знаходити ще більше граматичних та орфографічних помилок, а й стилістичні недоліки."
+   },
+   "popupSettingsHeadline": {
+      "description": "Headline for the website specific settings shown in the addon popup",
+      "message": "Налаштування для даного сайту"
+   },
+   "popupSettingsHover": {
+      "description": "Mouse hover over the settings icon",
+      "message": "Розширені налаштування"
+   },
+   "poweredBy": {
+      "description": "Hint that explains who the author of this add-on is",
+      "message": "Powered by \u003Cb>LanguageTool\u003C/b>"
+   },
+   "premiumErrorsButton": {
+      "description": "Button shown in premium teaser that sends the user to the pricing table. Button text should be as short as possible",
+      "message": "Детальніше"
+   },
+   "premiumErrorsTextPlural": {
+      "description": "Hint shown in a premium teaser, telling the user that there are more issues that only the premium version found",
+      "message": "Ваш текст містить \u003Cstrong>$count$ просунутих писемних помилок\u003C/strong>",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "premiumErrorsTextSingular": {
+      "description": "Hint shown in a premium teaser, telling the user that there are more issues that only the premium version found",
+      "message": "Ваш текст містить \u003Cstrong>одну просунуту писемну помилку\u003C/strong>"
+   },
+   "privacyLinkForDefaultServer": {
+      "description": "Link to privacy policy",
+      "message": "Для додаткової інформації дивіться \u003Ca href='$privacyUrl$' target='_blank'> нашу політику конфіденційності\u003C/a>",
+      "placeholders": {
+         "privacyUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org/privacy/"
+         }
+      }
+   },
+   "privacyNoteForDefaultServer": {
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "message": "Це розширення перевірить ваш текст відіславши його до \u003Ca href='$serverUrl$' target='_blank'>$serverUrl$\u003C/a> зашифрованим з'єднанням. \u003Cb>Ваш текст не буде збережено.\u003C/b> Перевірка може бути вимкнена в будь-який час.",
+      "placeholders": {
+         "serverHost": {
+            "content": "$2",
+            "example": "LanguageTool.org"
+         },
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org"
+         }
+      }
+   },
+   "privacyNoteForOtherServer": {
+      "description": "Shown on first start of extension to make user aware of privacy issues when using some other than the default server",
+      "message": "Це розширення перевірить ваш текст відіславши його до  $serverUrl$. Щоб перемикнутися назад до типового сервера, зайдіть на сторінку налаштувань розширення.",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "http://localhost:8081/"
+         }
+      }
+   },
+   "privacyNoteSlogan": {
+      "description": "Slogan after 'LanguageTool' shown in privacy dialog at first start",
+      "message": "Програмне забезпечення для корекції тексту"
+   },
+   "privacyPolicy": {
+      "description": "Options dialog: Link to privacy policy",
+      "message": "Політика конфіденційності"
+   },
+   "pt": {
+      "description": "language name",
+      "message": "Португальська"
+   },
+   "pt_AO": {
+      "description": "language name",
+      "message": "Португальська (Ангола preAO)"
+   },
+   "pt_BR": {
+      "description": "language name",
+      "message": "Португальська (Бразилія posAO)"
+   },
+   "pt_CV": {
+      "description": "language name",
+      "message": "Португальська (Капе Верде)"
+   },
+   "pt_MZ": {
+      "description": "language name",
+      "message": "Португальська (Мозамбік preAO)"
+   },
+   "pt_PT": {
+      "description": "language name (posAO = post reform)",
+      "message": "Португальська (Португалія posAO)"
+   },
+   "pt_PT_post_reform": {
+      "description": "language name (posAO = post reform)",
+      "message": "Португальська (Португалія, після реформи)"
+   },
+   "pt_PT_pre_reform": {
+      "description": "language name (preAO = pre reform)",
+      "message": "Португальська (Португалія, дореформений)"
+   },
+   "punctuationError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Помилка пунктуації"
+   },
+   "ratingHeadline": {
+      "description": "Headline shown in the teaser that asks user to rate the add-on",
+      "message": "Вам подобається на коректор тексту?"
+   },
+   "ratingText": {
+      "description": "Text shown in the teaser that asks user to rate the add-on",
+      "message": "Залиште свій відгук"
+   },
+   "ratingThankYou": {
+      "description": "Message shown to the user after he rated",
+      "message": "Дякуємо."
+   },
+   "ratingUnhappyQuestion": {
+      "description": "If user gives a negative rating, we ask the user why he's unhappy",
+      "message": "Будь ласка, розкажіть нам, чому ви невдовлені розширенням"
+   },
+   "reportAnIssue": {
+      "description": "Link text for sending feedback to languagetool.org",
+      "message": "Report an issue"
+   },
+   "reviewChromeHeadline": {
+      "description": "Headline shown in the teaser that asks user to give a review in the Chrome Store",
+      "message": "Чи не могли б ви оцінити наше розширення в Chrome Store?"
+   },
+   "reviewFirefoxHeadline": {
+      "description": "Headline shown in the teaser that asks user to give a review in the Firefox Add-On Store",
+      "message": "Чи не могли б ви оцінити наше розширення в Firefox Store?"
+   },
+   "reviewLink": {
+      "description": "Call-to-action link (should be kept short)",
+      "message": "Оцінити"
+   },
+   "ro": {
+      "description": "language name",
+      "message": "Румунська"
+   },
+   "ru": {
+      "description": "language name",
+      "message": "Російська"
+   },
+   "save": {
+      "description": "Options dialog: save button",
+      "message": "Зберегти"
+   },
+   "sendFeedback": {
+      "description": "Link text for sending feedback to languagetool.org",
+      "message": "Надіслати відгук"
+   },
+   "serverNotAvailable": {
+      "description": "Warning shown to the user that the local server isn't available",
+      "message": "Локальний сервер недоступний"
+   },
+   "serverText": {
+      "description": "Options dialog: description of the text field for the API server URL",
+      "message": "URL сервера LanguageTool API:"
+   },
+   "serverUrlIsInvalid": {
+      "description": "Options dialog: error shown if server URL is not valid, e.g. doesn't start with http or https",
+      "message": "Недійсний URL"
+   },
+   "settingsAccountHeadline": {
+      "description": "Headline for the account login section on the settings page",
+      "message": "Акаунт"
+   },
+   "settingsAddDomainHint": {
+      "description": "Text shown when the entered domain doesn't exist yet in the list of ignored domains",
+      "message": "Цей домен ще не було добавлено. Натисніть Enter, щоб добавити його."
+   },
+   "settingsAddOrFilterDomains": {
+      "description": "Placeholder text for input field where user can enter web domains where the addon shouldn't run on",
+      "message": "Додати або знайти домен …"
+   },
+   "settingsAddOrFilterWords": {
+      "description": "Placeholder text for input field where user can enter new words for his dictionary (he can use the input field also for searching in his dictionary)",
+      "message": "Додати або знайти слово …"
+   },
+   "settingsAddWordHint": {
+      "description": "Text shown when the entered word doesn't exist yet in the personal dictionary",
+      "message": "Це слово відсутнє в вашому словнику. Натисніть Enter, щоб добавити його."
+   },
+   "settingsAreYouSure": {
+      "description": "Confirmation message for when the user wants to clear or delete something.",
+      "message": "Ви впевнені? Це буде неможливо відмінити."
+   },
+   "settingsClearAll": {
+      "description": "Button text that deletes all items in a list",
+      "message": "Видалити все"
+   },
+   "settingsCopyDictionary": {
+      "description": "Button text that copy all words from personal dictionary to clipboard",
+      "message": "Скопіювати"
+   },
+   "settingsCopyDictionarySuccessful": {
+      "description": "Message shown when dictionary copied to clipboard successful.",
+      "message": "Скопійовано в буфер обміну"
+   },
+   "settingsDictionaryHeadline": {
+      "description": "Headline for the personal dictionary section on the settings page",
+      "message": "Персональний словник"
+   },
+   "settingsDomainInvalid": {
+      "description": "Error message shown when the domain the user entered is not valid or is already in the list",
+      "message": "Будь ласка, введіть дійсний домен, який ще не було добавлено."
+   },
+   "settingsEmptyDictionary": {
+      "description": "Text shown when personal dictionary doesn't contain any words (yet)",
+      "message": "Ваш персональний словник поки порожній"
+   },
+   "settingsEmptyDomainList": {
+      "description": "Text shown when disabled-domain list doesn't contain any domains (yet)",
+      "message": "Ви ще не відключили жоден сайт"
+   },
+   "settingsEmptyIgnoredRules": {
+      "description": "Text shown when there are no ignored rules (yet)",
+      "message": "Ви ще не ігноруєте жодного правила"
+   },
+   "settingsEnableAllRules": {
+      "description": "Button text that enables all grammar rules that were previously disabled",
+      "message": "Активувати все"
+   },
+   "settingsEnableDomain": {
+      "description": "Button for removing a domain from the list of disabled-domains",
+      "message": "Активувати домен"
+   },
+   "settingsExperimentalSuccess": {
+      "description": "Success message shown when the user saves the experimental settings",
+      "message": "Ваші налаштування успішно збережено."
+   },
+   "settingsForgotPasswordLink": {
+      "description": "Placeholder text for password text field",
+      "message": "Забули пароль?"
+   },
+   "settingsHeadline": {
+      "description": "Headline for the settings page",
+      "message": "Налаштування"
+   },
+   "settingsLoggedInAs": {
+      "description": "Text shown for users who have logged in with their LanguageTool account",
+      "message": "Ви увійшли як $email$.",
+      "placeholders": {
+         "email": {
+            "content": "$1",
+            "example": "\u003Cstrong>foo@foobar.com\u003C/strong>"
+         }
+      }
+   },
+   "settingsLoginButton": {
+      "description": "Button for logging in with email and password",
+      "message": "Увійти"
+   },
+   "settingsLoginError": {
+      "description": "Error message shown when the user credentials (email and password) are wrong",
+      "message": "Ви не змогли авторизуватись. Будь ласка, перевірте ваш email та пароль."
+   },
+   "settingsLoginSuccess": {
+      "description": "Success message shown when the user logged in",
+      "message": "Тепер ви авторизовані"
+   },
+   "settingsLogoutButton": {
+      "description": "Button for logging out",
+      "message": "Вийти"
+   },
+   "settingsLogoutSuccess": {
+      "description": "Success message shown when the user logged out",
+      "message": "Ви деавторизувались"
+   },
+   "settingsPasswordPlaceholder": {
+      "description": "Placeholder text for password text field",
+      "message": "Пароль"
+   },
+   "settingsPremiumButton": {
+      "description": "Button text for a teaser on the settings page promoting the premium functionality",
+      "message": "Відкрийте для себе LanguageTool Premium"
+   },
+   "settingsPremiumFeaturesActivated": {
+      "description": "Text shown for users who have logged in with their LanguageTool account and who have a paid subscription",
+      "message": "Усі \u003Cstrong>преміум можливості\u003C/strong> активовано."
+   },
+   "settingsPremiumHeadline": {
+      "description": "Headline for a teaser on the settings page promoting the premium functionality",
+      "message": "Покращіть якість вашого письма"
+   },
+   "settingsPremiumText": {
+      "description": "Text for a teaser on the settings page promoting the premium functionality",
+      "message": "Знаходьте просунуті граматичні, стилістичні та пунктуаційні помилки або перевіряйте тексти довжиною понад 40 000 символів."
+   },
+   "settingsUnknownError": {
+      "description": "Generic error message",
+      "message": "Сталася неочікувана помилка"
+   },
+   "siteCannotBeSupported": {
+      "description": "Some sites are too complex and can probably never be supported, so we show this error",
+      "message": "На жаль, ми не підтримуємо технологію редагування тексту, використану на даному сайті. Будь ласка, зв’яжіться з власником сайту та попросіть його інтегрувати LanguageTool."
+   },
+   "sk": {
+      "description": "language name",
+      "message": "Словацька"
+   },
+   "sl": {
+      "description": "language name",
+      "message": "Словенська"
+   },
+   "spellingError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Орфографічна помилка"
+   },
+   "sr": {
+      "description": "language name",
+      "message": "Сербська"
+   },
+   "sr_BA": {
+      "description": "language name",
+      "message": "Сербська (Боснія)"
+   },
+   "sr_HR": {
+      "description": "language name",
+      "message": "Сербська (Хорватія)"
+   },
+   "sr_ME": {
+      "description": "language name",
+      "message": "Сербська (Чорногорія)"
+   },
+   "sr_RS": {
+      "description": "language name",
+      "message": "Сербська (Сербія)"
+   },
+   "statusIconEnableLT": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in disabled state",
+      "message": "Увімкнути LanguageTool – коректор граматики та орфографії"
+   },
+   "statusIconError": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in error state",
+      "message": "Помилка"
+   },
+   "statusIconMoreErrors": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in incomplete result state",
+      "message": "Результат перевірки неповний: Перевірка тексту була перервана через велику кількість помилок."
+   },
+   "statusIconPermissionRequired": {
+      "description": "Shown when hover over the status icon (not the toolbar one) in permission required state (i.e. user has not confirmed privacy dialog on first start)",
+      "message": "Перевірка тексту неможлива - спочатку прийміть політику конфіденційності"
+   },
+   "statusIconReload": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in reload needed state",
+      "message": "Розширення було оновлено. Будь ласка, перезавантажте сторінку, щоб активувати перевірку орфографії та граматики."
+   },
+   "statusIconToolTip": {
+      "description": "Shown when hovering over the status icon (not the toolbar one)",
+      "message": "LanguageTool – коректор граматики та орфографії"
+   },
+   "suggestionError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Стиль пропозиції"
+   },
+   "sv": {
+      "description": "language name",
+      "message": "Шведська"
+   },
+   "ta": {
+      "description": "language name",
+      "message": "Тамільська"
+   },
+   "textTooLong": {
+      "description": "Message shown to the user when his text is too large to be checked",
+      "message": "Вибачте, але цей текст надто великий для перевірки."
+   },
+   "timeoutError": {
+      "description": "Error message shown if API server doesn't respond timely",
+      "message": "Тайм-аут від сервера, спробуйте знову пізніше ($serverUrl$)",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org:8081/"
+         }
+      }
+   },
+   "tl": {
+      "description": "language name",
+      "message": "Тагальська"
+   },
+   "tooManyErrors": {
+      "description": "Message shown to the user when his text contains too many errors",
+      "message": "Здається, що в цьому тексті занадто багато помилок. Ви впевнені що обрано вірну мову?"
+   },
+   "tooManyRequests": {
+      "description": "Message shown to the user when they have sent too many and/or large requests",
+      "message": "Перевищено ліміт запитів - будь ласка, зачекайте хвилину і LanguageTool знову стане доступним"
+   },
+   "tryAgain": {
+      "description": "Link the user can click on when they got a warning that the local server isn't available",
+      "message": "Спробувати ще раз"
+   },
+   "turnOffRule": {
+      "description": "Link shown in the popup to turn off, i.e. ignore, a rule (the rule - not just this match)",
+      "message": "Вимкнути правило"
+   },
+   "turnOnHint": {
+      "description": "Message in hint popup",
+      "message": "You can enable the extension again here"
+   },
+   "uk": {
+      "description": "language name",
+      "message": "Українська"
+   },
+   "unknownError": {
+      "description": "Message shown to the user when his text is too large to be checked",
+      "message": "Вибачте, але підчас перевірки тексту виникла помилка."
+   },
+   "username": {
+      "description": "Options dialog: user name for languagetoolplus.com",
+      "message": "Електронна пошта:"
+   },
+   "validatorHasMistakesHeadlinePlural": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "Знайдено $count$ письмових помилок",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "validatorHasMistakesHeadlineSingular": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "Знайдено одну письмову помилку"
+   },
+   "validatorHasMistakesText": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "Натисніть на підсвічені слова, щоб виправити їх."
+   },
+   "validatorHasPremiumErrorsButton": {
+      "description": "Button that sends the user to the upgrade/pricing page",
+      "message": "Детальніше"
+   },
+   "validatorHasPremiumErrorsHeadlinePlural": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Ваш текст містить $count$ просунутих писемних помилок",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "validatorHasPremiumErrorsHeadlineSingular": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Ваш текст містить одну просунуту писемну помилку"
+   },
+   "validatorHasPremiumErrorsText": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Перейдіть на LanguageTool Premium, щоб знаходити набагато більше граматичних, стилістичних та пунктуаційних помилок"
+   },
+   "validatorLoadingHint": {
+      "description": "Loading status, shown when text is currently being checked",
+      "message": "Перевіряємо текст…"
+   },
+   "validatorNoMistakesHeadline": {
+      "description": "Text displayed on top of text when the text doesn't contain any errors",
+      "message": "Вітаємо, не знайдено жодної помилки!"
+   },
+   "validatorNoTextStatus": {
+      "description": "Text shown above validator text field when it doesn't have enough characters to be checked",
+      "message": "Введіть або вставте текст, щоб перевірити його"
+   },
+   "validatorPlaceholder": {
+      "description": "Text shown in text field when it's empty",
+      "message": "Будь ласка, введіть або вставте ваш текст тут …"
+   },
+   "validatorPremiumButton": {
+      "description": "Label for a button. Clicking it will send the user to the website where he can buy the premium version",
+      "message": "Оновити"
+   },
+   "validatorPremiumHeadline": {
+      "description": "Title for a bullet point list of features the premium version has",
+      "message": "Знаходьте більше письмових помилок та покращте своє письмо"
+   },
+   "validatorPremiumReason1": {
+      "description": "Reason for buying the premium version",
+      "message": "Більш ретельна перевірка граматики, пунктуації та стилю"
+   },
+   "validatorPremiumReason2": {
+      "description": "Reason for buying the premium version",
+      "message": "Перевіряйте великі тексти (до 40 000 символів)"
+   },
+   "validatorPremiumReason3": {
+      "description": "Reason for buying the premium version",
+      "message": "Автовизначення недійсних номерів (наприклад IBAN, ISBN, …)"
+   },
+   "validatorPremiumReason4": {
+      "description": "Reason for buying the premium version",
+      "message": "Plugin for Microsoft Office"
+   },
+   "variantCaDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Вважати для каталонської типовим варіант:"
+   },
+   "variantDeDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Вважати для німецької типовим варіант:"
+   },
+   "variantEnDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Вважати для англійської типовим варіант:"
+   },
+   "variantPtDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Вважати для португальської типовим варіант:"
+   },
+   "webstoreSiteNotSupported": {
+      "description": "Error shown when Chrome extension is used on https://chrome.google.com/webstore, which doesn't work for technical reasons",
+      "message": "Вибачте, Google Chrome не дозволяє розширенням доступатися до веб-сховища Chrome."
+   },
+   "zh": {
+      "description": "language name",
+      "message": "Китайська"
+   }
+}

@@ -1,26 +1,49 @@
 {
-    "manifest_version": 2,
-    "name": "Grammar Button",
-    "version": "1.0",
-    "description": "Change the value when users click the button",
-    "browser_action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": [
-          "<all_urls>"
-        ],
-        "js": ["content.js"]
-      }
-    ],
-    "permissions": [
-      "activeTab",
-      "tabs"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    }
-  }
+   "author": "LanguageTooler GmbH",
+   "background": {
+      "scripts": [ "common/browser-polyfill.min.js", "common/purify.min.js", "config/config.js", "config/languages.js", "common/browserDetector.js", "common/utils.js", "common/eventBus.js", "common/storageController.js", "common/tracker.js", "common/tweaksManager.js", "background/validator.js", "background/main.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/images/icons/icon16.png",
+      "default_popup": "popup/popup.html",
+      "default_title": "LanguageTool"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "common/browser-polyfill.min.js", "common/purify.min.js", "config/config.js", "config/languages.js", "common/browserDetector.js", "common/utils.js", "common/eventBus.js", "common/storageController.js", "common/tracker.js", "common/tweaksManager.js", "common/domMeasurement.js", "content/debounce.js", "content/domWalker.js", "content/requestStatus.js", "content/ceElementInspector.js", "content/inputAreaWrapper.js", "content/mirror.js", "content/highlighter.js", "content/toolbar.js", "content/dialog.js", "content/errorCard.js", "content/ltAssistant.js", "content/main.js", "privacyConfirmationDialog/privacyConfirmationDialog.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "css": [ "common/fonts.css", "content/styles.css" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "homepage_url": "https://languagetoolplus.com",
+   "icons": {
+      "128": "assets/images/icons/icon128.png",
+      "16": "assets/images/icons/icon16.png",
+      "32": "assets/images/icons/icon32.png",
+      "48": "assets/images/icons/icon48.png",
+      "64": "assets/images/icons/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkt4bywewdHDTMJQe+zW8adz1qGZ4Ux9ZYsiz/HjZv5+75NhXyYHKJjhVADvK64MQQruggnpxFWroL/Mkn3RPtRW+iq4ZLJyj5LDZ/CCv8inkM4FetuS+KbK1USBD07yJR5iaXfmdhXMXD/28W6DyMK2enPkjH/fxHZVBZ5JebUXhyswtpPRRl4/gMk00WTALUCMDqM6W8XkT/fq1S36i6k+D3+9i1syQ1bAgbu7NUSK7K7hYXGjTmc5hAUBnpsUFAY2iev6IS0v//aQrJWbb7BWFrPygcWS/VXxsdlxCJ15DDecOVrW7ukDgsnPhPtC7AFInvrGfMstzEfumIVOyAQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "67.0.0",
+   "name": "__MSG_appName__",
+   "offline_enabled": false,
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "activeTab", "storage", "contextMenus" ],
+   "short_name": "LanguageTool",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.3.2",
+   "web_accessible_resources": [ "https://api.languagetool.org", "assets/fonts/*.woff2", "assets/styles/*", "common/*.css", "common/*.js", "content/*.css", "content/*.js", "config/*.js", "privacyConfirmationDialog/*.js", "content/iframes/rating/*.html", "content/iframes/premiumErrors/*.html", "content/iframes/historicPremiumErrors/*.html", "assets/images/*" ]
+}

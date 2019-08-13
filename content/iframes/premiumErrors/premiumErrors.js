@@ -1,0 +1,1 @@
+const urlObj=new URL(location.href),teaser=new PremiumErrorsTeaser(document.querySelector("#container"),Number(urlObj.searchParams.get("grammarMatches")),Number(urlObj.searchParams.get("styleMatches")));teaser.render(),document.documentElement.addEventListener("mousedown",e=>e.preventDefault());

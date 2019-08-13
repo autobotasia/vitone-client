@@ -1,0 +1,1136 @@
+{
+   "accessDeniedError2": {
+      "description": "Message shown when the server denies access (unclear reason)",
+      "message": "O servidor enviou uma mensagem de \"acesso negado\" - por favor verifique o seu e-mail e password nas opções do diálogo e tente novamente."
+   },
+   "addToDictionaryTitle": {
+      "description": "Title hover shown in the popup to accept a word to the internal dictionary",
+      "message": "adicionar \"$word$\" ao dicionário pessoal",
+      "placeholders": {
+         "word": {
+            "content": "$1",
+            "example": "foobar"
+         }
+      }
+   },
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Verifique problemas de ortografia e gramática em seus textos em qualquer lugar da web."
+   },
+   "appName": {
+      "description": "The name of the application, displayed in the web store.",
+      "message": "Corretor gramatical e ortográfico - LanguageTool"
+   },
+   "appStoreDesc1": {
+      "description": "Description item 1 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Finds many errors that a simple spell checker cannot detect"
+   },
+   "appStoreDesc10": {
+      "description": "Description paragraph 1 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Com esta extensão você pode verificar o texto com estilo livre e verificador gramatical LanguageTool. O LanguageTool encontra vários erros que um corretor ortográfico simples não consegue detectar, como trocar mas/mais, um/uma, ou palavras repetidas, e ele pode detectar alguns problemas gramaticais. O LanguageTool suporta mais de 25 idiomas, incluindo Inglês, Espanhol, Francês, Alemão, Polonês e Russo."
+   },
+   "appStoreDesc2": {
+      "description": "Description item 2 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "No registration needed"
+   },
+   "appStoreDesc20": {
+      "description": "Description paragraph 2 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "O LanguageTool é desenvolvido pensando em simplicidade. Ao clicar num botão ou usar um atalho de teclado, ele verifica instantaneamente a ortografia e concordância do texto selecionado. Ele é compatível com quase todos os textos, independente da origem, incluindo redes sociais como Twitter ou LinkedIn e serviços de e-mail online como o Gmail. Apenas alguns poucos sites como docs.google.com e chrome.google.com ainda não são suportados - use https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm para Google Docs."
+   },
+   "appStoreDesc3": {
+      "description": "Description item 3 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Supports more than 25 languages (see below)"
+   },
+   "appStoreDesc30": {
+      "description": "Description paragraph 3 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Com o LanguageTool, nossa meta é fornecer aos usuários um revisor e verificador gramatical completo que lhes permitirá ter controle e confiança sobre o seu conteúdo. Ao mesmo tempo, que é uma extensão vital para quem fala outro idioma, é também, esperto o suficiente para reconhecer enganos feitos em seu próprio idioma e melhorando sua escrita em geral. Essa correção gramatical e ortográfica funciona em todas as variações do idioma, distinguindo entre o Inglês americano e o britânico, por exemplo. Ainda possui um dicionário pessoal para exceções ou palavras que você geralmente usa, mas que estão ausentes em dicionários convencionais. Essas palavras serão reconhecidas numa futura revisão e verificação gramatical."
+   },
+   "appStoreDesc4": {
+      "description": "Description item 4 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Works on almost any website including Gmail, Facebook, twitter"
+   },
+   "appStoreDesc5": {
+      "description": "Description paragraph 0 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Usuário do Google Docs? Por favor use https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm"
+   },
+   "appStoreDesc60": {
+      "description": "Description paragraph 5 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Diferentemente do Grammarly e Ginger, o LanguageTool funciona em vários idiomas e oferece várias das mesmas funcionalidades."
+   },
+   "appStoreDesc70": {
+      "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "Sua privacidade é importante para nós: por padrão, essa extensão verificará seu texto enviando-o para https://languagetool.org numa conexão criptografada. Não é necessária nenhuma conta para usar essa extensão. Não armazenamos seu endereço IP. Veja nossa política de privacidade em https://languagetool.org/privacy/ ."
+   },
+   "appStoreDesc80": {
+      "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
+      "message": "List of supported languages: English (Australian, Canadian, GB, New Zealand, South African, US), French, German (Austria, Germany, Swiss), Asturian, Belarusian, Breton, Catalan (also Valencian), Chinese, Danish, Dutch, Esperanto, Galician, Greek, Italian, Japanese, Khmer, Persian, Polish, Portuguese (Brazil, Portugal, Angola, Mozambique), Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Tagalog, Tamil, Ukrainian"
+   },
+   "ast": {
+      "description": "language name",
+      "message": "Asturiano"
+   },
+   "autoCheckDesc": {
+      "description": "Options dialog: auto-check on all domains by default",
+      "message": "Verificação automática em todos os domínios por padrão"
+   },
+   "autoCheckOnDomainsDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the check text will run automatically in background",
+      "message": "Verificar o texto automaticamente nestes domínios (um domínio por linha):"
+   },
+   "be": {
+      "description": "language name",
+      "message": "Bielorrusso"
+   },
+   "br": {
+      "description": "language name",
+      "message": "Bretão"
+   },
+   "ca": {
+      "description": "language name",
+      "message": "Catalão"
+   },
+   "ca_ES_valencia": {
+      "description": "language name",
+      "message": "Catalão (Valenciano)"
+   },
+   "close": {
+      "description": "Link that closes the window",
+      "message": "Fechar"
+   },
+   "cloudServer": {
+      "description": "Radio button label for the cloud server setting (the default)",
+      "message": "Servidor na nuvem (languagetool.org)"
+   },
+   "connectionProblem": {
+      "description": "Message shown to the user when extension can't connect to server",
+      "message": "Não há conexão com o $serverUrl$",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://api.languagetool.org/v2"
+         }
+      }
+   },
+   "contextMenuValidate": {
+      "description": "Check text item in context menu",
+      "message": "Verifique ortografia e gramática"
+   },
+   "continue": {
+      "description": "Link shown below the privacy note on first use",
+      "message": "Ok, entendi"
+   },
+   "da": {
+      "description": "language name",
+      "message": "Dinamarquês"
+   },
+   "da_DK": {
+      "description": "language name",
+      "message": "Dinamarquês (Dinamarca)"
+   },
+   "de": {
+      "description": "language name",
+      "message": "Alemão"
+   },
+   "de_AT": {
+      "description": "language name",
+      "message": "Alemão (austríaco)"
+   },
+   "de_CH": {
+      "description": "language name",
+      "message": "Alemão (suíço)"
+   },
+   "de_DE": {
+      "description": "language name",
+      "message": "Alemão (Alemanha)"
+   },
+   "de_DE_x_simple_language": {
+      "description": "language name",
+      "message": "Alemão (Alemão Simples)"
+   },
+   "defaultServerLink": {
+      "description": "Options dialog: Link to reset the URL of the API server to the default value",
+      "message": "Usar padrão"
+   },
+   "dialogPremiumButton": {
+      "description": "Button for when there are hidden matches (errors that only premium users can see)",
+      "message": "Saiba mais"
+   },
+   "dialogPremiumHeadlinePlural": {
+      "description": "Headline for when there are hidden matches (errors that only premium users can see)",
+      "message": "$count$ problemas de escrita encontrados",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "dialogPremiumHeadlineSingular": {
+      "description": "Headline for when there are hidden matches (errors that only premium users can see)",
+      "message": "Mais um problema de escrita encontrado"
+   },
+   "dialogPremiumText": {
+      "description": "Text for when there are hidden matches (errors that only premium users can see)",
+      "message": "Obtenha mais sugestões de estilo, pontuação e gramática usando o LanguageTool Premium"
+   },
+   "dialogSelectLanguageLabel": {
+      "description": "Label of dropdown where user can select a language for his text",
+      "message": "Select language"
+   },
+   "dialogTextTooLongButton": {
+      "description": "Button shown when text is too long",
+      "message": "Saiba mais"
+   },
+   "dialogTextTooLongHeadline": {
+      "description": "Text shown when text is too long",
+      "message": "Este texto é um pouco longo"
+   },
+   "dialogTextTooLongText": {
+      "description": "Text shown when text is too long",
+      "message": "Atualize para o Premium e obtenha sugestões de gramática e estilo em textos longos."
+   },
+   "dialogTextTooShortHeadline": {
+      "description": "Text shown when text is too short for checking",
+      "message": "Text is too short"
+   },
+   "dialogTextTooShortText": {
+      "description": "Text shown when text is too short for checking",
+      "message": "Por favor, introduza pelo menos 5 caracteres para verificar erros"
+   },
+   "dialogUnsupportedLanguageHeadline": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "This language is not supported"
+   },
+   "dialogUnsupportedLanguageLabel": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "Unsupported language"
+   },
+   "dialogUnsupportedLanguageText": {
+      "description": "Shown to the user when the language he's writing is not supported",
+      "message": "LanguageTool supports 20+ other languages (e.g. English, German, Spanish, French, Portuguese, Dutch or Russian)."
+   },
+   "domainsDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the reminder icon is disabled",
+      "message": "Desabilitar a verificação em alguns sites"
+   },
+   "el": {
+      "description": "language name",
+      "message": "Grego"
+   },
+   "en": {
+      "description": "language name",
+      "message": "Inglês"
+   },
+   "en_AU": {
+      "description": "language name",
+      "message": "Inglês (australiano)"
+   },
+   "en_CA": {
+      "description": "language name",
+      "message": "Inglês (canadense)"
+   },
+   "en_GB": {
+      "description": "language name",
+      "message": "Inglês (britânico)"
+   },
+   "en_NZ": {
+      "description": "language name",
+      "message": "Inglês (Nova Zelândia)"
+   },
+   "en_US": {
+      "description": "language name",
+      "message": "Inglês (americano)"
+   },
+   "en_ZA": {
+      "description": "language name",
+      "message": "Inglês (sul-africano)"
+   },
+   "enableEverywhereButton": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Ativar para todos os campos de texto"
+   },
+   "enableHereButton": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Ativar apenas para este campo de texto"
+   },
+   "enableInDialog": {
+      "description": "Shown in popup when add-on is not enabled",
+      "message": "Click para ativar verificações ortográficas \u003Cbr> e gramaticais"
+   },
+   "enableRuleTooltip": {
+      "description": "Shown when user hover cursor over enable rule button on options page",
+      "message": "Clique para habilitar a regra."
+   },
+   "eo": {
+      "description": "language name",
+      "message": "Esperanto"
+   },
+   "errorsIgnoredByDictionary": {
+      "description": "Message shown in popup with count of errors which are ignored because misspelled word contains in user dictionary",
+      "message": "$countIgnoredByDictionary$ palavras foram ignoradas",
+      "placeholders": {
+         "countIgnoredByDictionary": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "errorsIgnoredByDictionarySingular": {
+      "description": "Message shown in popup with count of errors which are ignored because misspelled word contains in user dictionary",
+      "message": "1 palavra foi ignorada"
+   },
+   "errorsIgnoredByRules": {
+      "description": "Message shown in popup with count of errors which are ignored because error rule is ignored",
+      "message": "$countIgnoredByRules$ regras foram ignoradas",
+      "placeholders": {
+         "countIgnoredByRules": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "errorsIgnoredByRulesSingular": {
+      "description": "Message shown in popup with count of errors which are ignored because error rule is ignored",
+      "message": "1 regra foi ignorada"
+   },
+   "es": {
+      "description": "language name",
+      "message": "Espanhol"
+   },
+   "experimentalLink": {
+      "description": "Link to show experimental settings",
+      "message": "Configurações experimentais (somente para usuários avançados)"
+   },
+   "extensionUpdatedHeadline": {
+      "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field",
+      "message": "Esta extensão foi atualizada"
+   },
+   "extensionUpdatedText": {
+      "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field.",
+      "message": "Por favor, clique no ícone  $iconHtml$ na barra de ferramentas do seu navegador ou recarregue a página para ativar novamente a verificação ortográfica e gramatical.",
+      "placeholders": {
+         "iconHtml": {
+            "content": "$1",
+            "example": "\u003Cspan class='lt-placeholder-icon'>\u003C/span>"
+         }
+      }
+   },
+   "fa": {
+      "description": "language name",
+      "message": "Persa"
+   },
+   "feedbackButton": {
+      "description": "Label for submit button of feedback form",
+      "message": "Envie sua mensagem"
+   },
+   "feedbackDirectMail": {
+      "description": "Text shown on feedback form",
+      "message": "Se você quiser enviar uma captura de tela, você pode também nos enviar um e-mail $email$.",
+      "placeholders": {
+         "email": {
+            "content": "$1",
+            "example": "feedback@languagetool.org"
+         }
+      }
+   },
+   "feedbackError": {
+      "description": "Error message, shown to the user when his feedback message wasn't successfully sent",
+      "message": "Desculpe. Sua mensagem não pôde ser enviada. Tente novamente mais tarde."
+   },
+   "feedbackHeadline": {
+      "description": "Headline of feedback contact form",
+      "message": "Envie o seu feedback para o LanguageTool"
+   },
+   "feedbackSenderPlaceholder": {
+      "description": "Placeholder text shown in the email text field of the feedback form",
+      "message": "Coloque o seu endereço de e-mail…"
+   },
+   "feedbackSuccess": {
+      "description": "Success message, shown to the user when his feedback message was successfully sent",
+      "message": "Obrigado! Vamos tentar responder a sua solicitação assim que possível."
+   },
+   "feedbackTextPlaceholder": {
+      "description": "Placeholder text shown in the message text field of the feedback form",
+      "message": "Coloque o seu feedback…"
+   },
+   "fr": {
+      "description": "language name",
+      "message": "Francês"
+   },
+   "gl": {
+      "description": "language name",
+      "message": "Galego"
+   },
+   "googleDocsNotSupported": {
+      "description": "Google Docs is too complex to be supported, so we show this error",
+      "message": "Desculpe, o site do Google Docs não é suportado por essa extensão. Por favor instale \u003Ca target='_blank' href='$url$'>essa extensão\u003C/a>, otimizada para o Google Docs. Após a instalação, use o menu \"Extensões\" no Google Docs para acessá-la.",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://chrome.google.com/webstore/detail/languagetool/kjcoklfhicmkbfifghaecedbohbmofkm"
+         }
+      }
+   },
+   "googleDocsPluginInstructions": {
+      "description": "Instructions on how to use the google docs plugin. See second sentence of googleDocsNotSupported on how to use it.",
+      "message": "\u003Ch3>Using LanguageTool with Google Docs\u003C/h3> In the Google Docs menu please click on \u003Cstrong>Add-ons\u003C/strong>, then \u003Cstrong>LanguageTool\u003C/strong> to check your text."
+   },
+   "googleDocsPluginTeaserButton": {
+      "description": "Text of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "Ativar LanguageTool para o Google Docs"
+   },
+   "googleDocsPluginTeaserHeadline": {
+      "description": "Headline of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "Extensão adicional requerida para a verificação da gramática"
+   },
+   "googleDocsPluginTeaserText": {
+      "description": "Text of a teaser that advertises the LanguageTool Google Docs Add-on",
+      "message": "LanguageTool funciona com o Facebook, Gmail, Twitter ou muito outros. Para o Google Docs uma extensão adicional é necessária."
+   },
+   "grammarError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Gramática e outros"
+   },
+   "havePremiumAccountDesc": {
+      "description": "Options dialog: checkbox for premium access",
+      "message": "Use minha conta em \u003Ca href='$url$'>LanguageToolPlus.com\u003C/a>:",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://languagetoolplus.com"
+         }
+      }
+   },
+   "historicPremiumErrorsButton": {
+      "description": "Button for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version.",
+      "message": "Saiba mais"
+   },
+   "historicPremiumErrorsHeadline": {
+      "description": "Introduction headline for premium teaser",
+      "message": "Você sabia?"
+   },
+   "historicPremiumErrorsText": {
+      "description": "Text for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version.",
+      "message": "Você poderia ter evitado \u003Cstrong>$count$ problemas de gramática e estilo \u003C/strong> nos últimos dias com o LanguageTool Premium",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "9"
+         }
+      }
+   },
+   "historicPremiumErrorsText2": {
+      "description": "Text for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version. Important: The count needs to be at the beginning of the sentence!",
+      "message": "\u003Cstrong>$count$ problemas de gramática e estilo\u003C/strong> poderiam ter sido evitados nos últimos dias com o LanguageTool Premium.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "9"
+         }
+      }
+   },
+   "ignoreDomainsCheckDesc": {
+      "description": "Options dialog: text for the textarea with the domains's where the check text won't run automatically in background",
+      "message": "Sem verificação automática nestes domínios (um domínio por linha):"
+   },
+   "ignoreHere": {
+      "description": "Button that allows to ignore a misspelled word or grammar error in the current text field.",
+      "message": "Ignore neste texto"
+   },
+   "ignoredRules": {
+      "description": "Text shown at the bottom of the popup to turn on turned off rules again",
+      "message": "Essas regras foram desativadas, clique em uma regra para ativa-la novamente:"
+   },
+   "ignoredRulesDesc": {
+      "description": "Shown as title of ignored rules block on options page",
+      "message": "Regras desabilitadas."
+   },
+   "incompleteResult": {
+      "description": "Message shown in dialog when validation return incomplete result",
+      "message": "Os resultados são incompletos: A verificação de texto foi interrompida devido a muitos erros."
+   },
+   "invalidUsernameOrPassword": {
+      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "message": "Erro: Por favor verifique o seu e-mail e senha nas opções de diálogo."
+   },
+   "is": {
+      "description": "language name",
+      "message": "Islandês"
+   },
+   "it": {
+      "description": "language name",
+      "message": "Italiano"
+   },
+   "ja": {
+      "description": "language name",
+      "message": "Japonês"
+   },
+   "km": {
+      "description": "language name",
+      "message": "Cambojano"
+   },
+   "language": {
+      "description": "Text shown in the popup to indicate the automatically detected language of the text checked",
+      "message": "Idioma:"
+   },
+   "languagetoolNotSupported": {
+      "description": "Languagetool.org is test example, so we show this error",
+      "message": "A extensão no funciona neste site, pois, o mesmo oferece a mesma funcionalidade"
+   },
+   "localServer": {
+      "description": "Radio button label for the local server setting, the one that needs manual set-up",
+      "message": "Servidor local (localhost) - requer o servidor LanguageTool funcionando localmente"
+   },
+   "localServerDocs": {
+      "description": "Link to documentation for installing the server locally",
+      "message": "Documentação"
+   },
+   "lt": {
+      "description": "language name",
+      "message": "Lituano"
+   },
+   "ml": {
+      "description": "language name",
+      "message": "Malaio"
+   },
+   "moreDetails": {
+      "description": "Link shown to get more details about the error somewhere on the web (not shown for every error)",
+      "message": "Mais detalhes..."
+   },
+   "motherTongueDesc": {
+      "description": "Options dialog: text next to the 'mother tongue' selection",
+      "message": "Língua nativa:"
+   },
+   "motherTongueExpl": {
+      "description": "Options dialog: more descriptive text explaining what selection of mother tongue does",
+      "message": "Defina a língua nativa se desejar ser avisado sobre falsos cognatos ao verificar textos escritos em outros idiomas."
+   },
+   "msOnlineOfficeNotSupported": {
+      "description": "Error shown when clicking the toolbar icon at Microsoft Word Online",
+      "message": "Desculpe, Microsoft Word online não é suportado por esta extensão, instale \u003Ca target='_blank' href='$url$'>esta extensão\u003C/a>.",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://appsource.microsoft.com/de-de/product/office/WA104381727"
+         }
+      }
+   },
+   "nl": {
+      "description": "language name",
+      "message": "Holandês"
+   },
+   "noErrorsFound2": {
+      "description": "Shown in popup when no errors have been found",
+      "message": "Yay, nenhum erro encontrado!"
+   },
+   "onboardingHeadline": {
+      "description": "Text shown to the user when he accepted the privacy policy and is now ready to use the add-on",
+      "message": "Sua escrita agora será melhorada."
+   },
+   "onboardingIntro": {
+      "description": "Text shown to the user when he accepted the privacy policy and is now ready to use the add-on",
+      "message": "Seu texto será agora checado na maioria dos campos enquanto você digita."
+   },
+   "onboardingNote1": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Recarregue todas as páginas abertas para ativar a extensão."
+   },
+   "onboardingNote2": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Esta extensão não funciona nos campos de texto da loja do Chrome ou em addons.mozilla.org"
+   },
+   "onboardingNote3": {
+      "description": "Installation note. Shown once the user has accepted the privacy policy.",
+      "message": "Para desativar a extensão em um site, clique no ícone LT na barra de ferramentas do navegador."
+   },
+   "otherServer": {
+      "description": "Radio button label for the server URL if neither cloud nor local server is the correct choice",
+      "message": "Outro servidor - requer o servirdor LanguageTool funcionando lá"
+   },
+   "password": {
+      "description": "Options dialog: password for languagetoolplus.com",
+      "message": "Senha:"
+   },
+   "pl": {
+      "description": "language name",
+      "message": "Polonês"
+   },
+   "popupOnboardingHeadline": {
+      "description": "Title shown on top of a list explaining how to use the LanguageTool addon",
+      "message": "Bem-vindo! Agora você pode usar o LanguageTool:"
+   },
+   "popupOnboardingStep1": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Clique em qualquer texto multilinha (e.g. no Gmail, Facebook, …)"
+   },
+   "popupOnboardingStep2": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Você vai encontrar um ícone parecido com $icon1Html$ ou $icon2Html$ no canto direito inferior.",
+      "placeholders": {
+         "icon1Html": {
+            "content": "$1",
+            "example": "\u003Cspan class='icon-1'>\u003C/span>"
+         },
+         "icon2Html": {
+            "content": "$2",
+            "example": "\u003Cspan class='icon-2'>\u003C/span>"
+         }
+      }
+   },
+   "popupOnboardingStep3": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Escreva algum texto. Os problemas na escrita serão  \u003Cu>sublinhados\u003C/u>"
+   },
+   "popupOnboardingStep4": {
+      "description": "List item explaining step by step how to use the LanguageTool addon",
+      "message": "Clique na palavra sublinhada para obter sugestões."
+   },
+   "popupOptionCaseText": {
+      "description": "Switch in toolbar popup",
+      "message": "Verificar maiúsculas e minúsculas."
+   },
+   "popupOptionCheckText": {
+      "description": "Switch in toolbar popup",
+      "message": "Verificação gramatical e ortográfica"
+   },
+   "popupOptionValidate": {
+      "description": "Validate button in toolbar popup",
+      "message": "Verifique o texto selecionado"
+   },
+   "popupPremiumHeadline": {
+      "description": "Premium hint in popup",
+      "message": "Escreva como um profissional"
+   },
+   "popupPremiumLink": {
+      "description": "Premium hint in popup",
+      "message": "Saiba mais."
+   },
+   "popupPremiumText": {
+      "description": "Premium hint in popup",
+      "message": "Atualize para o LanguageTool premium não só para encontrar mais erros de gramática e pontuação nos textos, mas também de estilo."
+   },
+   "popupSettingsHeadline": {
+      "description": "Headline for the website specific settings shown in the addon popup",
+      "message": "Configurações para este site"
+   },
+   "popupSettingsHover": {
+      "description": "Mouse hover over the settings icon",
+      "message": "Configurações mais avançadas"
+   },
+   "poweredBy": {
+      "description": "Hint that explains who the author of this add-on is",
+      "message": "Desenvolvido por \u003Cb>LanguageTool\u003C/b>"
+   },
+   "premiumErrorsButton": {
+      "description": "Button shown in premium teaser that sends the user to the pricing table. Button text should be as short as possible",
+      "message": "Saiba mais"
+   },
+   "premiumErrorsTextPlural": {
+      "description": "Hint shown in a premium teaser, telling the user that there are more issues that only the premium version found",
+      "message": "Seu texto contêm \u003Cstrong>$count$ problemas avançados de escrita\u003C/strong>",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "premiumErrorsTextSingular": {
+      "description": "Hint shown in a premium teaser, telling the user that there are more issues that only the premium version found",
+      "message": "Seu texnto contêm \u003Cstrong> um problema avançado de escrita\u003C/strong>"
+   },
+   "privacyLinkForDefaultServer": {
+      "description": "Link to privacy policy",
+      "message": "Para detalhes, veja \u003Ca href='$privacyUrl$' target='_blank'> nossa política de privacidade\u003C/a>",
+      "placeholders": {
+         "privacyUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org/privacy/"
+         }
+      }
+   },
+   "privacyNoteForDefaultServer": {
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "message": "Essa extensão verificará seu texto enviando-o para \u003Ca href='$serverUrl$' target='_blank'>$serverHost$\u003C/a>  usando uma conexão criptografada. \u003Cb>Seu texto não será armazenado\u003C/b>. Isso pode ser desativado a qualquer hora.",
+      "placeholders": {
+         "serverHost": {
+            "content": "$2",
+            "example": "LanguageTool.org"
+         },
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org"
+         }
+      }
+   },
+   "privacyNoteForOtherServer": {
+      "description": "Shown on first start of extension to make user aware of privacy issues when using some other than the default server",
+      "message": "Essa extensão verificará seu texto enviando-o para $serverUrl$. Para retornar ao servidor padrão, por favor visite a página de configurações da extensão.",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "http://localhost:8081/"
+         }
+      }
+   },
+   "privacyNoteSlogan": {
+      "description": "Slogan after 'LanguageTool' shown in privacy dialog at first start",
+      "message": "Software de revisão"
+   },
+   "privacyPolicy": {
+      "description": "Options dialog: Link to privacy policy",
+      "message": "Política de privacidade"
+   },
+   "pt": {
+      "description": "language name",
+      "message": "Português"
+   },
+   "pt_AO": {
+      "description": "language name",
+      "message": "Português (Angola pré AO)"
+   },
+   "pt_BR": {
+      "description": "language name",
+      "message": "Português (Brasil pós AO)"
+   },
+   "pt_CV": {
+      "description": "language name",
+      "message": "Português (Cabo Verde)"
+   },
+   "pt_MZ": {
+      "description": "language name",
+      "message": "Português (Moçambique pré AO)"
+   },
+   "pt_PT": {
+      "description": "language name (posAO = post reform)",
+      "message": "Português (Portugal pós AO)"
+   },
+   "pt_PT_post_reform": {
+      "description": "language name (posAO = post reform)",
+      "message": "Português (Portugal, pós-reforma)"
+   },
+   "pt_PT_pre_reform": {
+      "description": "language name (preAO = pre reform)",
+      "message": "Português (Portugal, pré-reforma)"
+   },
+   "punctuationError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Pontuação"
+   },
+   "ratingHeadline": {
+      "description": "Headline shown in the teaser that asks user to rate the add-on",
+      "message": "Você gostou do nosso verificador?"
+   },
+   "ratingText": {
+      "description": "Text shown in the teaser that asks user to rate the add-on",
+      "message": "Nos dê seu feedback"
+   },
+   "ratingThankYou": {
+      "description": "Message shown to the user after he rated",
+      "message": "Obrigado."
+   },
+   "ratingUnhappyQuestion": {
+      "description": "If user gives a negative rating, we ask the user why he's unhappy",
+      "message": "Por favor nos diga porquê você não está feliz"
+   },
+   "reportAnIssue": {
+      "description": "Link text for sending feedback to languagetool.org",
+      "message": "Reportar um problema"
+   },
+   "reviewChromeHeadline": {
+      "description": "Headline shown in the teaser that asks user to give a review in the Chrome Store",
+      "message": "Você nos daria uma avaliação na loja do Chrome?"
+   },
+   "reviewFirefoxHeadline": {
+      "description": "Headline shown in the teaser that asks user to give a review in the Firefox Add-On Store",
+      "message": "Você nos daria uma avaliação na loja do Firefox?"
+   },
+   "reviewLink": {
+      "description": "Call-to-action link (should be kept short)",
+      "message": "Avalie agora"
+   },
+   "ro": {
+      "description": "language name",
+      "message": "Romeno"
+   },
+   "ru": {
+      "description": "language name",
+      "message": "Russo"
+   },
+   "save": {
+      "description": "Options dialog: save button",
+      "message": "Salvar"
+   },
+   "sendFeedback": {
+      "description": "Link text for sending feedback to languagetool.org",
+      "message": "Enviar feedback"
+   },
+   "serverNotAvailable": {
+      "description": "Warning shown to the user that the local server isn't available",
+      "message": "Servidor local não disponível"
+   },
+   "serverText": {
+      "description": "Options dialog: description of the text field for the API server URL",
+      "message": "URL do servidor de API do LanguageTool:"
+   },
+   "serverUrlIsInvalid": {
+      "description": "Options dialog: error shown if server URL is not valid, e.g. doesn't start with http or https",
+      "message": "Esta URL não é válida"
+   },
+   "settingsAccountHeadline": {
+      "description": "Headline for the account login section on the settings page",
+      "message": "Conta"
+   },
+   "settingsAddDomainHint": {
+      "description": "Text shown when the entered domain doesn't exist yet in the list of ignored domains",
+      "message": "Este domínio ainda não foi adicionado. Pressione enter para adicioná-lo"
+   },
+   "settingsAddOrFilterDomains": {
+      "description": "Placeholder text for input field where user can enter web domains where the addon shouldn't run on",
+      "message": "Adicionar ou encontrar domínio…"
+   },
+   "settingsAddOrFilterWords": {
+      "description": "Placeholder text for input field where user can enter new words for his dictionary (he can use the input field also for searching in his dictionary)",
+      "message": "Adicionar ou encontra palavra…"
+   },
+   "settingsAddWordHint": {
+      "description": "Text shown when the entered word doesn't exist yet in the personal dictionary",
+      "message": "Essa palavra não existe no seu dicionário. Pressione enter para adicioná-la"
+   },
+   "settingsAreYouSure": {
+      "description": "Confirmation message for when the user wants to clear or delete something.",
+      "message": "Você tem certeza? Não há volta."
+   },
+   "settingsClearAll": {
+      "description": "Button text that deletes all items in a list",
+      "message": "Limpar tudo"
+   },
+   "settingsCopyDictionary": {
+      "description": "Button text that copy all words from personal dictionary to clipboard",
+      "message": "Copiar para a área de transferência"
+   },
+   "settingsCopyDictionarySuccessful": {
+      "description": "Message shown when dictionary copied to clipboard successful.",
+      "message": "Copiado para a área de transferência"
+   },
+   "settingsDictionaryHeadline": {
+      "description": "Headline for the personal dictionary section on the settings page",
+      "message": "Dicionário pessoal"
+   },
+   "settingsDomainInvalid": {
+      "description": "Error message shown when the domain the user entered is not valid or is already in the list",
+      "message": "Por favor, coloque um domínio válido que ainda não foi adicionado."
+   },
+   "settingsEmptyDictionary": {
+      "description": "Text shown when personal dictionary doesn't contain any words (yet)",
+      "message": "O seu dicionário pessoal é atualmente vazio"
+   },
+   "settingsEmptyDomainList": {
+      "description": "Text shown when disabled-domain list doesn't contain any domains (yet)",
+      "message": "Você ainda não desativou nenhum site ainda"
+   },
+   "settingsEmptyIgnoredRules": {
+      "description": "Text shown when there are no ignored rules (yet)",
+      "message": "Você ainda não ignorou nenhuma regra"
+   },
+   "settingsEnableAllRules": {
+      "description": "Button text that enables all grammar rules that were previously disabled",
+      "message": "Ativar tudo"
+   },
+   "settingsEnableDomain": {
+      "description": "Button for removing a domain from the list of disabled-domains",
+      "message": "Ativar domínio"
+   },
+   "settingsExperimentalSuccess": {
+      "description": "Success message shown when the user saves the experimental settings",
+      "message": "Suas configurações foram salvas com sucesso."
+   },
+   "settingsForgotPasswordLink": {
+      "description": "Placeholder text for password text field",
+      "message": "Esqueceu a senha?"
+   },
+   "settingsHeadline": {
+      "description": "Headline for the settings page",
+      "message": "Configurações"
+   },
+   "settingsLoggedInAs": {
+      "description": "Text shown for users who have logged in with their LanguageTool account",
+      "message": "Você entrou como $email$.",
+      "placeholders": {
+         "email": {
+            "content": "$1",
+            "example": "\u003Cstrong>foo@foobar.com\u003C/strong>"
+         }
+      }
+   },
+   "settingsLoginButton": {
+      "description": "Button for logging in with email and password",
+      "message": "Entrar"
+   },
+   "settingsLoginError": {
+      "description": "Error message shown when the user credentials (email and password) are wrong",
+      "message": "Você não pôde conectar-se. Por favor verifique o seu e-mail e senha."
+   },
+   "settingsLoginSuccess": {
+      "description": "Success message shown when the user logged in",
+      "message": "Agora você está conectado"
+   },
+   "settingsLogoutButton": {
+      "description": "Button for logging out",
+      "message": "Sair"
+   },
+   "settingsLogoutSuccess": {
+      "description": "Success message shown when the user logged out",
+      "message": "Agora você está desconectado"
+   },
+   "settingsPasswordPlaceholder": {
+      "description": "Placeholder text for password text field",
+      "message": "Senha"
+   },
+   "settingsPremiumButton": {
+      "description": "Button text for a teaser on the settings page promoting the premium functionality",
+      "message": "Descubra o LanguageTool premium"
+   },
+   "settingsPremiumFeaturesActivated": {
+      "description": "Text shown for users who have logged in with their LanguageTool account and who have a paid subscription",
+      "message": "Todos os \u003Cstrong>recursos premium\u003C/strong> estão ativados."
+   },
+   "settingsPremiumHeadline": {
+      "description": "Headline for a teaser on the settings page promoting the premium functionality",
+      "message": "Atualize o seu jogo de escrita"
+   },
+   "settingsPremiumText": {
+      "description": "Text for a teaser on the settings page promoting the premium functionality",
+      "message": "Encontre problemas  avançados de gramática, estilo e pontuação em até 40,000 caracteres."
+   },
+   "settingsUnknownError": {
+      "description": "Generic error message",
+      "message": "Um erro inesperado ocorreu"
+   },
+   "siteCannotBeSupported": {
+      "description": "Some sites are too complex and can probably never be supported, so we show this error",
+      "message": "Desculpe, este site usa tecnologia para edição de texto que não suportamos. Por favor, entre em contato com os proprietários e peça-lhes para integrarem o LanguageTool."
+   },
+   "sk": {
+      "description": "language name",
+      "message": "Eslovaco"
+   },
+   "sl": {
+      "description": "language name",
+      "message": "Esloveno"
+   },
+   "spellingError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Ortografia"
+   },
+   "sr": {
+      "description": "language name",
+      "message": "Sérvio"
+   },
+   "sr_BA": {
+      "description": "language name",
+      "message": "Sérvio (Bósnia)"
+   },
+   "sr_HR": {
+      "description": "language name",
+      "message": "Sérvio (Croácia)"
+   },
+   "sr_ME": {
+      "description": "language name",
+      "message": "Sérvio (Montenegro)"
+   },
+   "sr_RS": {
+      "description": "language name",
+      "message": "Sérvio (Sérvia)"
+   },
+   "statusIconEnableLT": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in disabled state",
+      "message": "Ativar LanguageTool - Verificações ortográficas e gramaticais"
+   },
+   "statusIconError": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in error state",
+      "message": "Erro"
+   },
+   "statusIconMoreErrors": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in incomplete result state",
+      "message": "Os resultados são incompletos: A verificação do texto foi parada devido a muitos erros."
+   },
+   "statusIconPermissionRequired": {
+      "description": "Shown when hover over the status icon (not the toolbar one) in permission required state (i.e. user has not confirmed privacy dialog on first start)",
+      "message": "Não é possível verificar o texto — confirme a política de privacidade primeiro."
+   },
+   "statusIconReload": {
+      "description": "Shown when hovering over the status icon (not the toolbar one) in reload needed state",
+      "message": "A extensão foi atualizada. Por favor recarregue a página para ativar a verificação ortográfica e gramatical."
+   },
+   "statusIconToolTip": {
+      "description": "Shown when hovering over the status icon (not the toolbar one)",
+      "message": "LanguageTool - Verificação ortográfica e gramatical"
+   },
+   "suggestionError": {
+      "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
+      "message": "Estilo"
+   },
+   "sv": {
+      "description": "language name",
+      "message": "Sueco"
+   },
+   "ta": {
+      "description": "language name",
+      "message": "Tâmil"
+   },
+   "textTooLong": {
+      "description": "Message shown to the user when his text is too large to be checked",
+      "message": "Desculpe, este texto é muito longo para ser verificado"
+   },
+   "timeoutError": {
+      "description": "Error message shown if API server doesn't respond timely",
+      "message": "Tempo esgotado do servidor - por favor tente novamente mais tarde ($serverUrl$)",
+      "placeholders": {
+         "serverUrl": {
+            "content": "$1",
+            "example": "https://languagetool.org:8081/"
+         }
+      }
+   },
+   "tl": {
+      "description": "language name",
+      "message": "Tágalo"
+   },
+   "tooManyErrors": {
+      "description": "Message shown to the user when his text contains too many errors",
+      "message": "Este texto parece conter muitos erros. Você tem certeza que o idioma correto está selecionado?"
+   },
+   "tooManyRequests": {
+      "description": "Message shown to the user when they have sent too many and/or large requests",
+      "message": "O limite de solicitações foi excedido - por favor aguarde um minuto e o LanguageTool deverá estar disponível novamente."
+   },
+   "tryAgain": {
+      "description": "Link the user can click on when they got a warning that the local server isn't available",
+      "message": "Tente de novo"
+   },
+   "turnOffRule": {
+      "description": "Link shown in the popup to turn off, i.e. ignore, a rule (the rule - not just this match)",
+      "message": "Desativar regra em qualquer lugar"
+   },
+   "turnOnHint": {
+      "description": "Message in hint popup",
+      "message": "Você pode ativar esta extensão novamente aqui"
+   },
+   "uk": {
+      "description": "language name",
+      "message": "Ucraniano"
+   },
+   "unknownError": {
+      "description": "Message shown to the user when his text is too large to be checked",
+      "message": "Desculpe, alguma coisa deu errado na verificação do seu texto"
+   },
+   "username": {
+      "description": "Options dialog: user name for languagetoolplus.com",
+      "message": "E-mail:"
+   },
+   "validatorHasMistakesHeadlinePlural": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "$count$ erros de escrita encontrados.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "validatorHasMistakesHeadlineSingular": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "Um erro de escrita encontrado."
+   },
+   "validatorHasMistakesText": {
+      "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
+      "message": "Clique nas palavras destacadas para corrigi-las."
+   },
+   "validatorHasPremiumErrorsButton": {
+      "description": "Button that sends the user to the upgrade/pricing page",
+      "message": "Saiba mais"
+   },
+   "validatorHasPremiumErrorsHeadlinePlural": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Seu texto contêm $count$ problemas avançados de escrita",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "7"
+         }
+      }
+   },
+   "validatorHasPremiumErrorsHeadlineSingular": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Seu texto contêm um problema avançado de escrita"
+   },
+   "validatorHasPremiumErrorsText": {
+      "description": "Text shown when the text contains writing issues that are only found in the premium version",
+      "message": "Atualize para o LanguageTool premium para encontrar mais problemas de gramática, estilo e pontuação"
+   },
+   "validatorLoadingHint": {
+      "description": "Loading status, shown when text is currently being checked",
+      "message": "Verificando texto…"
+   },
+   "validatorNoMistakesHeadline": {
+      "description": "Text displayed on top of text when the text doesn't contain any errors",
+      "message": "Parabéns, nenhum erro encontrado!"
+   },
+   "validatorNoTextStatus": {
+      "description": "Text shown above validator text field when it doesn't have enough characters to be checked",
+      "message": "Escreva ou cole o seu texto para checá-lo"
+   },
+   "validatorPlaceholder": {
+      "description": "Text shown in text field when it's empty",
+      "message": "Por favor coloque ou cole seu texto aqui…"
+   },
+   "validatorPremiumButton": {
+      "description": "Label for a button. Clicking it will send the user to the website where he can buy the premium version",
+      "message": "Atualização"
+   },
+   "validatorPremiumHeadline": {
+      "description": "Title for a bullet point list of features the premium version has",
+      "message": "Encontre mais erros de escrita e se torne um escritor melhor."
+   },
+   "validatorPremiumReason1": {
+      "description": "Reason for buying the premium version",
+      "message": "Gramática mais sofisticada, pontuação e verificação de estilo."
+   },
+   "validatorPremiumReason2": {
+      "description": "Reason for buying the premium version",
+      "message": "Verifique textos mais longos (até 40,000 caracteres)"
+   },
+   "validatorPremiumReason3": {
+      "description": "Reason for buying the premium version",
+      "message": "Detecção automática para números inválidos (e.g. IBAN, ISBN, …)"
+   },
+   "validatorPremiumReason4": {
+      "description": "Reason for buying the premium version",
+      "message": "Extensão para Microsoft Office."
+   },
+   "variantCaDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Interpretar catalão como:"
+   },
+   "variantDeDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Interpretar Alemão como:"
+   },
+   "variantEnDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Interpretar Inglês como:"
+   },
+   "variantPtDesc": {
+      "description": "Options dialog: set the language variant",
+      "message": "Interpretar português como:"
+   },
+   "webstoreSiteNotSupported": {
+      "description": "Error shown when Chrome extension is used on https://chrome.google.com/webstore, which doesn't work for technical reasons",
+      "message": "Desculpe, mas o Google Chrome impede que extensões acessem a Chrome Web Store. Estranho, não é mesmo?"
+   },
+   "zh": {
+      "description": "language name",
+      "message": "Chinês"
+   }
+}

@@ -1,0 +1,6 @@
+*.iml
+*.kate-swp
+.lgn
+locale~
+dist/*
+.DS_Store
