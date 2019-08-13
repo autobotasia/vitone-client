@@ -59,7 +59,7 @@
    },
    "appStoreDesc70": {
       "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
-      "message": "Twoja prywatność jest dla nas ważna: Domyślnie nasze rozszerzenie sprawdzi Twój tekst, wysyłając go na adres https://languagetool.org za pośrednictwem bezpiecznego, szyfrowanego połączenia. Do korzystania z tego rozszerzenia nie jest wymagane konto. Nie przechowujemy Twojego adresu IP. Więcej informacji na temat naszej polityki prywatności można znaleźć pod adresem https://languagetool.org/privacy/."
+      "message": "Twoja prywatność jest dla nas ważna: Domyślnie nasze rozszerzenie sprawdzi Twój tekst, wysyłając go na adres https://autobot.asia za pośrednictwem bezpiecznego, szyfrowanego połączenia. Do korzystania z tego rozszerzenia nie jest wymagane konto. Nie przechowujemy Twojego adresu IP. Więcej informacji na temat naszej polityki prywatności można znaleźć pod adresem https://autobot.asia/privacy/."
    },
    "appStoreDesc80": {
       "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -99,7 +99,7 @@
    },
    "cloudServer": {
       "description": "Radio button label for the cloud server setting (the default)",
-      "message": "Serwer w chmurze (languagetool.org)"
+      "message": "Serwer w chmurze (autobot.asia)"
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
@@ -107,7 +107,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://api.languagetool.org/v2"
+            "example": "https://api.autobot.asia/v2"
          }
       }
    },
@@ -329,7 +329,7 @@
       "placeholders": {
          "email": {
             "content": "$1",
-            "example": "feedback@languagetool.org"
+            "example": "feedback@autobot.asia"
          }
       }
    },
@@ -393,11 +393,11 @@
    },
    "havePremiumAccountDesc": {
       "description": "Options dialog: checkbox for premium access",
-      "message": "Wykorzystaj moje konto w \u003Ca href='$url$'>LanguageToolPlus.com\u003C/a>",
+      "message": "Wykorzystaj moje konto w \u003Ca href='$url$'>autobot.asia\u003C/a>",
       "placeholders": {
          "url": {
             "content": "$1",
-            "example": "https://languagetoolplus.com"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -450,7 +450,7 @@
       "message": "Wyniki są niekompletne: Kontrola tekstu została zatrzymana z powodu zbyt wielu błędów."
    },
    "invalidUsernameOrPassword": {
-      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "description": "Message shown when user uses their autobot.asia account but could not be authenticated",
       "message": "Błąd: Sprawdź swój adres e-mail i hasło w oknie dialogowym opcji"
    },
    "is": {
@@ -474,7 +474,7 @@
       "message": "Język:"
    },
    "languagetoolNotSupported": {
-      "description": "Languagetool.org is test example, so we show this error",
+      "description": "autobot.asia is test example, so we show this error",
       "message": "Rozszerzenie nie działa na tej stronie internetowej, ponieważ strona oferuje taką samą funkcjonalność."
    },
    "localServer": {
@@ -548,7 +548,7 @@
       "message": "Inny serwer - wymaga działającego serwera LanguageToo"
    },
    "password": {
-      "description": "Options dialog: password for languagetoolplus.com",
+      "description": "Options dialog: password for autobot.asia",
       "message": "Hasło:"
    },
    "pl": {
@@ -645,21 +645,21 @@
       "placeholders": {
          "privacyUrl": {
             "content": "$1",
-            "example": "https://languagetool.org/privacy/"
+            "example": "https://autobot.asia/privacy/"
          }
       }
    },
    "privacyNoteForDefaultServer": {
-      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on autobot.asia",
       "message": "To rozszerzenie sprawdzi Twój tekst, wysyłając go do \u003Ca href='$serverUrl$' target='_blank'>$serverHost$\u003C/a> za pomocą zaszyfrowanego połączenia. \u003Cb>Twój tekst nie będzie nigdzie zapisany.\u003C/b> Sprawdzanie można wyłączyć w każdym momencie.",
       "placeholders": {
          "serverHost": {
             "content": "$2",
-            "example": "LanguageTool.org"
+            "example": "autobot.asia"
          },
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -734,7 +734,7 @@
       "message": "Proszę nam powiedzieć, dlaczego jesteś nezadowolony/-a"
    },
    "reportAnIssue": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Zgłoś problem"
    },
    "reviewChromeHeadline": {
@@ -762,7 +762,7 @@
       "message": "Zapisz"
    },
    "sendFeedback": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Wyślij opinię"
    },
    "serverNotAvailable": {
@@ -989,7 +989,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org:8081/"
+            "example": "https://autobot.asia:8081/"
          }
       }
    },
@@ -1026,7 +1026,7 @@
       "message": "Przepraszamy, coś poszło nie tak podczas sprawdzania tekstu."
    },
    "username": {
-      "description": "Options dialog: user name for languagetoolplus.com",
+      "description": "Options dialog: user name for autobot.asia",
       "message": "E-mail:"
    },
    "validatorHasMistakesHeadlinePlural": {

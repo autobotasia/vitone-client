@@ -59,7 +59,7 @@
    },
    "appStoreDesc70": {
       "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
-      "message": "Ваша приватность важна для нас: по умолчанию это расширение будет проверять ваш текст, отправляя его на адрес https://languagetool.org через безопасное зашифрованное соединение. Для использования этого расширения не требуется учётная запись. Мы не запоминаем ваш IP-адрес. Смотрите https://languagetool.org/privacy/ с описанием нашей политики конфиденциальности."
+      "message": "Ваша приватность важна для нас: по умолчанию это расширение будет проверять ваш текст, отправляя его на адрес https://autobot.asia через безопасное зашифрованное соединение. Для использования этого расширения не требуется учётная запись. Мы не запоминаем ваш IP-адрес. Смотрите https://autobot.asia/privacy/ с описанием нашей политики конфиденциальности."
    },
    "appStoreDesc80": {
       "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -99,7 +99,7 @@
    },
    "cloudServer": {
       "description": "Radio button label for the cloud server setting (the default)",
-      "message": "Облачный сервер (languagetool.org)"
+      "message": "Облачный сервер (autobot.asia)"
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
@@ -107,7 +107,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://api.languagetool.org/v2"
+            "example": "https://api.autobot.asia/v2"
          }
       }
    },
@@ -329,7 +329,7 @@
       "placeholders": {
          "email": {
             "content": "$1",
-            "example": "feedback@languagetool.org"
+            "example": "feedback@autobot.asia"
          }
       }
    },
@@ -393,11 +393,11 @@
    },
    "havePremiumAccountDesc": {
       "description": "Options dialog: checkbox for premium access",
-      "message": "Использовать мою учётную запись на \u003Ca href='$url$'>LanguageToolPlus.com\u003C/a>:",
+      "message": "Использовать мою учётную запись на \u003Ca href='$url$'>autobot.asia\u003C/a>:",
       "placeholders": {
          "url": {
             "content": "$1",
-            "example": "https://languagetoolplus.com"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -450,7 +450,7 @@
       "message": "Results are incomplete: Text checking was stopped due to too many errors."
    },
    "invalidUsernameOrPassword": {
-      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "description": "Message shown when user uses their autobot.asia account but could not be authenticated",
       "message": "Ошибка: проверьте ваш email и пароль в окне настроек"
    },
    "is": {
@@ -474,7 +474,7 @@
       "message": "Язык:"
    },
    "languagetoolNotSupported": {
-      "description": "Languagetool.org is test example, so we show this error",
+      "description": "autobot.asia is test example, so we show this error",
       "message": "Расширение не работает на данном сайте, так как сайт предлагает схожий функционал"
    },
    "localServer": {
@@ -548,7 +548,7 @@
       "message": "Внешний сервер - требуется, чтобы на нем был запущен сервер LanguageTool"
    },
    "password": {
-      "description": "Options dialog: password for languagetoolplus.com",
+      "description": "Options dialog: password for autobot.asia",
       "message": "Пароль:"
    },
    "pl": {
@@ -645,21 +645,21 @@
       "placeholders": {
          "privacyUrl": {
             "content": "$1",
-            "example": "https://languagetool.org/privacy/"
+            "example": "https://autobot.asia/privacy/"
          }
       }
    },
    "privacyNoteForDefaultServer": {
-      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on autobot.asia",
       "message": "Это расширение будет проверять текст отправляя его на \u003Ca href='$serverUrl$' target='_blank'>$serverUrl$\u003C/a> через зашифрованное соединение. \u003Cb>Ваш текст не будет сохраняться.\u003C/b> Проверка может быть отключена в любое время.",
       "placeholders": {
          "serverHost": {
             "content": "$2",
-            "example": "LanguageTool.org"
+            "example": "autobot.asia"
          },
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -734,7 +734,7 @@
       "message": "Пожалуйста, расскажите нам, почему вы недовольны расширением"
    },
    "reportAnIssue": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Сообщить о проблеме"
    },
    "reviewChromeHeadline": {
@@ -762,7 +762,7 @@
       "message": "Сохранить"
    },
    "sendFeedback": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Отправить отзыв"
    },
    "serverNotAvailable": {
@@ -989,7 +989,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org:8081/"
+            "example": "https://autobot.asia:8081/"
          }
       }
    },
@@ -1026,7 +1026,7 @@
       "message": "Извините, но во время проверки текста что-то пошло не так."
    },
    "username": {
-      "description": "Options dialog: user name for languagetoolplus.com",
+      "description": "Options dialog: user name for autobot.asia",
       "message": "E-Mail:"
    },
    "validatorHasMistakesHeadlinePlural": {

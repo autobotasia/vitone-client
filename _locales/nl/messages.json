@@ -59,7 +59,7 @@
    },
    "appStoreDesc70": {
       "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
-      "message": "Uw privacy is belangrijk voor ons: Standaard stuurt LT uw tekst naar https://languagetool.org over een beveiligde verbinding. Er is geen account nodig. We slaan uw IP-adres niet op. Zie https://languagetool.org/privacy/ voor details over ons privacybeleid."
+      "message": "Uw privacy is belangrijk voor ons: Standaard stuurt LT uw tekst naar https://autobot.asia over een beveiligde verbinding. Er is geen account nodig. We slaan uw IP-adres niet op. Zie https://autobot.asia/privacy/ voor details over ons privacybeleid."
    },
    "appStoreDesc80": {
       "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -99,7 +99,7 @@
    },
    "cloudServer": {
       "description": "Radio button label for the cloud server setting (the default)",
-      "message": "Cloudserver (languagetool.org)"
+      "message": "Cloudserver (autobot.asia)"
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
@@ -107,7 +107,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://api.languagetool.org/v2"
+            "example": "https://api.autobot.asia/v2"
          }
       }
    },
@@ -329,7 +329,7 @@
       "placeholders": {
          "email": {
             "content": "$1",
-            "example": "feedback@languagetool.org"
+            "example": "feedback@autobot.asia"
          }
       }
    },
@@ -393,11 +393,11 @@
    },
    "havePremiumAccountDesc": {
       "description": "Options dialog: checkbox for premium access",
-      "message": "Gebruik mijn account bij \u003Ca href='$url$'>languagetoolplus.com\u003C/a>",
+      "message": "Gebruik mijn account bij \u003Ca href='$url$'>autobot.asia\u003C/a>",
       "placeholders": {
          "url": {
             "content": "$1",
-            "example": "https://languagetoolplus.com"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -450,7 +450,7 @@
       "message": "Resultaat is incompleet; controle is gestopt vanwege te veel fouten."
    },
    "invalidUsernameOrPassword": {
-      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "description": "Message shown when user uses their autobot.asia account but could not be authenticated",
       "message": "Fout: Controleer s.v.p. e-mailadres en wachtwoord in het optiesscherm"
    },
    "is": {
@@ -474,7 +474,7 @@
       "message": "Taal:"
    },
    "languagetoolNotSupported": {
-      "description": "Languagetool.org is test example, so we show this error",
+      "description": "autobot.asia is test example, so we show this error",
       "message": "De extensie werkt niet op deze website, omdat de website hetzelfde doet."
    },
    "localServer": {
@@ -548,7 +548,7 @@
       "message": "Andere server - LanguageTool moet ergens anders draaien"
    },
    "password": {
-      "description": "Options dialog: password for languagetoolplus.com",
+      "description": "Options dialog: password for autobot.asia",
       "message": "Wachtwoord:"
    },
    "pl": {
@@ -645,21 +645,21 @@
       "placeholders": {
          "privacyUrl": {
             "content": "$1",
-            "example": "https://languagetool.org/privacy/"
+            "example": "https://autobot.asia/privacy/"
          }
       }
    },
    "privacyNoteForDefaultServer": {
-      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on autobot.asia",
       "message": "Deze extensie controleert je tekst door die over een versleutelde verbinding te versturen naar \u003Ca href='$serverHost$' target='_blank'>$serverUrl$\u003C/a>. \u003Cb>De tekst slaan we niet op.\u003C/b> De controles kunnen meteen worden beëindigd als u dat wenst.",
       "placeholders": {
          "serverHost": {
             "content": "$2",
-            "example": "LanguageTool.org"
+            "example": "autobot.asia"
          },
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -734,7 +734,7 @@
       "message": "Vertel ons s.v.p. waarom u niet tevreden bent."
    },
    "reportAnIssue": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Stuur feedback"
    },
    "reviewChromeHeadline": {
@@ -762,7 +762,7 @@
       "message": "Bewaar"
    },
    "sendFeedback": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Stuur feedback"
    },
    "serverNotAvailable": {
@@ -989,7 +989,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org:8081/"
+            "example": "https://autobot.asia:8081/"
          }
       }
    },
@@ -1026,7 +1026,7 @@
       "message": "Sorry, er ging iets mis bij het controleren van de tekst."
    },
    "username": {
-      "description": "Options dialog: user name for languagetoolplus.com",
+      "description": "Options dialog: user name for autobot.asia",
       "message": "E-mail:"
    },
    "validatorHasMistakesHeadlinePlural": {

@@ -59,7 +59,7 @@
    },
    "appStoreDesc70": {
       "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
-      "message": "La vostra privacitat és important per a nosaltres. Per defecte, aquesta extensió revisa els textos enviant-lso a https://languagetool.org en una connexió xifrada segura. No cal tenir un compte per a utilitzar l'extensió. No desem la vostra adreça IP. Vegeu la nostra política de privacitat en https://languagetool.org/privacy/."
+      "message": "La vostra privacitat és important per a nosaltres. Per defecte, aquesta extensió revisa els textos enviant-lso a https://autobot.asia en una connexió xifrada segura. No cal tenir un compte per a utilitzar l'extensió. No desem la vostra adreça IP. Vegeu la nostra política de privacitat en https://autobot.asia/privacy/."
    },
    "appStoreDesc80": {
       "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -99,7 +99,7 @@
    },
    "cloudServer": {
       "description": "Radio button label for the cloud server setting (the default)",
-      "message": "Servidor al núvol (languagetool.org)"
+      "message": "Servidor al núvol (autobot.asia)"
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
@@ -107,7 +107,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://api.languagetool.org/v2"
+            "example": "https://api.autobot.asia/v2"
          }
       }
    },
@@ -329,7 +329,7 @@
       "placeholders": {
          "email": {
             "content": "$1",
-            "example": "feedback@languagetool.org"
+            "example": "feedback@autobot.asia"
          }
       }
    },
@@ -393,11 +393,11 @@
    },
    "havePremiumAccountDesc": {
       "description": "Options dialog: checkbox for premium access",
-      "message": "Utilitza el meu compte a \u003Ca href='$url$'>languagetoolplus.com\u003C/a>:",
+      "message": "Utilitza el meu compte a \u003Ca href='$url$'>autobot.asia\u003C/a>:",
       "placeholders": {
          "url": {
             "content": "$1",
-            "example": "https://languagetoolplus.com"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -450,7 +450,7 @@
       "message": "Els resultats són incomplets: la comprovació del text s'ha aturat a causa d'haver-hi massa errors."
    },
    "invalidUsernameOrPassword": {
-      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "description": "Message shown when user uses their autobot.asia account but could not be authenticated",
       "message": "Error: Si us plau, comproveu el vostre correu electrònic i la contrasenya al quadre d'opcions de diàleg"
    },
    "is": {
@@ -474,7 +474,7 @@
       "message": "Idioma:"
    },
    "languagetoolNotSupported": {
-      "description": "Languagetool.org is test example, so we show this error",
+      "description": "autobot.asia is test example, so we show this error",
       "message": "No suportat per LanguageTool"
    },
    "localServer": {
@@ -548,7 +548,7 @@
       "message": "Un altre servidor: requereix un servidor LanguageTool que s'executarà allà"
    },
    "password": {
-      "description": "Options dialog: password for languagetoolplus.com",
+      "description": "Options dialog: password for autobot.asia",
       "message": "Contrasenya:"
    },
    "pl": {
@@ -645,21 +645,21 @@
       "placeholders": {
          "privacyUrl": {
             "content": "$1",
-            "example": "https://languagetool.org/privacy/"
+            "example": "https://autobot.asia/privacy/"
          }
       }
    },
    "privacyNoteForDefaultServer": {
-      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on autobot.asia",
       "message": "Aquesta extensió comprovarà el text enviant-lo a \u003Ca href='$serverUrl$'target='_blank'>$serverHost$\u003C/a> durant una connexió xifrada. \u003Cb>El vostre text no s’emmagatzemarà.\u003C/b>",
       "placeholders": {
          "serverHost": {
             "content": "$2",
-            "example": "LanguageTool.org"
+            "example": "autobot.asia"
          },
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -734,7 +734,7 @@
       "message": "Si us plau, explica'ns per què no estàs satisfet"
    },
    "reportAnIssue": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Informeu d'un problema"
    },
    "reviewChromeHeadline": {
@@ -762,7 +762,7 @@
       "message": "Desa"
    },
    "sendFeedback": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Enviar comentaris"
    },
    "serverNotAvailable": {
@@ -989,7 +989,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org:8081/"
+            "example": "https://autobot.asia:8081/"
          }
       }
    },
@@ -1026,7 +1026,7 @@
       "message": "S'ha produït un error en comprovar el text."
    },
    "username": {
-      "description": "Options dialog: user name for languagetoolplus.com",
+      "description": "Options dialog: user name for autobot.asia",
       "message": "Adreça electrònica:"
    },
    "validatorHasMistakesHeadlinePlural": {

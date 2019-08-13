@@ -14,7 +14,7 @@ function localize() {
     translateSection(document.documentElement), translateElement("#havePremiumAccountDesc", {
         isHTML: !0,
         key: "havePremiumAccountDesc",
-        interpolations: ["https://languagetoolplus.com/webextension/upgrade?pk_campaign=addon2-options"]
+        interpolations: ["https://autobot.asia/webextension/upgrade?pk_campaign=addon2-options"]
     })
 }
 
@@ -319,7 +319,7 @@ function enableAllIgnoredRules() {
 }
 
 function showPrivacyLink() {
-    document.getElementById("privacyPolicy").innerHTML = "<a target='_blank' href='https://languagetool.org/privacy/'>" + browser.i18n.getMessage("privacyPolicy") + "</a>"
+    document.getElementById("privacyPolicy").innerHTML = "<a target='_blank' href='https://autobot.asia/privacy/'>" + browser.i18n.getMessage("privacyPolicy") + "</a>"
 }
 
 function onEnableRuleButtonClick(e) {

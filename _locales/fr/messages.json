@@ -59,7 +59,7 @@
    },
    "appStoreDesc70": {
       "description": "Description paragraph 6 in Google Chrome Web Store (does not appear in the extension itself)",
-      "message": "Le respect de votre vie privée est important pour nous : par défaut cette extension vérifie votre texte en l'envoyant sur le site https://languagetool.org avec une connexion chiffrée sécurisée. Cette extension ne nécessite aucune création de compte. Nous ne stockons pas les textes que vous vérifiez. Nous ne stockons pas votre adresse IP. Notre politique sur la vie privée est disponible à cette adresse https://languagetool.org/privacy/."
+      "message": "Le respect de votre vie privée est important pour nous : par défaut cette extension vérifie votre texte en l'envoyant sur le site https://autobot.asia avec une connexion chiffrée sécurisée. Cette extension ne nécessite aucune création de compte. Nous ne stockons pas les textes que vous vérifiez. Nous ne stockons pas votre adresse IP. Notre politique sur la vie privée est disponible à cette adresse https://autobot.asia/privacy/."
    },
    "appStoreDesc80": {
       "description": "Description paragraph 7 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -99,7 +99,7 @@
    },
    "cloudServer": {
       "description": "Radio button label for the cloud server setting (the default)",
-      "message": "Serveur cloud (languagetool.org)"
+      "message": "Serveur cloud (autobot.asia)"
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
@@ -107,7 +107,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://api.languagetool.org/v2"
+            "example": "https://api.autobot.asia/v2"
          }
       }
    },
@@ -329,7 +329,7 @@
       "placeholders": {
          "email": {
             "content": "$1",
-            "example": "feedback@languagetool.org"
+            "example": "feedback@autobot.asia"
          }
       }
    },
@@ -393,11 +393,11 @@
    },
    "havePremiumAccountDesc": {
       "description": "Options dialog: checkbox for premium access",
-      "message": "Utiliser mon compte sur \u003Ca href='$url$'>LanguageToolPlus.com\u003C/a> :",
+      "message": "Utiliser mon compte sur \u003Ca href='$url$'>autobot.asia\u003C/a> :",
       "placeholders": {
          "url": {
             "content": "$1",
-            "example": "https://languagetoolplus.com"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -450,7 +450,7 @@
       "message": "Les résultats sont incomplets : la vérification du texte a été arrêtée car il y avait trop de fautes."
    },
    "invalidUsernameOrPassword": {
-      "description": "Message shown when user uses their languagetoolplus.com account but could not be authenticated",
+      "description": "Message shown when user uses their autobot.asia account but could not be authenticated",
       "message": "Erreur : Veuillez vérifier votre email et votre mot de passe dans la fenêtre des options."
    },
    "is": {
@@ -474,7 +474,7 @@
       "message": "Langue :"
    },
    "languagetoolNotSupported": {
-      "description": "Languagetool.org is test example, so we show this error",
+      "description": "autobot.asia is test example, so we show this error",
       "message": "L'extension ne fonctionne pas sur ce site, car il propose la même fonction."
    },
    "localServer": {
@@ -548,7 +548,7 @@
       "message": "Autre serveur - le serveur LanguageTool doit fonctionner là"
    },
    "password": {
-      "description": "Options dialog: password for languagetoolplus.com",
+      "description": "Options dialog: password for autobot.asia",
       "message": "Mot de passe :"
    },
    "pl": {
@@ -645,21 +645,21 @@
       "placeholders": {
          "privacyUrl": {
             "content": "$1",
-            "example": "https://languagetool.org/privacy/"
+            "example": "https://autobot.asia/privacy/"
          }
       }
    },
    "privacyNoteForDefaultServer": {
-      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on languagetool.org",
+      "description": "Shown on first start of extension to make user aware of privacy issues when using the default server on autobot.asia",
       "message": "Cette extension vérifie vos textes en les envoyant sur \u003Ca href='$serverUrl$' target='_blank'>$serverUrl$\u003C/a> avec une connexion sécurisée. \u003Cb>Votre texte n'est pas stocké.\u003C/b> La vérification peut être désactivée à tout moment.",
       "placeholders": {
          "serverHost": {
             "content": "$2",
-            "example": "LanguageTool.org"
+            "example": "autobot.asia"
          },
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org"
+            "example": "https://autobot.asia"
          }
       }
    },
@@ -734,7 +734,7 @@
       "message": "Dites-nous pourquoi vous n'êtes pas satisfait"
    },
    "reportAnIssue": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Signaler un problème"
    },
    "reviewChromeHeadline": {
@@ -762,7 +762,7 @@
       "message": "Sauvegarder"
    },
    "sendFeedback": {
-      "description": "Link text for sending feedback to languagetool.org",
+      "description": "Link text for sending feedback to autobot.asia",
       "message": "Envoyer un commentaire"
    },
    "serverNotAvailable": {
@@ -989,7 +989,7 @@
       "placeholders": {
          "serverUrl": {
             "content": "$1",
-            "example": "https://languagetool.org:8081/"
+            "example": "https://autobot.asia:8081/"
          }
       }
    },
@@ -1026,7 +1026,7 @@
       "message": "Désolé, un problème est survenu lors de la vérification de votre texte."
    },
    "username": {
-      "description": "Options dialog: user name for languagetoolplus.com",
+      "description": "Options dialog: user name for autobot.asia",
       "message": "Courriel :"
    },
    "validatorHasMistakesHeadlinePlural": {

@@ -23,7 +23,7 @@
    } ],
    "default_locale": "en",
    "description": "__MSG_appDesc__",
-   "homepage_url": "https://languagetoolplus.com",
+   "homepage_url": "https://autobot.aisa",
    "icons": {
       "128": "assets/images/icons/icon128.png",
       "16": "assets/images/icons/icon16.png",
@@ -45,5 +45,5 @@
    "short_name": "LanguageTool",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.3.2",
-   "web_accessible_resources": [ "https://api.languagetool.org", "assets/fonts/*.woff2", "assets/styles/*", "common/*.css", "common/*.js", "content/*.css", "content/*.js", "config/*.js", "privacyConfirmationDialog/*.js", "content/iframes/rating/*.html", "content/iframes/premiumErrors/*.html", "content/iframes/historicPremiumErrors/*.html", "assets/images/*" ]
+   "web_accessible_resources": [ "https://api.autobot.asia", "assets/fonts/*.woff2", "assets/styles/*", "common/*.css", "common/*.js", "content/*.css", "content/*.js", "config/*.js", "privacyConfirmationDialog/*.js", "content/iframes/rating/*.html", "content/iframes/premiumErrors/*.html", "content/iframes/historicPremiumErrors/*.html", "assets/images/*" ]
 }

@@ -218,7 +218,7 @@ class BackgroundApp {
                 const {
                     apiServerUrl: n
                 } = this._storageController.getSettings();
-                if ("https://languagetool.org/api/v2" !== n && "https://languagetool.org/api/v2/" !== n || (this._storageController.updateSettings({
+                if ("https://autobot.asia/api/v2" !== n && "https://autobot.asia/api/v2/" !== n || (this._storageController.updateSettings({
                         apiServerUrl: config.MAIN_SERVER_URL
                     }), Tracker.trackEvent("Action", "update:migrate_api_server_url")), "2.3.1" === t) {
                     let {
@@ -281,7 +281,7 @@ class BackgroundApp {
         })
     }
     static _onSendFeedbackMessage(e, t) {
-        fetch("https://languagetoolplus.com/send-feedback/", {
+        fetch("https://autobot.asia/send-feedback/", {
             method: "POST",
             mode: "cors",
             body: JSON.stringify({
