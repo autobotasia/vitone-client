@@ -74,6 +74,10 @@ class Validator {
         return o.append("mode", "allButTextLevelOnly"), o.append("allowIncompleteResults", s.toString()), o
     }
     static _sendRequest(e, t, r = config.REQUEST_TIMEOUT) {
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log('===========_sendRequest============', JSON.stringify(e));
+        bkg.console.log('===========_sendRequest 2============', JSON.stringify(t));
+        
         const a = fetch(e, t).catch(t => {
                 throw "AbortError" === t.name ? {
                     reason: "AbortError",
@@ -223,6 +227,8 @@ class Validator {
         })
     }
     static _processResponse(e, t, r, a) {
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log("======_processResponse==============",JSON.stringify(e),JSON.stringify(t));
         let s = this._transformMatches(e.matches, t, e.language, a);
         s = this._adjustErrors(s, t, getHostNameFromUrl(r.url), r.recipientInfo.fullName);
         let o = [];

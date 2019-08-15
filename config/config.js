@@ -19,10 +19,11 @@ const config= {
     INSTALL_URL:"https://autobot.asia/webextension/install",
     UNINSTALL_URL:"https://autobot.asia/webextension/uninstall",
     MIN_TEXT_LENGTH:5,
-    MAIN_SERVER_URL:"https://api.autobot.asia/v2",
+    MAIN_SERVER_URL:"https://api.languagetool.org/v2",
+    //MAIN_SERVER_URL:"https://api.autobot.asia/v2",
     FALLBACK_MAIN_SERVER_URL:"https://api-fallback.autobot.asia/v2",
     PREMIUM_SERVER_URL:"https://autobot.asia/api/v2",
-    FALLBACK_PREMIUM_SERVER_URL:"https://api.autobot.asia/v2",
+    FALLBACK_PREMIUM_SERVER_URL:"https://autobot.asia/v2",
     LOCAL_SERVER_URL:"http://localhost:8081/v2",
     MAX_USAGE_COUNT_ONBOARDING:5,
     COLORS: {
