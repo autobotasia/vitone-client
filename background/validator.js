@@ -232,17 +232,27 @@ class Validator {
         let s = this._transformMatches(e.matches, t, e.language, a);
         s = this._adjustErrors(s, t, getHostNameFromUrl(r.url), r.recipientInfo.fullName);
         let o = [];
-        const {
-            hasPaidSubscription: i
-        } = Validator._storageController.getUIState(), {
-            frenchPremiumRules: n
-        } = Validator._storageController.getTestFlags();
-        return !i && !Validator._storageController.isUsedCustomServer() && e.language && e.language.code.startsWith("fr") && (s = s.filter(e => "test" !== n || !Validator.FR_PREMIUM_RULES.includes(e.rule.id) || (o.push(e), !1))), i && s.forEach(e => {
-            "test" === n && Validator.FR_PREMIUM_RULES.includes(e.rule.id) && (e.rule.isPremium = !0), Validator.NL_PREMIUM_RULES.includes(e.rule.id) && (e.rule.isPremium = !0)
-        }), !i && !Validator._storageController.isUsedCustomServer() && e.language && e.language.code.startsWith("nl") && (s = s.filter(e => !Validator.NL_PREMIUM_RULES.includes(e.rule.id) || (o.push(e), !1))), e.hiddenMatches && (o = o.concat(Validator._transformMatches(e.hiddenMatches, t, e.language, a))), {
-            errors: s,
-            hiddenErrors: o
-        }
+        const { hasPaidSubscription: i } = Validator._storageController.getUIState(), 
+            { frenchPremiumRules: n } = Validator._storageController.getTestFlags();
+        return !i && 
+            !Validator._storageController.isUsedCustomServer() && 
+            e.language && e.language.code.startsWith("fr") && 
+            (s = s.filter(e => "test" !== n || !Validator.FR_PREMIUM_RULES.includes(e.rule.id) || (o.push(e), !1))), 
+            i && 
+            s.forEach(e => {
+                "test" === n && Validator.FR_PREMIUM_RULES.includes(e.rule.id) && (e.rule.isPremium = !0), 
+                Validator.NL_PREMIUM_RULES.includes(e.rule.id) && (e.rule.isPremium = !0)
+            }), 
+            !i && 
+            !Validator._storageController.isUsedCustomServer() && 
+            e.language && e.language.code.startsWith("nl") && 
+            (s = s.filter(e => !Validator.NL_PREMIUM_RULES.includes(e.rule.id) || (o.push(e), !1))), 
+            e.hiddenMatches && 
+            (o = o.concat(Validator._transformMatches(e.hiddenMatches, t, e.language, a))), 
+            {
+                errors: s,
+                hiddenErrors: o
+            }
     }
     static _correctErrorOffsets(e, t) {
         const r = [];
@@ -259,6 +269,9 @@ class Validator {
         return r
     }
     static validate(e, t, r, a, s = !1) {
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log("\n\n\n", "Validate", "\n\n\n")
+
         if (!(e = this._ignoreText(e)).trim() || /^( *\n)* *$/g.test(e)) return Promise.resolve({
             language: t,
             errors: [],
@@ -295,6 +308,9 @@ class Validator {
         })
     }
     static partialValidate(e, t, r, a, s = !1) {
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log("\n\n\n", "partialValidate", "\n\n\n")
+
         if (e.forEach(e => {
                 e.text = this._ignoreText(e.text)
             }), 0 === e.length) return Promise.resolve({
@@ -354,4 +370,44 @@ Validator.FR_PREMIUM_RULES = ["IMP_PRON", "FR_COMPOUNDS", "AUX_ETRE_VCONJ", "XXi
     JIRA_OPENING_TAG: /\{(color|code|noformat|quote)\:[a-z0-9#]+?\}/gi,
     JIRA_CLOSING_TAG: /\{(color|code|noformat|quote)\}/gi,
     JIRA_TEXT_TAG: /^(h[1-6]|bq)\./gim
-}, Validator.IGNORE_ASCII_SMILEYS_REGEXPS = [/(\s|^)(xD)(?=\s|[\!\.\?\)]|$)/gi, /(\s|^)(\:\w+\:)(?=\s|[\!\.\?\)]|$)/g, /(\s|^)(\<[\/\\]?3)(?=\s|[\!\.\?]|$)/g, /(\s|^)([\(\)\\D|\*$][\-\^]?[\:\;\=])(?=\s|[\!\.\?]|$)/g, /(\s|^)([\:\;\=B8][\-\^]?[3DOPp\@\$\*\\\)\(\/\|])(?=\s|[\!\.\?\)]|$)/g, /(\s|^)(\((?:y|n|x|i|\-|\?|\!|\*|\*r|\*g|\*b|\*y|\+|on|off|flag|flagoff)\))(?=\s|[\!\.\?\)]|$)/g], Validator.SPELLING_RULES_ID = ["SPELLER_RULE", "MORFOLOGIK_RULE", "HUNSPELL", "SPELLING_RULE"], Validator.STYLE_ISSUE_TYPES = ["style", "locale-violation", "register"], Validator.EMAIL_SIGNATURE_SEPARATOR_REGEXP = /^[\‐|\-]{2,}|[\‐|\-]{2,}$/, Validator.ONLY_NUMBERS_REGEXP = /^[0-9]+$/, Validator.COLON_WHITESPACE_REGEXP = /^[;:]\s/, Validator.BULLET_POINT_REGEXP = /(\u25b6\ufe0e|\u25BA|\*|-|\u2606|\u2605|\u25cf|\u2022|\u25e6|\u27A4)\s+$/, Validator.LOWERCASE_REGEXP = /[a-z]/, Validator.DOT_WITH_PREFIX_REGEXP = /\w\.$/, Validator.SLASH_AT_END_REGEXP = /(\/|\\)$/, Validator.SLASH_AT_BEGINNING_REGEXP = /^(\/|\\)/, Validator.COMMON_TLDS = ["com", "co", "org", "net", "de", "info", "biz", "es", "fr", "be", "in", "gov", "nl", "ca", "com.br", "br", "at", "us", "au", "ru", "pl", "ly", "it", "cat", "edu", "jp", "ko", "cn", "se", "no", "mil", "ch", "dk", "com.mx", "mx", "eu", "co.uk", "uk", "ir", "cz", "ua", "kr", "gr", "tw", "nz", "co.nz", "za", "ro", "vn", "io", "tr", "me", "fi", "tv", "xyz", "pt", "ie"], Validator.COMMON_TLD_WITH_DOT_REGEXPS = Validator.COMMON_TLDS.map(e => new RegExp(`^\\.${e.replace(".","\\.")}\\b`, "i")), Validator.COMMON_FILE_TYPES = ["jpeg", "jpg", "gif", "png", "bmp", "svg", "ai", "sketch", "ico", "ps", "psd", "tiff", "tif", "mp3", "wav", "midi", "mid", "aif", "mpa", "ogg", "wma", "wpl", "cda", "7z", "arj", "deb", "pkg", "rar", "rpm", "tar.gz", "tar", "zip", "bin", "dmg", "iso", "toast", "vcd", "csv", "dat", "db", "log", "mdb", "sav", "sql", "xml", "apk", "bat", "bin", "cgi", "com", "exe", "gadget", "jar", "py", "js", "json", "wsf", "fnt", "fon", "otf", "ttf", "woff", "woff2", "rb", "java", "php", "html", "asp", "aspx", "cer", "cfm", "cgi", "pl", "css", "htm", "jsp", "part", "rss", "xhtml", "key", "odp", "pps", "ppt", "pptx", "class", "cpp", "cs", "h", "sh", "swift", "vb", "ods", "xlr", "xls", "xlt", "xltx", "bak", "cab", "cfg", "cpl", "cur", "dll", "dmp", "msi", "ini", "tmp", "3g2", "3gp", "avi", "flv", "h264", "m4v", "mkv", "mov", "mp4", "mpg", "mpeg", "rm", "swf", "vob", "wmv", "doc", "docx", "dot", "dotx", "pdf", "rtf", "text", "tex", "wks", "wps", "wpd", "txt"], Validator.COMMON_FILE_TYPE_WITH_DOT_REGEXPS = Validator.COMMON_FILE_TYPES.map(e => new RegExp(`^[\\wáàâóòìíéèùúâôîêûäöüß\\-\\.\\(\\)]*?\\.${e}\\b`, "i")), Validator._storageController = new StorageController, Validator._validationAbortControllers = new Map, Validator._partialValidationAbortControllers = new Map, Validator._useValidationFallbackServer = !1, Validator._usePartialValidationFallbackServer = !1, Validator._mainServerUnavailabilityTimeStamp = 0, Validator._isInitialized = !1, Validator._constructor(), "undefined" != typeof module && (module.exports = Validator);
+}, 
+Validator.IGNORE_ASCII_SMILEYS_REGEXPS = [
+    /(\s|^)(xD)(?=\s|[\!\.\?\)]|$)/gi, 
+    /(\s|^)(\:\w+\:)(?=\s|[\!\.\?\)]|$)/g, 
+    /(\s|^)(\<[\/\\]?3)(?=\s|[\!\.\?]|$)/g, 
+    /(\s|^)([\(\)\\D|\*$][\-\^]?[\:\;\=])(?=\s|[\!\.\?]|$)/g, 
+    /(\s|^)([\:\;\=B8][\-\^]?[3DOPp\@\$\*\\\)\(\/\|])(?=\s|[\!\.\?\)]|$)/g, 
+    /(\s|^)(\((?:y|n|x|i|\-|\?|\!|\*|\*r|\*g|\*b|\*y|\+|on|off|flag|flagoff)\))(?=\s|[\!\.\?\)]|$)/g
+], 
+Validator.SPELLING_RULES_ID = [
+    "SPELLER_RULE", 
+    "MORFOLOGIK_RULE", 
+    "HUNSPELL", 
+    "SPELLING_RULE"
+], 
+Validator.STYLE_ISSUE_TYPES = [
+    "style", 
+    "locale-violation", 
+    "register"
+], 
+Validator.EMAIL_SIGNATURE_SEPARATOR_REGEXP = /^[\‐|\-]{2,}|[\‐|\-]{2,}$/, 
+Validator.ONLY_NUMBERS_REGEXP = /^[0-9]+$/, 
+Validator.COLON_WHITESPACE_REGEXP = /^[;:]\s/, 
+Validator.BULLET_POINT_REGEXP = /(\u25b6\ufe0e|\u25BA|\*|-|\u2606|\u2605|\u25cf|\u2022|\u25e6|\u27A4)\s+$/, 
+Validator.LOWERCASE_REGEXP = /[a-z]/, 
+Validator.DOT_WITH_PREFIX_REGEXP = /\w\.$/, 
+Validator.SLASH_AT_END_REGEXP = /(\/|\\)$/, 
+Validator.SLASH_AT_BEGINNING_REGEXP = /^(\/|\\)/, 
+Validator.COMMON_TLDS = ["com", "co", "org", "net", "de", "info", "biz", "es", "fr", "be", "in", "gov", "nl", "ca", "com.br", "br", "at", "us", "au", "ru", "pl", "ly", "it", "cat", "edu", "jp", "ko", "cn", "se", "no", "mil", "ch", "dk", "com.mx", "mx", "eu", "co.uk", "uk", "ir", "cz", "ua", "kr", "gr", "tw", "nz", "co.nz", "za", "ro", "vn", "io", "tr", "me", "fi", "tv", "xyz", "pt", "ie"], 
+Validator.COMMON_TLD_WITH_DOT_REGEXPS = Validator.COMMON_TLDS.map(e => new RegExp(`^\\.${e.replace(".","\\.")}\\b`, "i")), 
+Validator.COMMON_FILE_TYPES = ["jpeg", "jpg", "gif", "png", "bmp", "svg", "ai", "sketch", "ico", "ps", "psd", "tiff", "tif", "mp3", "wav", "midi", "mid", "aif", "mpa", "ogg", "wma", "wpl", "cda", "7z", "arj", "deb", "pkg", "rar", "rpm", "tar.gz", "tar", "zip", "bin", "dmg", "iso", "toast", "vcd", "csv", "dat", "db", "log", "mdb", "sav", "sql", "xml", "apk", "bat", "bin", "cgi", "com", "exe", "gadget", "jar", "py", "js", "json", "wsf", "fnt", "fon", "otf", "ttf", "woff", "woff2", "rb", "java", "php", "html", "asp", "aspx", "cer", "cfm", "cgi", "pl", "css", "htm", "jsp", "part", "rss", "xhtml", "key", "odp", "pps", "ppt", "pptx", "class", "cpp", "cs", "h", "sh", "swift", "vb", "ods", "xlr", "xls", "xlt", "xltx", "bak", "cab", "cfg", "cpl", "cur", "dll", "dmp", "msi", "ini", "tmp", "3g2", "3gp", "avi", "flv", "h264", "m4v", "mkv", "mov", "mp4", "mpg", "mpeg", "rm", "swf", "vob", "wmv", "doc", "docx", "dot", "dotx", "pdf", "rtf", "text", "tex", "wks", "wps", "wpd", "txt"], 
+Validator.COMMON_FILE_TYPE_WITH_DOT_REGEXPS = Validator.COMMON_FILE_TYPES.map(e => new RegExp(`^[\\wáàâóòìíéèùúâôîêûäöüß\\-\\.\\(\\)]*?\\.${e}\\b`, "i")), 
+Validator._storageController = new StorageController, 
+Validator._validationAbortControllers = new Map, 
+Validator._partialValidationAbortControllers = new Map, 
+Validator._useValidationFallbackServer = !1, 
+Validator._usePartialValidationFallbackServer = !1, 
+Validator._mainServerUnavailabilityTimeStamp = 0, 
+Validator._isInitialized = !1, 
+Validator._constructor(), 
+"undefined" != typeof module && (module.exports = Validator);

@@ -413,4 +413,11 @@ class BackgroundApp {
         })
     }
 }
-BackgroundApp.UNSUPPORTED_LANGUAGE_NAME = "NoopLanguage", BackgroundApp._hasGoogleDocsPluginInstalled = !1, BackgroundApp._extensionStates = new Map, BackgroundApp._validationThrottlingCount = 0, BackgroundApp._validatorsData = new Map, BackgroundApp._isInitialized = !1, BackgroundApp._darkMode = !1, BackgroundApp._constructor();
+BackgroundApp.UNSUPPORTED_LANGUAGE_NAME = "NoopLanguage", 
+BackgroundApp._hasGoogleDocsPluginInstalled = !1, 
+BackgroundApp._extensionStates = new Map, 
+BackgroundApp._validationThrottlingCount = 0, 
+BackgroundApp._validatorsData = new Map, 
+BackgroundApp._isInitialized = !1, 
+BackgroundApp._darkMode = !1, 
+BackgroundApp._constructor();

@@ -357,7 +357,7 @@ StorageController.eventNames = {
     ignoreCheckOnDomains: [],
     autoCheckOnDomains: []
 }, StorageController.DEFAULT_PRIVACY_SETTINGS = {
-    allowRemoteCheck: !1
+    allowRemoteCheck: !0
 }, StorageController.DEFAULT_STATISTICS = {
     usageCount: 0,
     sessionCount: 0,
