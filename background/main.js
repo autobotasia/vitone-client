@@ -138,7 +138,7 @@ class BackgroundApp {
             color: "#F53987"
         }), browser.browserAction.setBadgeText({
             tabId: e,
-            text: BrowserDetector.isOpera() ? "" : "OFF"
+            text: ""
         }))
     }
     static _updateUninstallURL(e = "unknown") {
