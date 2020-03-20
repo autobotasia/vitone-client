@@ -75,17 +75,17 @@ class Dialog {
       this._controls.languageSelectorWrapper.appendChild(
         this._controls.languageSelector
       ),
-      (this._controls.optionsLink = this._document.createElement("lt-span")),
-      (this._controls.optionsLink.className = "lt-dialog__options-link"),
-      (this._controls.optionsLink.title = Dialog.MESSAGES.OPTIONS_TITLE),
-      this._eventListeners.push(
-        addUseCaptureEvent(
-          this._controls.optionsLink,
-          "click",
-          this._onOptionsClick.bind(this)
-        )
-      ),
-      this._controls.header.appendChild(this._controls.optionsLink),
+      // (this._controls.optionsLink = this._document.createElement("lt-span")),
+      // (this._controls.optionsLink.className = "lt-dialog__options-link"),
+      // (this._controls.optionsLink.title = Dialog.MESSAGES.OPTIONS_TITLE),
+      // this._eventListeners.push(
+      //   addUseCaptureEvent(
+      //     this._controls.optionsLink,
+      //     "click",
+      //     this._onOptionsClick.bind(this)
+      //   )
+      // ),
+      // this._controls.header.appendChild(this._controls.optionsLink),
       (this._controls.content = this._document.createElement("lt-div")),
       (this._controls.content.className = "lt-dialog__content"),
       this._controls.innerContainer.appendChild(this._controls.content),

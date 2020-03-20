@@ -23,14 +23,15 @@ const popupContainer = document.querySelector("#popup-container"),
     moreOptionsLink = document.querySelector("#popup-more-options-link"),
     basicLink = document.querySelector("#popup-basic-link"),
     plusLink = document.querySelector("#popup-plus-link");
-moreOptionsLink.setAttribute("title", browser.i18n.getMessage("popupSettingsHover")), [moreOptionsLink, basicLink, plusLink].forEach(e => {
-    e.addEventListener("click", () => {
-        browser.runtime.sendMessage({
-            command: "OPEN_OPTIONS",
-            ref: e === moreOptionsLink ? "popup-icon" : "popup-badge"
-        }), window.close()
-    })
-});
+// moreOptionsLink.setAttribute("title", browser.i18n.getMessage("popupSettingsHover")), 
+// [moreOptionsLink, basicLink, plusLink].forEach(e => {
+//     e.addEventListener("click", () => {
+//         browser.runtime.sendMessage({
+//             command: "OPEN_OPTIONS",
+//             ref: e === moreOptionsLink ? "popup-icon" : "popup-badge"
+//         }), window.close()
+//     })
+// });
 const feedbackLink = document.querySelector("#feedback-link");
 feedbackLink.addEventListener("click", () => {
     browser.runtime.sendMessage({
