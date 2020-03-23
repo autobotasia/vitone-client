@@ -16,6 +16,7 @@ class Highlighter {
       (this._render = bindAndCatch(this._render, this)),
       this._inputArea.addEventListener("scroll", this._onInputAreaScroll),
       this._ceElement.addEventListener("click", this._onCEElementClick),
+      this._ceElement.addEventListener("mouseover", this._onCEElementClick),
       this._ceElement.addEventListener(
         Mirror.eventNames.click,
         this._onCEElementClick
@@ -234,24 +235,24 @@ class Highlighter {
         this._updateScrolling();
       });
   }
-  _onCEElementClick(e) {
-    if ((this._isMirror && e.stopImmediatePropagation(), !this._container))
+  _onCEElementClick = debouncedOnEvent(config.EVENT_MOUSE_MOVE_DEBOUNCE_TIMEOUT, function(e, context) {
+    if ((context._isMirror && e.stopImmediatePropagation(), !context._container))
       return;
-    this._domMeasurement.clearCache();
+      context._domMeasurement.clearCache();
     let t = { x: e.clientX, y: e.clientY };
-    t = this._toElementCoordinates(t, this._ceElement);
-    for (const e of this._highlightedBlocks) {
+    t = context._toElementCoordinates(t, context._ceElement);
+    for (const e of context._highlightedBlocks) {
       const i = e.textBoxes.find(e => isPointInsideRect(e, t));
       if (i) {
         const t = {
-          highlighter: this,
+          highlighter: context,
           blockId: e.id,
-          clickedRectangle: this._toPageCoordinates(i, this._ceElement)
+          clickedRectangle: context._toPageCoordinates(i, context._ceElement)
         };
         return void dispatchCustomEvent(Highlighter.eventNames.blockClicked, t);
       }
     }
-  }
+  })
   _onContentChanged(e) {
     if (!this._container) return;
     const t = this._inputAreaWrapper.getText(),

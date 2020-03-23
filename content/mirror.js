@@ -240,21 +240,7 @@ class Mirror {
     });
   }
 
-  debouncedOnMimickedElementClick(delay, fn) {
-    let timerId;
-    return function (e) {
-      if (timerId) {
-        clearTimeout(timerId);
-      }
-      timerId = setTimeout(() => {
-        let context = this
-        fn(e, context);
-        timerId = null;
-      }, delay);
-    }
-  }
-
-  _onMimickedElementClick = this.debouncedOnMimickedElementClick(200, function(e, context) {
+  _onMimickedElementClick = debouncedOnEvent(config.EVENT_MOUSE_MOVE_DEBOUNCE_TIMEOUT, function(e, context) {
     if (void 0 === e.clientX || void 0 === e.clientY) return;
     const t = Mirror.getElementByPos(
       context.getCloneElement(),

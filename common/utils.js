@@ -15,6 +15,19 @@ function hasFocus(t) {
       t.ownerDocument.hasFocus())
   );
 }
+function debouncedOnEvent(delay, fn) {
+  let timerId;
+  return function (e) {
+    if (timerId) {
+      clearTimeout(timerId);
+    }
+    timerId = setTimeout(() => {
+      let context = this
+      fn(e, context);
+      timerId = null;
+    }, delay);
+  }
+}
 function isCEElement(t) {
   return (
     t.isContentEditable || ("BODY" === t.nodeName && hasFirefoxDesignMode(t))
