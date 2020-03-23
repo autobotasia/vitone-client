@@ -21,6 +21,10 @@ class Mirror {
         this._onMimickedElementScroll
       ),
       this._mimickedElement.addEventListener(
+        "mousemove",
+        this._onMimickedElementClick
+      ),
+      this._mimickedElement.addEventListener(
         "click",
         this._onMimickedElementClick
       ),
@@ -235,15 +239,31 @@ class Mirror {
       this._updateScrolling();
     });
   }
-  _onMimickedElementClick(e) {
+
+  debouncedOnMimickedElementClick(delay, fn) {
+    let timerId;
+    return function (e) {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+      timerId = setTimeout(() => {
+        let context = this
+        fn(e, context);
+        timerId = null;
+      }, delay);
+    }
+  }
+
+  _onMimickedElementClick = this.debouncedOnMimickedElementClick(200, function(e, context) {
     if (void 0 === e.clientX || void 0 === e.clientY) return;
     const t = Mirror.getElementByPos(
-      this.getCloneElement(),
+      context.getCloneElement(),
       e.clientX,
       e.clientY
     );
-    t && this._dispatchClick(t, e);
-  }
+    t && context._dispatchClick(t, e);
+  });
+
   getCloneElement() {
     return this._wrapper;
   }
