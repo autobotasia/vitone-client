@@ -148,8 +148,8 @@ class ErrorCard {
             "click",
             this._onAddToDictionaryClick.bind(this)
           )
-        ),
-        e.appendChild(t);
+        )
+        // e.appendChild(t);
       const r = this._document.createElement("lt-div");
       r.classList.add("lt-errorcard__temporarily-ignore-word"),
         (r.textContent = ErrorCard.MESSAGES.LINK_IGNORE_HERE),

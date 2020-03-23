@@ -121,7 +121,7 @@ class Dialog {
           this._showFeedbackForm.bind(this)
         )
       ),
-      this._controls.footer.appendChild(this._controls.sendFeedback),
+      // this._controls.footer.appendChild(this._controls.sendFeedback),
       (this._controls.pointer = this._document.createElement("lt-span")),
       (this._controls.pointer.className = "lt-dialog__pointer"),
       this._controls.innerContainer.appendChild(this._controls.pointer),
@@ -334,8 +334,8 @@ class Dialog {
               addUseCaptureEvent(o, "click", o => {
                 this._onAddToDictionaryClick(e, o), t.remove();
               })
-            ),
-            t.appendChild(o);
+            )
+            // t.appendChild(o);
           const n = this._document.createElement("lt-div");
           n.classList.add("lt-dialog__temporarily-ignore-word"),
             (n.textContent = browser.i18n.getMessage("ignoreHere")),
@@ -615,7 +615,7 @@ class Dialog {
   }
   _gotoLanguageTool(e) {
     e.stopImmediatePropagation(),
-      window.open("https://autobot.asia/?pk_campaign=addon2-dialog", "_blank");
+      window.open("https://ncc.asia/", "_blank");
   }
   _showFeedbackForm(e) {
     e.stopImmediatePropagation();
