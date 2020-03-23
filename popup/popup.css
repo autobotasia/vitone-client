@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     min-height: 64px;
+    color: #7abd36;
 
     padding: 0 12px;
     border-bottom: 1px solid #DBDDE5;
@@ -197,7 +198,7 @@
     display: none;
 }
 
-.lt-popup__switch {
+/* .lt-popup__switch {
     background: #45A8FC;
     border-radius: 10px;
     height: 20px;
@@ -238,7 +239,7 @@
 
 .lt-popup__switch.lt-popup__switch--off::after {
     transform: translateX(-20px);
-}
+} */
 
 .lt-popup__validator {
     padding: 15px 12px;

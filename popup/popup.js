@@ -15,30 +15,12 @@ translateSection(document.body), translateElement("#popup-onboarding-text-1", {
     isHTML: !0
 });
 const popupContainer = document.querySelector("#popup-container"),
-    optionCapitalization = document.querySelector("#popup-option-capitalization .lt-popup__switch"),
-    optionCheck = document.querySelector("#popup-option-check .lt-popup__switch"),
     validateArea = document.querySelector("#popup-validator"),
     validateButton = document.querySelector("#popup-validator-button"),
     teaserContainer = document.querySelector("#popup-teaser"),
     moreOptionsLink = document.querySelector("#popup-more-options-link"),
     basicLink = document.querySelector("#popup-basic-link"),
     plusLink = document.querySelector("#popup-plus-link");
-// moreOptionsLink.setAttribute("title", browser.i18n.getMessage("popupSettingsHover")), 
-// [moreOptionsLink, basicLink, plusLink].forEach(e => {
-//     e.addEventListener("click", () => {
-//         browser.runtime.sendMessage({
-//             command: "OPEN_OPTIONS",
-//             ref: e === moreOptionsLink ? "popup-icon" : "popup-badge"
-//         }), window.close()
-//     })
-// });
-const feedbackLink = document.querySelector("#feedback-link");
-feedbackLink.addEventListener("click", () => {
-    browser.runtime.sendMessage({
-        command: "OPEN_FEEDBACK_FORM",
-        url: url
-    })
-});
 const onboardingButton = document.querySelector("#onboarding-button");
 onboardingButton.addEventListener("click", () => {
     document.querySelector("#popup-onboarding").classList.remove("lt-popup__onboarding-show"), popupContainer.classList.remove("lt-popup--disabled"), Tracker.trackEvent("Action", "popup:onboarding_banner:close"), storageController.updateUIState({
@@ -102,11 +84,7 @@ let storageController = new StorageController(() => {
                 ALLOWED_ATTR: ["target", "href"]
             }), popupContainer.classList.add("lt-popup--disabled"), Tracker.trackEvent("Action", "popup:disabled", getHostNameFromUrl(url))
         }
-        a.enabled || (optionCheck.classList.add("lt-popup__switch--off"), hideCapitalization()), a.capitalization || optionCapitalization.classList.add("lt-popup__switch--off"), optionCapitalization.addEventListener("click", e => {
-            toggleCapitalization()
-        }), optionCheck.addEventListener("click", e => {
-            toggleCheck()
-        }), setTimeout(() => {
+        a.enabled || (hideCapitalization()), a.capitalization, setTimeout(() => {
             popupContainer.classList.add("lt-popup--animations-enabled")
         }, 500), browser.tabs.sendMessage(tabId, {
             command: "GET_SELECTED_TEXT"
@@ -121,41 +99,15 @@ let storageController = new StorageController(() => {
     })
 });
 const getDomainTrackingValue = e => "extensions" === e ? url : e,
-    toggleCheck = () => {
-        optionCheck.classList.contains("lt-popup__switch--off") ? enableCheck() : disableCheck()
-    },
-    toggleCapitalization = () => {
-        optionCapitalization.classList.contains("lt-popup__switch--off") ? enableCapitalization() : disableCapitalization()
-    },
-    enableCheck = () => {
-        storageController && (optionCheck.classList.remove("lt-popup__switch--off"), storageController.enableDomain(hostName), Tracker.trackEvent("Action", "enable_domain", getDomainTrackingValue(hostName)), browser.runtime.sendMessage({
-            command: "EXTENSION_STATUS_CHANGED",
-            tabId: tabId,
-            enabled: !0
-        }), showCapitalization(), Tracker.trackEvent("Action", "enable_domain", getDomainTrackingValue(hostName)))
-    },
-    disableCheck = () => {
-        storageController && (optionCheck.classList.add("lt-popup__switch--off"), storageController.disableDomain(hostName), browser.runtime.sendMessage({
-            command: "EXTENSION_STATUS_CHANGED",
-            tabId: tabId,
-            enabled: !1
-        }), hideCapitalization(), Tracker.trackEvent("Action", "disable_domain", getDomainTrackingValue(hostName)))
-    },
-    showCapitalization = () => {
-        optionCapitalization.parentElement.classList.remove("lt-popup__option--hide")
-    },
-    hideCapitalization = () => {
-        optionCapitalization.parentElement.classList.add("lt-popup__option--hide")
-    },
     enableCapitalization = () => {
-        storageController && (optionCapitalization.classList.remove("lt-popup__switch--off"), storageController.enableCapitalization(hostName), browser.runtime.sendMessage({
+        storageController && (storageController.enableCapitalization(hostName), browser.runtime.sendMessage({
             command: "EXTENSION_STATUS_CHANGED",
             tabId: tabId,
             capitalization: !0
         }), Tracker.trackEvent("Action", "enable_capitalization", getDomainTrackingValue(hostName)))
     },
     disableCapitalization = () => {
-        storageController && (optionCapitalization.classList.add("lt-popup__switch--off"), storageController.disableCapitalization(hostName), browser.runtime.sendMessage({
+        storageController && (storageController.disableCapitalization(hostName), browser.runtime.sendMessage({
             command: "EXTENSION_STATUS_CHANGED",
             tabId: tabId,
             capitalization: !1
