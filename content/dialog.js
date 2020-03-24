@@ -9,7 +9,7 @@ class Dialog {
       (this._controls = {}),
       (this._eventListeners = []),
       this._render(),
-      this.setCurrentLanguage(t || getDefaultLanguage()),
+      this.setCurrentLanguage("vi"),
       this.updateState(o),
       this._eventListeners.push(
         addUseCaptureEvent(document, "keydown", this._onKeydown.bind(this))
@@ -677,7 +677,7 @@ class Dialog {
     const t =
         LANGUAGES.find(t => t.code === e) ||
         LANGUAGES.find(t => e.startsWith(t.code)) ||
-        LANGUAGES.find(e => "en-us" === e.code),
+        LANGUAGES.find(e => "vi" === e.code),
       o = browser.runtime.getURL("/assets/images/flags/" + t.code + ".svg");
     (this._controls.currentLanguage.textContent = t.name),
       new DomMeasurement(this._document).setStyles(

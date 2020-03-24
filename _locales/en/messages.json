@@ -85,6 +85,10 @@
       "description": "language name",
       "message": "Breton"
    },
+   "vi": {
+      "description": "language name",
+      "message": "Vietnamese"
+   },
    "ca": {
       "description": "language name",
       "message": "Catalan"

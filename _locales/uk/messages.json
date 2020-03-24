@@ -89,6 +89,10 @@
       "description": "language name",
       "message": "Каталонська"
    },
+   "vi": {
+      "description": "language name",
+      "message": "Vietnamese"
+   },
    "ca_ES_valencia": {
       "description": "language name",
       "message": "Каталанський (Валенсія)"

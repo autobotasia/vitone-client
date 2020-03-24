@@ -147,6 +147,10 @@
       "description": "language name",
       "message": "alemany (alemany fàcil)"
    },
+   "vi": {
+      "description": "language name",
+      "message": "Vietnamese"
+   },
    "defaultServerLink": {
       "description": "Options dialog: Link to reset the URL of the API server to the default value",
       "message": "Fes servir el servidor per defecte"
