@@ -354,8 +354,9 @@ class BackgroundApp {
             usageCount: s
         }), BackgroundApp._updateUninstallURL(getHostNameFromUrl(t.metaData.url)),
             Promise.all([
-                Validator.validate(t.text, t.forceLanguage ? t.language : null, r, t.metaData, t.hasUserChangedLanguage),
-                Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage)]).then(([e, a]) => {
+                // Validator.validate(t.text, t.forceLanguage ? t.language : null, r, t.metaData, t.hasUserChangedLanguage),
+                Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage)]).then(([a]) => {
+                    var bkg = chrome.extension.getBackgroundPage();
                     const n = e.language || t.language,
                         o = n && n.name === BackgroundApp.UNSUPPORTED_LANGUAGE_NAME;
                     return o && (n.code = r[0]), {
@@ -366,12 +367,13 @@ class BackgroundApp {
                         language: n,
                         isUnsupportedLanguage: o,
                         isIncompleteResult: a.isIncompleteResult,
-                        validationErrors: e.errors,
-                        validationHiddenErrors: e.hiddenErrors,
+                        validationErrors: [],
+                        validationHiddenErrors: [],
                         partialValidationErrors: a.errors,
                         partialValidationHiddenErrors: a.hiddenErrors
                     }
                 }).catch(e => {
+                    var bkg = chrome.extension.getBackgroundPage();
                     if (!e || "AbortError" !== e.reason) return {
                         command: "VALIDATION_FAILED",
                         instanceId: t.metaData.instanceId,

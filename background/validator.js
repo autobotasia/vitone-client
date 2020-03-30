@@ -37,41 +37,21 @@ class Validator {
     return e
   }
   static _getRequestData(e, t, r, a) {
-    const s = new URLSearchParams,
-      {
-        username: o,
-        password: i,
-        token: n,
-        motherTongue: l,
-        enVariant: E,
-        deVariant: _,
-        ptVariant: d,
-        caVariant: u
-      } = this._storageController.getSettings(),
-      {
-        hasPaidSubscription: c
-      } = this._storageController.getUIState(),
-      g = {
-        text: e,
-        metaData: {
-          EmailToAddress: a.recipientInfo.address
-        }
-      };
-    if (s.append("data", JSON.stringify(g)), c && o && i ? (s.append("username", o), s.append("password", i)) : c && o && n && (s.append("username", o), s.append("tokenV2", n)), s.append("textSessionId", a.instanceId), c || s.append("enableHiddenRules", "true"), l && s.append("motherTongue", l), t) s.append("language", t.code);
-    else {
-      s.append("language", "auto"), s.append("noopLanguages", uniq(r || []).join(",")), s.append("preferredLanguages", uniq(r || []).join(","));
-      const e = [];
-      E && e.push(E), _ && e.push(_), d && e.push(d), u && e.push(u), e.length > 0 && s.append("preferredVariants", e.toString())
-    }
-    return s.append("disabledRules", "WHITESPACE_RULE"), s.append("useragent", this._getUserAgent()), s
+    const g = {
+      text: e,
+      metaData: {
+        EmailToAddress: a.recipientInfo.address
+      }
+    };
+    return JSON.stringify(g)
   }
   static _getValidationRequestData(e, t, r, a) {
     const s = this._getRequestData(e, t, r, a);
-    return s.append("mode", "textLevelOnly"), s
+    return this._getRequestData(e, t, r, a);
   }
   static _getPartialValidationRequestData(e, t, r, a, s) {
     const o = this._getRequestData(e, t, r, a);
-    return o.append("mode", "allButTextLevelOnly"), o.append("allowIncompleteResults", s.toString()), o
+    return this._getRequestData(e, t, r, a);
   }
   static _sendRequest(e, t, r = config.REQUEST_TIMEOUT) {
     var bkg = chrome.extension.getBackgroundPage();
@@ -310,31 +290,64 @@ class Validator {
   static partialValidate(e, t, r, a, s = !1) {
     var bkg = chrome.extension.getBackgroundPage();
     bkg.console.log("\n\n\n", "partialValidate", "\n\n\n")
-
-    if (e.forEach(e => {
-      e.text = this._ignoreText(e.text)
-    }), 0 === e.length) return Promise.resolve({
-      language: t,
-      errors: [],
-      hiddenErrors: [],
-      isIncompleteResult: !1
-    });
-    if (!e.some(e => !!e.text.trim())) return Promise.resolve({
-      language: t,
-      errors: [],
-      hiddenErrors: [],
-      isIncompleteResult: !1
-    });
-    this._abortPartialValidationRequest(a.instanceId), this._partialValidationAbortControllers[a.instanceId] = new AbortController, this._usePartialValidationFallbackServer && Date.now() - this._mainServerUnavailabilityTimeStamp >= config.MAIN_SERVER_RECHECK_TIME && (this._usePartialValidationFallbackServer = !1);
-    const o = this._getServerFullUrl(a, !0),
+    if (e.forEach(e => { e.text = this._ignoreText(e.text) }), 0 === e.length) {
+      return Promise.resolve({
+        language: t,
+        errors: [],
+        hiddenErrors: [],
+        isIncompleteResult: !1
+      });
+    }
+    if (!e.some(e => !!e.text.trim())) {
+      return Promise.resolve({
+        language: t,
+        errors: [],
+        hiddenErrors: [],
+        isIncompleteResult: !1
+      });
+    }
+    const o = `http://ai.nccsoft.vn:8888/check`,
       i = e.map(e => e.text).join("\n\n"),
       n = {
         method: "post",
-        mode: "cors",
-        body: this._getPartialValidationRequestData(i, t, r, a, s),
-        signal: this._partialValidationAbortControllers[a.instanceId].signal
+        mode: 'cors',
+        body: Validator._getValidationRequestData(e, t, r, a),
+        headers: {
+          'Content-Type': 'application/json'
+        },
       };
     return this._sendRequest(o, n).then(t => {
+      bkg.console.log("\n\n\n", t, "\n\n\n")
+      t.language = {
+        "name": "English (US)",
+        "code": "en-US",
+        "detectedLanguage": {
+          "name": "English (US)",
+          "code": "en-US",
+          "confidence": 0.297
+        }
+      }
+      if (t.matches.length > 0) {
+        t.matches.forEach(match => {
+          match.offset = match.replacements[0].offset
+          match.length = match.replacements[0].length
+          match.rule = {
+            id: "MORFOLOGIK_RULE_EN_US",
+            description: "Possible spelling mistake",
+            issueType: "misspelling",
+            category: {
+              id: "TYPOS",
+              name: "Possible Typo"
+            }
+          }
+          match.type = { typeName: "Other" }
+          match.ignoreForIncompleteSentence = false
+          match.contextForSureMatch = 0
+          match.replacements.forEach(replacement => {
+            replacement.value = replacement.replaceby[0].text
+          })
+        })
+      }
       const {
         errors: r,
         hiddenErrors: s
