@@ -62,10 +62,10 @@ class BackgroundApp {
     static _constructor() {
         if (!BackgroundApp._isInitialized) {
             if (BackgroundApp._onDataLoaded = BackgroundApp._onDataLoaded.bind(BackgroundApp), BackgroundApp._onInstalled = BackgroundApp._onInstalled.bind(BackgroundApp), BackgroundApp._onMessage = BackgroundApp._onMessage.bind(BackgroundApp), BackgroundApp._onValidateClicked = BackgroundApp._onValidateClicked.bind(BackgroundApp), BackgroundApp._storageController = new StorageController(BackgroundApp._onDataLoaded), browser.runtime.onInstalled.addListener(BackgroundApp._onInstalled), browser.runtime.onMessage.addListener(BackgroundApp._onMessage), browser.contextMenus && browser.contextMenus.create({
-                    title: browser.i18n.getMessage("contextMenuValidate"),
-                    contexts: ["selection"],
-                    onclick: BackgroundApp._onValidateClicked
-                }), this._updateIcon(), setInterval(() => this._updateIcon(), 6e4), BrowserDetector.isFirefox()) {
+                title: browser.i18n.getMessage("contextMenuValidate"),
+                contexts: ["selection"],
+                onclick: BackgroundApp._onValidateClicked
+            }), this._updateIcon(), setInterval(() => this._updateIcon(), 6e4), BrowserDetector.isFirefox()) {
                 const e = () => {
                     browser.runtime.onUpdateAvailable.removeListener(e), this._installUpdate()
                 };
@@ -182,7 +182,7 @@ class BackgroundApp {
     }
     static _onDataLoaded() {
         BackgroundApp._storageController.checkForPaidSubscription().catch(e => {
-            Tracker.trackError("js", `Error checking paid subscripton: ${e&&e.message}`)
+            Tracker.trackError("js", `Error checking paid subscripton: ${e && e.message}`)
         }), Tracker.trackActivity(), BackgroundApp._updateUninstallURL()
     }
     static _onInstalled(e) {
@@ -219,8 +219,8 @@ class BackgroundApp {
                     apiServerUrl: n
                 } = this._storageController.getSettings();
                 if ("https://autobot.asia/api/v2" !== n && "https://autobot.asia/api/v2/" !== n || (this._storageController.updateSettings({
-                        apiServerUrl: config.MAIN_SERVER_URL
-                    }), Tracker.trackEvent("Action", "update:migrate_api_server_url")), "2.3.1" === t) {
+                    apiServerUrl: config.MAIN_SERVER_URL
+                }), Tracker.trackEvent("Action", "update:migrate_api_server_url")), "2.3.1" === t) {
                     let {
                         ignoredRules: e
                     } = this._storageController.getSettings();
@@ -267,8 +267,8 @@ class BackgroundApp {
         })
     }
     static _onOpenFeedbackForm(e, t) {
-        let a = `/feedbackForm/feedbackForm.html?url=${encodeURIComponent(t.url.substr(0,200))}`;
-        t.html && (a += `&html=${encodeURIComponent(t.html.substr(0,400))}`), t.title && (a += `&title=${encodeURIComponent(t.title)}`), browser.windows.create({
+        let a = `/feedbackForm/feedbackForm.html?url=${encodeURIComponent(t.url.substr(0, 200))}`;
+        t.html && (a += `&html=${encodeURIComponent(t.html.substr(0, 400))}`), t.title && (a += `&title=${encodeURIComponent(t.title)}`), browser.windows.create({
             url: browser.runtime.getURL(a),
             type: "popup",
             width: 380,
@@ -327,8 +327,8 @@ class BackgroundApp {
             return Promise.resolve(e)
         }
         if (0 === BackgroundApp._validationThrottlingCount && setTimeout(() => {
-                BackgroundApp._validationThrottlingCount = 0
-            }, 5e3), BackgroundApp._validationThrottlingCount++, BackgroundApp._validationThrottlingCount > 25) {
+            BackgroundApp._validationThrottlingCount = 0
+        }, 5e3), BackgroundApp._validationThrottlingCount++, BackgroundApp._validationThrottlingCount > 25) {
             const e = {
                 command: "VALIDATION_FAILED",
                 instanceId: t.metaData.instanceId,
@@ -352,35 +352,38 @@ class BackgroundApp {
         const s = BackgroundApp._storageController.getStatistics().usageCount + 1;
         return BackgroundApp._storageController.updateStatistics({
             usageCount: s
-        }), BackgroundApp._updateUninstallURL(getHostNameFromUrl(t.metaData.url)), Promise.all([Validator.validate(t.text, t.forceLanguage ? t.language : null, r, t.metaData, t.hasUserChangedLanguage), Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage)]).then(([e, a]) => {
-            const n = e.language || t.language,
-                o = n && n.name === BackgroundApp.UNSUPPORTED_LANGUAGE_NAME;
-            return o && (n.code = r[0]), {
-                command: "VALIDATION_COMPLETED",
-                instanceId: t.metaData.instanceId,
-                text: t.text,
-                changedParagraphs: t.changedParagraphs,
-                language: n,
-                isUnsupportedLanguage: o,
-                isIncompleteResult: a.isIncompleteResult,
-                validationErrors: e.errors,
-                validationHiddenErrors: e.hiddenErrors,
-                partialValidationErrors: a.errors,
-                partialValidationHiddenErrors: a.hiddenErrors
-            }
-        }).catch(e => {
-            if (!e || "AbortError" !== e.reason) return {
-                command: "VALIDATION_FAILED",
-                instanceId: t.metaData.instanceId,
-                exception: {
-                    reason: e.reason,
-                    status: e.status,
-                    message: e.message,
-                    response: e.response,
-                    stack: e.stack
-                }
-            }
-        })
+        }), BackgroundApp._updateUninstallURL(getHostNameFromUrl(t.metaData.url)),
+            Promise.all([
+                Validator.validate(t.text, t.forceLanguage ? t.language : null, r, t.metaData, t.hasUserChangedLanguage),
+                Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage)]).then(([e, a]) => {
+                    const n = e.language || t.language,
+                        o = n && n.name === BackgroundApp.UNSUPPORTED_LANGUAGE_NAME;
+                    return o && (n.code = r[0]), {
+                        command: "VALIDATION_COMPLETED",
+                        instanceId: t.metaData.instanceId,
+                        text: t.text,
+                        changedParagraphs: t.changedParagraphs,
+                        language: n,
+                        isUnsupportedLanguage: o,
+                        isIncompleteResult: a.isIncompleteResult,
+                        validationErrors: e.errors,
+                        validationHiddenErrors: e.hiddenErrors,
+                        partialValidationErrors: a.errors,
+                        partialValidationHiddenErrors: a.hiddenErrors
+                    }
+                }).catch(e => {
+                    if (!e || "AbortError" !== e.reason) return {
+                        command: "VALIDATION_FAILED",
+                        instanceId: t.metaData.instanceId,
+                        exception: {
+                            reason: e.reason,
+                            status: e.status,
+                            message: e.message,
+                            response: e.response,
+                            stack: e.stack
+                        }
+                    }
+                })
     }
     static _onLaunchValidatorMessage(e, t) {
         BackgroundApp._launchValidator(t.text)
@@ -413,11 +416,11 @@ class BackgroundApp {
         })
     }
 }
-BackgroundApp.UNSUPPORTED_LANGUAGE_NAME = "NoopLanguage", 
-BackgroundApp._hasGoogleDocsPluginInstalled = !1, 
-BackgroundApp._extensionStates = new Map, 
-BackgroundApp._validationThrottlingCount = 0, 
-BackgroundApp._validatorsData = new Map, 
-BackgroundApp._isInitialized = !1, 
-BackgroundApp._darkMode = !1, 
-BackgroundApp._constructor();
+BackgroundApp.UNSUPPORTED_LANGUAGE_NAME = "NoopLanguage",
+    BackgroundApp._hasGoogleDocsPluginInstalled = !1,
+    BackgroundApp._extensionStates = new Map,
+    BackgroundApp._validationThrottlingCount = 0,
+    BackgroundApp._validatorsData = new Map,
+    BackgroundApp._isInitialized = !1,
+    BackgroundApp._darkMode = !1,
+    BackgroundApp._constructor();
