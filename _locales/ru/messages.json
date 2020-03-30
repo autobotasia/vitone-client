@@ -303,11 +303,11 @@
    },
    "extensionUpdatedHeadline": {
       "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field",
-      "message": "This extension has been updated"
+      "message": "Phần mở rộng này đã được nâng cấp"
    },
    "extensionUpdatedText": {
       "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field.",
-      "message": "Please click on the $iconHtml$ icon in your browser's toolbar or reload the page to enable spell and grammar checking again.",
+      "message": "Hãy chọn icon  $iconHtml$ để cập nhật những thay đổi mới nhất.",
       "placeholders": {
          "iconHtml": {
             "content": "$1",
@@ -619,7 +619,7 @@
    },
    "poweredBy": {
       "description": "Hint that explains who the author of this add-on is",
-      "message": "Powered by \u003Cb>LanguageTool\u003C/b>"
+      "message": "Cung cấp bởi \u003Cb>LanguageTool\u003C/b>"
    },
    "premiumErrorsButton": {
       "description": "Button shown in premium teaser that sends the user to the pricing table. Button text should be as short as possible",

@@ -121,7 +121,7 @@
    },
    "continue": {
       "description": "Link shown below the privacy note on first use",
-      "message": "Okay, got it"
+      "message": "Bắt đầu sử dụng"
    },
    "da": {
       "description": "language name",
@@ -157,7 +157,7 @@
    },
    "dialogPremiumButton": {
       "description": "Button for when there are hidden matches (errors that only premium users can see)",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "dialogPremiumHeadlinePlural": {
       "description": "Headline for when there are hidden matches (errors that only premium users can see)",
@@ -183,7 +183,7 @@
    },
    "dialogTextTooLongButton": {
       "description": "Button shown when text is too long",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "dialogTextTooLongHeadline": {
       "description": "Text shown when text is too long",
@@ -307,11 +307,11 @@
    },
    "extensionUpdatedHeadline": {
       "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field",
-      "message": "This extension has been updated"
+      "message": "Phần mở rộng này đã được nâng cấp"
    },
    "extensionUpdatedText": {
       "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field.",
-      "message": "Please click on the $iconHtml$ icon in your browser's toolbar or reload the page to enable spell and grammar checking again.",
+      "message": "Hãy chọn icon  $iconHtml$ để cập nhật những thay đổi mới nhất.",
       "placeholders": {
          "iconHtml": {
             "content": "$1",
@@ -407,7 +407,7 @@
    },
    "historicPremiumErrorsButton": {
       "description": "Button for new premium teaser, that shows how many grammar issues the user could have avoided with the Premium version.",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "historicPremiumErrorsHeadline": {
       "description": "Introduction headline for premium teaser",
@@ -439,7 +439,7 @@
    },
    "ignoreHere": {
       "description": "Button that allows to ignore a misspelled word or grammar error in the current text field.",
-      "message": "Ignore in this text"
+      "message": "Bỏ qua kết quả này"
    },
    "ignoredRules": {
       "description": "Text shown at the bottom of the popup to turn on turned off rules again",
@@ -561,15 +561,15 @@
    },
    "popupOnboardingHeadline": {
       "description": "Title shown on top of a list explaining how to use the LanguageTool addon",
-      "message": "Welcome! You can now use LanguageTool:"
+      "message": "Chào mừng đến với LanguageTool"
    },
    "popupOnboardingStep1": {
       "description": "List item explaining step by step how to use the LanguageTool addon",
-      "message": "Click in any multi-line text field (e.g. on Gmail, Facebook, …)"
+      "message": "Hãy chọn bất bì một mẫu nhập nào (ví dụ: trên Gmail, Facebook, . . .)"
    },
    "popupOnboardingStep2": {
       "description": "List item explaining step by step how to use the LanguageTool addon",
-      "message": "You will find an icon that looks like $icon1Html$ or $icon2Html$ in the bottom right corner",
+      "message": "Bạn sẽ tìm thấy icon $icon1Html$ hay $icon2Html$ ở góc dưới bên phải của mẫu nhập.",
       "placeholders": {
          "icon1Html": {
             "content": "$1",
@@ -583,11 +583,11 @@
    },
    "popupOnboardingStep3": {
       "description": "List item explaining step by step how to use the LanguageTool addon",
-      "message": "Type some text. Writing issues will be \u003Cu>underlined\u003C/u>"
+      "message": "Hãy thử nhập một câu. Lỗi sẽ sẽ được đánh dấu gạch dưới chân như \u003Cu>lỗi xai\u003C/u>"
    },
    "popupOnboardingStep4": {
       "description": "List item explaining step by step how to use the LanguageTool addon",
-      "message": "Click on an underlined word to get suggestions"
+      "message": "Chọn con trỏ chuột vào lỗi sai và nhận những gợi ý."
    },
    "popupOptionCaseText": {
       "description": "Switch in toolbar popup",
@@ -607,7 +607,7 @@
    },
    "popupPremiumLink": {
       "description": "Premium hint in popup",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "popupPremiumText": {
       "description": "Premium hint in popup",
@@ -623,11 +623,11 @@
    },
    "poweredBy": {
       "description": "Hint that explains who the author of this add-on is",
-      "message": "Powered by \u003Cb>LanguageTool\u003C/b>"
+      "message": "Cung cấp bởi \u003Cb>LanguageTool\u003C/b>"
    },
    "premiumErrorsButton": {
       "description": "Button shown in premium teaser that sends the user to the pricing table. Button text should be as short as possible",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "premiumErrorsTextPlural": {
       "description": "Hint shown in a premium teaser, telling the user that there are more issues that only the premium version found",
@@ -1053,7 +1053,7 @@
    },
    "validatorHasPremiumErrorsButton": {
       "description": "Button that sends the user to the upgrade/pricing page",
-      "message": "Learn more"
+      "message": "Tìm hiểu thêm"
    },
    "validatorHasPremiumErrorsHeadlinePlural": {
       "description": "Text shown when the text contains writing issues that are only found in the premium version",

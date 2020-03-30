@@ -619,7 +619,7 @@
    },
    "poweredBy": {
       "description": "Hint that explains who the author of this add-on is",
-      "message": "Powered by \u003Cb>LanguageTool\u003C/b>"
+      "message": "Cung cấp bởi \u003Cb>LanguageTool\u003C/b>"
    },
    "premiumErrorsButton": {
       "description": "Button shown in premium teaser that sends the user to the pricing table. Button text should be as short as possible",
