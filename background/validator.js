@@ -287,6 +287,41 @@ class Validator {
       throw s
     })
   }
+  static _transformResponse(reponse) {
+    let result = {}
+    result.language = {
+      "name": "English (US)",
+      "code": "en-US",
+      "detectedLanguage": {
+        "name": "English (US)",
+        "code": "en-US",
+        "confidence": 0.297
+      }
+    }
+    result.matches = []
+    reponse.matches.replacements.forEach(ele => {
+      let replacement = {}
+      replacement.offset = ele.offset
+      replacement.length = ele.length
+      replacement.message = reponse.matches.message
+      replacement.shortMessage = reponse.matches.shortMessage
+      replacement.rule = {
+        id: "MORFOLOGIK_RULE_EN_US",
+        description: "Possible spelling mistake",
+        issueType: "misspelling",
+        category: {
+          id: "TYPOS",
+          name: "Possible Typo"
+        }
+      }
+      replacement.type = { typeName: "Other" }
+      replacement.replacements = [{ value: ele.replaceby }]
+      replacement.ignoreForIncompleteSentence = false
+      replacement.contextForSureMatch = 0
+      result.matches.push(replacement)
+    })
+    return result
+  }
   static partialValidate(e, t, r, a, s = !1) {
     var bkg = chrome.extension.getBackgroundPage();
     bkg.console.log("\n\n\n", "partialValidate", "\n\n\n")
@@ -318,36 +353,8 @@ class Validator {
       };
     return this._sendRequest(o, n).then(t => {
       bkg.console.log("\n\n\n", t, "\n\n\n")
-      t.language = {
-        "name": "English (US)",
-        "code": "en-US",
-        "detectedLanguage": {
-          "name": "English (US)",
-          "code": "en-US",
-          "confidence": 0.297
-        }
-      }
-      if (t.matches.length > 0) {
-        t.matches.forEach(match => {
-          match.offset = match.replacements[0].offset
-          match.length = match.replacements[0].length
-          match.rule = {
-            id: "MORFOLOGIK_RULE_EN_US",
-            description: "Possible spelling mistake",
-            issueType: "misspelling",
-            category: {
-              id: "TYPOS",
-              name: "Possible Typo"
-            }
-          }
-          match.type = { typeName: "Other" }
-          match.ignoreForIncompleteSentence = false
-          match.contextForSureMatch = 0
-          match.replacements.forEach(replacement => {
-            replacement.value = replacement.replaceby[0].text
-          })
-        })
-      }
+      t = this._transformResponse(t)
+      bkg.console.log("\n\n\n", "tttttttttttttttttttt", t, "\n\n\n")
       const {
         errors: r,
         hiddenErrors: s
