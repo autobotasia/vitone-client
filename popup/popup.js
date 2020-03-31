@@ -59,32 +59,13 @@ let storageController = new StorageController(() => {
             r = new Date - new Date(1e3 * n.firstVisit);
         if (n.appliedSuggestions < 2 && !i.hasSeenOnboarding) document.querySelector("#popup-onboarding").classList.add("lt-popup__onboarding-show"), popupContainer.classList.add("lt-popup--disabled"), Tracker.trackEvent("Action", "popup:onboarding_banner", hostName);
         else if (a.supported && !storageController.isUsedCustomServer())
-            new UpgradeTeaser(teaserContainer, "popup").render()
-            // if (!i.hasPaidSubscription && ("like" === n.ratingValue || n.appliedSuggestions > 7 || r > 432e5)) {
-            //     let e = 0;
-            //     const t = new Date,
-            //         o = 300;
-            //     let a;
-            //     for (const i of n.hiddenErrors) {
-            //         const n = new Date(i.day);
-            //         if (t - n > 864e6) break;
-            //         if (a = n, (e += i.count) > o) {
-            //             e = o;
-            //             break
-            //         }
-            //     }
-            //     let i = String(e);
-            //     e >= o && (i = `${o}+`);
-            //     const r = Math.ceil((t - a) / 1e3 / 60 / 60 / 24);
-            //     new UpgradeTeaser(teaserContainer, "popup").render(), Tracker.trackEvent("Action", "popup:upgrade_teaser", `hidden_errors:${i}`)
-            // } else i.hasRated || new RatingTeaser(teaserContainer, "popup", url).render();
-        if (i.hasPaidSubscription && popupContainer.classList.add("lt-popup--plus"), !a.supported) {
-            const e = document.querySelector("#popup-hint");
-            e.classList.add("lt-popup__hint-visible"), e.innerHTML = DOMPurify.sanitize(a.unsupportedMessage, {
-                ALLOWED_TAGS: ["a"],
-                ALLOWED_ATTR: ["target", "href"]
-            }), popupContainer.classList.add("lt-popup--disabled"), Tracker.trackEvent("Action", "popup:disabled", getHostNameFromUrl(url))
-        }
+            if (i.hasPaidSubscription && popupContainer.classList.add("lt-popup--plus"), !a.supported) {
+                const e = document.querySelector("#popup-hint");
+                e.classList.add("lt-popup__hint-visible"), e.innerHTML = DOMPurify.sanitize(a.unsupportedMessage, {
+                    ALLOWED_TAGS: ["a"],
+                    ALLOWED_ATTR: ["target", "href"]
+                }), popupContainer.classList.add("lt-popup--disabled"), Tracker.trackEvent("Action", "popup:disabled", getHostNameFromUrl(url))
+            }
         a.enabled || (hideCapitalization()), a.capitalization, setTimeout(() => {
             popupContainer.classList.add("lt-popup--animations-enabled")
         }, 500), browser.tabs.sendMessage(tabId, {

@@ -103,7 +103,7 @@
    },
    "connectionProblem": {
       "description": "Message shown to the user when extension can't connect to server",
-      "message": "Cannot connect to $serverUrl$",
+      "message": "Không thể kết nối tới Autobot",
       "placeholders": {
          "serverUrl": {
             "content": "$1",
@@ -307,7 +307,7 @@
    },
    "extensionUpdatedText": {
       "description": "Shown in the dialog when the extension code was updated while the user was typing in a text field.",
-      "message": "Hãy chọn icon  $iconHtml$ để cập nhật những thay đổi mới nhất.",
+      "message": "Hãy chạy lại trang để cập nhật những thay đổi mới nhất.",
       "placeholders": {
          "iconHtml": {
             "content": "$1",
