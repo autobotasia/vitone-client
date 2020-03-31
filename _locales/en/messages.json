@@ -525,7 +525,7 @@
    },
    "noErrorsFound2": {
       "description": "Shown in popup when no errors have been found",
-      "message": "Yay, no errors found!"
+      "message": "Không thấy lỗi sai!"
    },
    "onboardingHeadline": {
       "description": "Text shown to the user when he accepted the privacy policy and is now ready to use the add-on",
