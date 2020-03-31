@@ -557,7 +557,7 @@
    },
    "popupOnboardingHeadline": {
       "description": "Title shown on top of a list explaining how to use the LanguageTool addon",
-      "message": "Chào mừng đến với LanguageTool"
+      "message": "Chào mừng đến với Autobot"
    },
    "popupOnboardingStep1": {
       "description": "List item explaining step by step how to use the LanguageTool addon",
