@@ -133,10 +133,10 @@ class Dialog {
     let t = this._controls.innerContainer.getBoundingClientRect();
     t.right >=
       this._document.documentElement.clientWidth -
-        Dialog.SPACE_TO_SCREEN_EDGE && this._alignToBottom(),
+      Dialog.SPACE_TO_SCREEN_EDGE && this._alignToBottom(),
       (t = this._controls.innerContainer.getBoundingClientRect()).bottom +
-        t.height >=
-        this._document.documentElement.clientHeight && this._alignToTop();
+      t.height >=
+      this._document.documentElement.clientHeight && this._alignToTop();
     const o = e.getDocumentScroll();
     (t = this._controls.innerContainer.getBoundingClientRect()),
       o.top + t.top <= Dialog.SPACE_TO_SCREEN_EDGE && this._alignToBottom();
@@ -150,9 +150,9 @@ class Dialog {
     const t = this._controls.innerContainer.getBoundingClientRect();
     if (t.left <= Dialog.SPACE_TO_SCREEN_EDGE) {
       const o =
-          parseInt(e.getStyle(this._controls.innerContainer, "right"), 10) +
-          t.left -
-          Dialog.SPACE_TO_SCREEN_EDGE,
+        parseInt(e.getStyle(this._controls.innerContainer, "right"), 10) +
+        t.left -
+        Dialog.SPACE_TO_SCREEN_EDGE,
         n =
           parseInt(e.getStyle(this._controls.pointer, "right"), 10) -
           t.left +
@@ -176,14 +176,14 @@ class Dialog {
       t = new DomMeasurement(this._document);
     if (
       (this._controls.innerContainer.classList.add("lt-dialog__container-hide"),
-      e.right >=
+        e.right >=
         this._document.documentElement.clientWidth -
-          Dialog.SPACE_TO_SCREEN_EDGE)
+        Dialog.SPACE_TO_SCREEN_EDGE)
     ) {
       const o =
-          parseInt(t.getStyle(this._controls.innerContainer, "left"), 10) -
-          (e.right - this._document.documentElement.clientWidth) -
-          Dialog.SPACE_TO_SCREEN_EDGE,
+        parseInt(t.getStyle(this._controls.innerContainer, "left"), 10) -
+        (e.right - this._document.documentElement.clientWidth) -
+        Dialog.SPACE_TO_SCREEN_EDGE,
         n =
           parseInt(t.getStyle(this._controls.pointer, "left"), 10) +
           (e.right - this._document.documentElement.clientWidth) +
@@ -202,7 +202,7 @@ class Dialog {
   _removeTeaser() {
     this._controls.teaserElement &&
       (this._controls.teaserElement.remove(),
-      (this._controls.teaserElement = void 0));
+        (this._controls.teaserElement = void 0));
   }
   _updateContent() {
     if (!this._controls.content) return;
@@ -210,21 +210,21 @@ class Dialog {
       this._controls.content.classList.remove("lt-dialog__has-errors");
     const e = this._state.requestStatus;
     e === REQUEST_STATUS.COMPLETED ||
-    (this._inApplyFixMode && e === REQUEST_STATUS.IN_PROGRESS)
+      (this._inApplyFixMode && e === REQUEST_STATUS.IN_PROGRESS)
       ? this._renderCompletedState()
       : e === REQUEST_STATUS.IN_PROGRESS
-      ? this._renderInProgressState()
-      : e === REQUEST_STATUS.DISABLED
-      ? this._renderDisabledState()
-      : e === REQUEST_STATUS.TEXT_TOO_SHORT
-      ? this._renderTextTooShortState()
-      : e === REQUEST_STATUS.TEXT_TOO_LONG
-      ? this._renderTextTooLongState()
-      : e === REQUEST_STATUS.UNSUPPORTED_LANGUAGE
-      ? this._renderLanguageUnsupportedState()
-      : e === REQUEST_STATUS.DISCONNECTED
-      ? this._renderDisconnectedState()
-      : e === REQUEST_STATUS.FAILED && this._renderFailedState(),
+        ? this._renderInProgressState()
+        : e === REQUEST_STATUS.DISABLED
+          ? this._renderDisabledState()
+          : e === REQUEST_STATUS.TEXT_TOO_SHORT
+            ? this._renderTextTooShortState()
+            : e === REQUEST_STATUS.TEXT_TOO_LONG
+              ? this._renderTextTooLongState()
+              : e === REQUEST_STATUS.UNSUPPORTED_LANGUAGE
+                ? this._renderLanguageUnsupportedState()
+                : e === REQUEST_STATUS.DISCONNECTED
+                  ? this._renderDisconnectedState()
+                  : e === REQUEST_STATUS.FAILED && this._renderFailedState(),
       this._position();
   }
   _renderInProgressState() {
@@ -238,10 +238,10 @@ class Dialog {
         this._renderIgnoredErrorsStats(),
         this._renderPremiumErrorsTeaser())
       : this._state.hiddenErrors && this._state.hiddenErrors.length
-      ? (this._removeTeaser(), this._renderPremiumState())
-      : (this._renderNoErrorsState(),
-        this._renderIgnoredErrorsStats(),
-        this._renderPremiumErrorsTeaser()),
+        ? (this._removeTeaser(), this._renderPremiumState())
+        : (this._renderNoErrorsState(),
+          this._renderIgnoredErrorsStats(),
+          this._renderPremiumErrorsTeaser()),
       this._controls.incompleteResult.classList.toggle(
         "lt-dialog__incomplete-result-show",
         !!this._state.isIncompleteResult
@@ -258,20 +258,20 @@ class Dialog {
             ? ((o.textContent = Dialog.MESSAGES.HEADLINE_SPELLING_ERROR),
               (o.style.color = config.COLORS.SPELLING.TITLE))
             : e.isStyleError
-            ? ((o.textContent = Dialog.MESSAGES.HEADLINE_SUGGESTION_ERROR),
-              (o.style.color = config.COLORS.STYLE.TITLE))
-            : e.isPunctuationError
-            ? ((o.textContent = Dialog.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
-              (o.style.color = config.COLORS.GRAMMAR.TITLE))
-            : ((o.textContent = Dialog.MESSAGES.HEADLINE_GRAMMAR_ERROR),
-              (o.style.color = config.COLORS.GRAMMAR.TITLE)),
+              ? ((o.textContent = Dialog.MESSAGES.HEADLINE_SUGGESTION_ERROR),
+                (o.style.color = config.COLORS.STYLE.TITLE))
+              : e.isPunctuationError
+                ? ((o.textContent = Dialog.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
+                  (o.style.color = config.COLORS.GRAMMAR.TITLE))
+                : ((o.textContent = Dialog.MESSAGES.HEADLINE_GRAMMAR_ERROR),
+                  (o.style.color = config.COLORS.GRAMMAR.TITLE)),
           t.append(o);
         const n = this._document.createElement("lt-div");
         if (
           ((n.className = "lt-dialog__error-text"),
-          (n.textContent = e.description),
-          t.append(n),
-          e.rule.urls && e.rule.urls.length > 0)
+            (n.textContent = e.description),
+            t.append(n),
+            e.rule.urls && e.rule.urls.length > 0)
         ) {
           const t = this._document.createElement("lt-span");
           t.classList.add("lt-dialog__more-details"),
@@ -312,7 +312,7 @@ class Dialog {
             n.appendChild(r),
             t.appendChild(n),
             e.fixes[o].value.length >= 14 &&
-              t.classList.add("lt-dialog__long-fix");
+            t.classList.add("lt-dialog__long-fix");
         }
         if (0 === i) {
           const o = this._document.createElement("lt-div");
@@ -335,7 +335,7 @@ class Dialog {
                 this._onAddToDictionaryClick(e, o), t.remove();
               })
             )
-            // t.appendChild(o);
+          // t.appendChild(o);
           const n = this._document.createElement("lt-div");
           n.classList.add("lt-dialog__temporarily-ignore-word"),
             (n.textContent = browser.i18n.getMessage("ignoreHere")),
@@ -395,9 +395,9 @@ class Dialog {
       let e = [];
       if (this._state.ignoredErrorsStats.byDictionary > 0) {
         const t =
-            1 === this._state.ignoredErrorsStats.byDictionary
-              ? "errorsIgnoredByDictionarySingular"
-              : "errorsIgnoredByDictionary",
+          1 === this._state.ignoredErrorsStats.byDictionary
+            ? "errorsIgnoredByDictionarySingular"
+            : "errorsIgnoredByDictionary",
           o = browser.i18n.getMessage(t, [
             this._state.ignoredErrorsStats.byDictionary
           ]);
@@ -405,9 +405,9 @@ class Dialog {
       }
       if (this._state.ignoredErrorsStats.byRules > 0) {
         const t =
-            1 === this._state.ignoredErrorsStats.byRules
-              ? "errorsIgnoredByRulesSingular"
-              : "errorsIgnoredByRules",
+          1 === this._state.ignoredErrorsStats.byRules
+            ? "errorsIgnoredByRulesSingular"
+            : "errorsIgnoredByRules",
           o = browser.i18n.getMessage(t, [
             this._state.ignoredErrorsStats.byRules
           ]);
@@ -470,8 +470,8 @@ class Dialog {
         1 === this._state.hiddenErrors.length
           ? browser.i18n.getMessage("dialogPremiumHeadlineSingular")
           : browser.i18n.getMessage("dialogPremiumHeadlinePlural", [
-              this._state.hiddenErrors.length
-            ]));
+            this._state.hiddenErrors.length
+          ]));
     const t = this._document.createElement("lt-div");
     (t.className = "lt-dialog__premium__text"),
       (t.textContent = browser.i18n.getMessage("dialogPremiumText"));
@@ -485,10 +485,10 @@ class Dialog {
             "https://autobot.asia/webextension/upgrade?pk_campaign=addon2-dialog-premium";
           (t += `&grammarMatches=${
             this._state.hiddenErrors.filter(e => !e.isStyleError).length
-          }`),
+            }`),
             (t += `&styleMatches=${
               this._state.hiddenErrors.filter(e => e.isStyleError).length
-            }`),
+              }`),
             window.open(t, "_blank"),
             Tracker.trackEvent("Action", "dialog:premium:click");
         })
@@ -548,10 +548,10 @@ class Dialog {
     const t = this._document.createElement("lt-div");
     if (
       ((t.className = "lt-dialog__language-unsupported__text"),
-      (t.textContent = Dialog.MESSAGES.UNSUPPORTED_LANGUAGE_TEXT),
-      this._controls.content.appendChild(e),
-      this._controls.content.appendChild(t),
-      this._controls.currentLanguage)
+        (t.textContent = Dialog.MESSAGES.UNSUPPORTED_LANGUAGE_TEXT),
+        this._controls.content.appendChild(e),
+        this._controls.content.appendChild(t),
+        this._controls.currentLanguage)
     ) {
       this._controls.currentLanguage.textContent =
         Dialog.MESSAGES.SELECT_LANGUAGE_LABEL;
@@ -669,15 +669,15 @@ class Dialog {
   updateState(e) {
     isSameObjects(this._state, e) ||
       ((this._state = Object.assign(this._state || {}, e)),
-      this._updateContent());
+        this._updateContent());
   }
   setCurrentLanguage(e) {
     if (!isRuntimeConnected()) return;
     e = e.toLowerCase();
     const t =
-        LANGUAGES.find(t => t.code === e) ||
-        LANGUAGES.find(t => e.startsWith(t.code)) ||
-        LANGUAGES.find(e => "vi" === e.code),
+      LANGUAGES.find(t => t.code === e) ||
+      LANGUAGES.find(t => e.startsWith(t.code)) ||
+      LANGUAGES.find(e => "vi" === e.code),
       o = browser.runtime.getURL("/assets/images/flags/" + t.code + ".svg");
     (this._controls.currentLanguage.textContent = t.name),
       new DomMeasurement(this._document).setStyles(

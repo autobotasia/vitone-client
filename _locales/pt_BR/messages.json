@@ -191,7 +191,7 @@
    },
    "dialogTextTooShortHeadline": {
       "description": "Text shown when text is too short for checking",
-      "message": "Text is too short"
+      "message": "Câu quá ngắn"
    },
    "dialogTextTooShortText": {
       "description": "Text shown when text is too short for checking",

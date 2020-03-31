@@ -191,11 +191,11 @@
    },
    "dialogTextTooShortHeadline": {
       "description": "Text shown when text is too short for checking",
-      "message": "Text is too short"
+      "message": "Câu quá ngắn"
    },
    "dialogTextTooShortText": {
       "description": "Text shown when text is too short for checking",
-      "message": "Please enter at least 5 characters to start checking for mistakes"
+      "message": "Hãy nhập câu lớn hơn 2 ký tự"
    },
    "dialogUnsupportedLanguageHeadline": {
       "description": "Shown to the user when the language he's writing is not supported",
