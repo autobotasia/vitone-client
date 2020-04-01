@@ -12,10 +12,10 @@ class ErrorCard {
       this._inputArea === this._inputArea.ownerDocument.body &&
       isLTAvailable(window.parent) &&
       ((this._referenceArea = i),
-      (this._document = this._referenceArea.ownerDocument),
-      (this._renderOutsideIframe = !0),
-      (this._onUnload = bindAndCatch(this._onUnload, this)),
-      window.addEventListener("pagehide", this._onUnload, !0)),
+        (this._document = this._referenceArea.ownerDocument),
+        (this._renderOutsideIframe = !0),
+        (this._onUnload = bindAndCatch(this._onUnload, this)),
+        window.addEventListener("pagehide", this._onUnload, !0)),
       (this._domMeasurement = new DomMeasurement(this._document)),
       (this._eventListeners = []),
       this._render(t);
@@ -101,20 +101,20 @@ class ErrorCard {
         ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_SPELLING_ERROR),
           (t.style.color = config.COLORS.SPELLING.TITLE))
         : this.error.isStyleError
-        ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_SUGGESTION_ERROR),
-          (t.style.color = config.COLORS.STYLE.TITLE))
-        : this.error.isPunctuationError
-        ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
-          (t.style.color = config.COLORS.GRAMMAR.TITLE))
-        : ((t.textContent = ErrorCard.MESSAGES.HEADLINE_GRAMMAR_ERROR),
-          (t.style.color = config.COLORS.GRAMMAR.TITLE)),
+          ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_SUGGESTION_ERROR),
+            (t.style.color = config.COLORS.STYLE.TITLE))
+          : this.error.isPunctuationError
+            ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
+              (t.style.color = config.COLORS.GRAMMAR.TITLE))
+            : ((t.textContent = ErrorCard.MESSAGES.HEADLINE_GRAMMAR_ERROR),
+              (t.style.color = config.COLORS.GRAMMAR.TITLE)),
       e.appendChild(t);
     const r = this._document.createElement("lt-div");
     if (
       (r.classList.add("lt-errorcard__text"),
-      (r.textContent = this.error.description),
-      e.appendChild(r),
-      this.error.rule.urls && this.error.rule.urls.length > 0)
+        (r.textContent = this.error.description),
+        e.appendChild(r),
+        this.error.rule.urls && this.error.rule.urls.length > 0)
     ) {
       const e = this._document.createElement("lt-span");
       e.classList.add("lt-errorcard__more-details"),
@@ -149,7 +149,7 @@ class ErrorCard {
             this._onAddToDictionaryClick.bind(this)
           )
         )
-        // e.appendChild(t);
+      // e.appendChild(t);
       const r = this._document.createElement("lt-div");
       r.classList.add("lt-errorcard__temporarily-ignore-word"),
         (r.textContent = ErrorCard.MESSAGES.LINK_IGNORE_HERE),
@@ -182,7 +182,8 @@ class ErrorCard {
         e.appendChild(r);
     }
     const i = this._document.createElement("lt-div");
-    i.classList.add("lt-errorcard__footer"), e.appendChild(i);
+    i.classList.add("lt-errorcard__footer"),
+      e.appendChild(i);
     const n = this._document.createElement("lt-div");
     n.classList.add("lt-errorcard__logo"),
       i.appendChild(n),
@@ -193,7 +194,7 @@ class ErrorCard {
     s.classList.add("lt-errorcard__badge-container"), i.appendChild(s);
     const d = this._document.createElement("lt-div");
     d.classList.add("lt-errorcard__name"),
-      (d.textContent = "LanguageTool"),
+      (d.textContent = "Autobot"),
       s.appendChild(d);
     // const a = this._document.createElement("lt-div");
     // this._hasSubscription
