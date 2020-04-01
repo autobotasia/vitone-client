@@ -508,10 +508,10 @@ html:not(.__lt-dummy-1):not(.__lt-dummy-2):not(.__lt-dummy-3):not(.__lt-dummy-4)
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     left: 33px !important;
-    bottom: -4px !important;
+    top: -4px !important;
     display: flex !important;
     flex-direction: column !important;
-    height: 400px !important;
+    height: 270px !important;
     min-height: 145px !important;
     max-height: 65vh !important; }
   @media only screen and (max-width: 340px) {

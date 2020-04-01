@@ -345,6 +345,7 @@ class Dialog {
               })
             ),
             t.appendChild(n);
+          console.log("icnore:", t);
         } else {
           const o = this._document.createElement("lt-div");
           o.classList.add("lt-dialog__ignore-rule"),
@@ -364,7 +365,9 @@ class Dialog {
               })
             ),
             t.appendChild(n);
+          console.log("icnore1:", t)
         }
+        console.log("icnore2:", t)
         this._controls.content.appendChild(t);
       });
   }
