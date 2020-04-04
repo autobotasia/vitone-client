@@ -442,8 +442,8 @@ class Dialog {
         (this._controls.teaserElement = this._document.createElement("iframe")),
         (this._controls.teaserElement.src = e),
         (this._controls.teaserElement.className =
-          "lt-dialog-iframe lt-dialog-rating-iframe"),
-        this._controls.content.after(this._controls.teaserElement);
+          "lt-dialog-iframe lt-dialog-rating-iframe");
+      // this._controls.content.after(this._controls.teaserElement); //remote frame 
     }
   }
   _renderPremiumErrorsTeaser() {
