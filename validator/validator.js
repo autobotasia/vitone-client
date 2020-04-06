@@ -6,7 +6,7 @@ const id = new URL(window.location.href).searchParams.get("id"),
     statusButton = document.getElementById("status-button");
 translateSection(document.documentElement), statusButton.addEventListener("click", () => {
     let t = "https://autobot.asia/webextension/upgrade?pk_campaign=addon2-validator-premium-errors";
-    t += `&grammarMatches=${currentState.hiddenErrors.filter(t=>!t.isStyleError).length}`, t += `&styleMatches=${currentState.hiddenErrors.filter(t=>t.isStyleError).length}`, window.open(t, "_target")
+    t += `&grammarMatches=${currentState.hiddenErrors.filter(t => !t.isStyleError).length}`, t += `&styleMatches=${currentState.hiddenErrors.filter(t => t.isStyleError).length}`, window.open(t, "_target")
 }), id ? browser.runtime.sendMessage({
     command: "VALIDATOR_LOADED",
     id: id
@@ -20,7 +20,9 @@ translateSection(document.documentElement), statusButton.addEventListener("click
     localStorage.setItem("validator-text", validatorElement.value)
 });
 const storageController = new StorageController(() => {
-    storageController.getUIState().hasPaidSubscription || storageController.isUsedCustomServer() || (document.querySelector("#sidebar").classList.remove("validator__sidebar--collapsed"), resize())
+    storageController.getUIState().hasPaidSubscription ||
+        storageController.isUsedCustomServer()
+    // (document.querySelector("#sidebar").classList.remove("validator__sidebar--collapsed"), resize())
 });
 let initialized = !1,
     currentState = null;
@@ -31,7 +33,7 @@ function resize() {
     validatorElement.style.height = t + "px", validatorElement.style.overflow = ""
 }
 document.addEventListener(LTAssistant.eventNames.updateState, t => {
-    if (initialized || (initialized = !0, statusBox.setAttribute("data-initialized", "true")), validatorElement.value.length < config.MIN_TEXT_LENGTH) return statusHeadline.textContent = browser.i18n.getMessage("validatorNoTextStatus"), statusText.textContent = "", statusBox.className = "validator__status-box validator__status-box--no-errors", void(currentState = null);
+    if (initialized || (initialized = !0, statusBox.setAttribute("data-initialized", "true")), validatorElement.value.length < config.MIN_TEXT_LENGTH) return statusHeadline.textContent = browser.i18n.getMessage("validatorNoTextStatus"), statusText.textContent = "", statusBox.className = "validator__status-box validator__status-box--no-errors", void (currentState = null);
     const e = t.detail;
     if (JSON.stringify(e) === JSON.stringify(currentState)) return;
     statusBox.className = "validator__status-box", currentState = e;

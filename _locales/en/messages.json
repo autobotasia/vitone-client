@@ -1045,11 +1045,11 @@
    },
    "validatorHasMistakesHeadlineSingular": {
       "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
-      "message": "One writing issue found"
+      "message": "Đã có gợi ý"
    },
    "validatorHasMistakesText": {
       "description": "Text displayed on top of text when the text contains spelling, punctuation or grammar errors",
-      "message": "Click on the highlighted words to correct them."
+      "message": "Chọn từ đã được gạch chân để xem gợi ý."
    },
    "validatorHasPremiumErrorsButton": {
       "description": "Button that sends the user to the upgrade/pricing page",
@@ -1075,19 +1075,19 @@
    },
    "validatorLoadingHint": {
       "description": "Loading status, shown when text is currently being checked",
-      "message": "Checking text …"
+      "message": "Đang kiểm tra lỗi ..."
    },
    "validatorNoMistakesHeadline": {
       "description": "Text displayed on top of text when the text doesn't contain any errors",
-      "message": "Congrats, no errors found!"
+      "message": "Không tìm thấy lỗi"
    },
    "validatorNoTextStatus": {
       "description": "Text shown above validator text field when it doesn't have enough characters to be checked",
-      "message": "Type or paste your text to check it"
+      "message": "Gõ hoặc dán văn bản của bạn để kiểm tra."
    },
    "validatorPlaceholder": {
       "description": "Text shown in text field when it's empty",
-      "message": "Please enter or paste your text here …"
+      "message": "Dán đoạn văn bản của bạn và kiểm tra …"
    },
    "validatorPremiumButton": {
       "description": "Label for a button. Clicking it will send the user to the website where he can buy the premium version",
