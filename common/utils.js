@@ -2,9 +2,9 @@
 function hasFirefoxDesignMode(t) {
   return Boolean(
     t.ownerDocument &&
-      "on" === t.ownerDocument.designMode &&
-      "read-write" ===
-        t.ownerDocument.defaultView.getComputedStyle(t)["-moz-user-modify"]
+    "on" === t.ownerDocument.designMode &&
+    "read-write" ===
+    t.ownerDocument.defaultView.getComputedStyle(t)["-moz-user-modify"]
   );
 }
 function hasFocus(t) {
@@ -95,7 +95,7 @@ function isRectsIntersect(t, e) {
 }
 function isPointInsideRect(t, e, n) {
   return (
-    void 0 === n && ((n = e.y), (e = e.x)),
+    void 0 === n && ((e.y <= t.top || e.y >= t.bottom ? n = t.top : n = e.y), (e = e.x)),
     t.left <= e && e <= t.right && t.top <= n && n <= t.bottom
   );
 }
@@ -139,10 +139,10 @@ const getVisibleTopAndBottom = (() => {
     let c = i.left + Math.round((i.width / 100) * 33);
     const a = Math.max(i.top, 0);
     let l = a;
-    for (;;) {
+    for (; ;) {
       if (t(e, s, c, l)) {
         if (l === a) break;
-        for (; l--; )
+        for (; l--;)
           if (!t(e, s, c, l)) {
             l++;
             break;
@@ -154,10 +154,10 @@ const getVisibleTopAndBottom = (() => {
     }
     const u = Math.min(i.bottom, o);
     let f = u;
-    for (;;) {
+    for (; ;) {
       if (t(e, s, c, f - 1)) {
         if (f === u) break;
-        for (; f++ < u; )
+        for (; f++ < u;)
           if (!t(e, s, c, f - 1)) {
             f--;
             break;
@@ -197,10 +197,10 @@ function fadeOutAndRemove(t, e) {
 }
 function observeScrollableAncestors(t, e) {
   const n = new DomMeasurement(t.ownerDocument);
-  const o = (function(t) {
+  const o = (function (t) {
     const e = [];
     let o = t.parentElement;
-    for (; o && o !== document.body && o !== document.documentElement; ) {
+    for (; o && o !== document.body && o !== document.documentElement;) {
       const t = n.getStyles(o, ["overflow-x", "overflow-y"]),
         r = t["overflow-x"],
         i = t["overflow-y"];
@@ -214,9 +214,9 @@ function observeScrollableAncestors(t, e) {
   const i = () => {
     r ||
       ((r = !0),
-      window.requestAnimationFrame(() => {
-        (r = !1), e();
-      }));
+        window.requestAnimationFrame(() => {
+          (r = !1), e();
+        }));
   };
   return (
     o.forEach(t => {
@@ -233,46 +233,46 @@ function observeScrollableAncestors(t, e) {
   );
 }
 const onElementDisabled = (() => {
-    let t;
-    const e = [];
-    return (n, o) => {
-      e.push({ element: n, callback: o }),
-        (t =
-          t ||
-          window.setInterval(() => {
-            const n = [];
-            e.forEach(t => {
-              (t.element.readOnly ||
-                t.element.disabled ||
-                !isVisible(t.element)) &&
-                (n.push(t), t.callback(t.element));
+  let t;
+  const e = [];
+  return (n, o) => {
+    e.push({ element: n, callback: o }),
+      (t =
+        t ||
+        window.setInterval(() => {
+          const n = [];
+          e.forEach(t => {
+            (t.element.readOnly ||
+              t.element.disabled ||
+              !isVisible(t.element)) &&
+              (n.push(t), t.callback(t.element));
+          }),
+            n.forEach(t => {
+              e.splice(e.indexOf(t), 1);
             }),
-              n.forEach(t => {
-                e.splice(e.indexOf(t), 1);
-              }),
-              e.length || (clearInterval(t), (t = null));
-          }, 600));
-    };
-  })(),
+            e.length || (clearInterval(t), (t = null));
+        }, 600));
+  };
+})(),
   onElementRemoved = (() => {
     let t;
     const e = [];
     return (n, o) => {
       e.push({ element: n, callback: o }),
         t ||
-          (t = new MutationObserver(n => {
-            const o = [];
-            e.forEach(t => {
-              n.find(
-                e =>
-                  Array.prototype.indexOf.call(e.removedNodes, t.element) > -1
-              ) && (o.push(t), t.callback(t.element));
+        (t = new MutationObserver(n => {
+          const o = [];
+          e.forEach(t => {
+            n.find(
+              e =>
+                Array.prototype.indexOf.call(e.removedNodes, t.element) > -1
+            ) && (o.push(t), t.callback(t.element));
+          }),
+            o.forEach(t => {
+              e.splice(e.indexOf(t), 1);
             }),
-              o.forEach(t => {
-                e.splice(e.indexOf(t), 1);
-              }),
-              e.length || (t.disconnect(), (t = null));
-          })).observe(document.documentElement, { childList: !0, subtree: !0 });
+            e.length || (t.disconnect(), (t = null));
+        })).observe(document.documentElement, { childList: !0, subtree: !0 });
     };
   })();
 function getTextsDiff(t, e) {
@@ -282,7 +282,7 @@ function getTextsDiff(t, e) {
   for (n = 0; n < o && t[n] === e[n]; n++);
   let r = 0;
   const i = Math.min(t.length, e.length);
-  for (; n + r < i; ) {
+  for (; n + r < i;) {
     if (t[t.length - r - 1] !== e[e.length - r - 1]) break;
     r++;
   }
@@ -301,7 +301,7 @@ function getParagraphsDiff(t, e) {
   for (i = 0; i < s && o[i] === r[i]; i++);
   let c = 0;
   const a = Math.min(o.length, r.length);
-  for (; i + c < a; ) {
+  for (; i + c < a;) {
     if (o[o.length - c - 1] !== r[r.length - c - 1]) break;
     c++;
   }
@@ -401,8 +401,8 @@ function getSelectedText() {
       "number" == typeof t.selectionStart)
     ? t.value.slice(t.selectionStart, t.selectionEnd)
     : window.getSelection && window.getSelection()
-    ? window.getSelection().toString()
-    : "";
+      ? window.getSelection().toString()
+      : "";
 }
 function addUseCaptureEvent(t, e, n) {
   const o = t instanceof HTMLDocument ? t : t.ownerDocument,
@@ -428,7 +428,7 @@ function generateStackTrace(t) {
       const n = t.match(/([\w_<>]+)\s+\(.+?([\w_\-]+\.(js|html))/);
       n && e.push(`${n[2]}:${n[1]}`);
     }),
-    !e.length)
+      !e.length)
   ) {
     const n = t.stack.match(/([\w_\-]+\.(js|html))/);
     n && e.push(n[1]);
@@ -436,7 +436,7 @@ function generateStackTrace(t) {
   return e.join(",").substr(0, 140);
 }
 function bindAndCatch(t, e = null) {
-  return function() {
+  return function () {
     if (BrowserDetector.isFirefox()) return t.apply(e, arguments);
     try {
       return t.apply(e, arguments);
@@ -444,16 +444,16 @@ function bindAndCatch(t, e = null) {
       let n = t.name;
       const o = generateStackTrace(e);
       throw (o && (n += "|" + o),
-      window.event && window.event.type && (n += "|" + window.event.type),
-      Tracker.trackError("js", e.message, n),
-      e);
+        window.event && window.event.type && (n += "|" + window.event.type),
+        Tracker.trackError("js", e.message, n),
+        e);
     }
   };
 }
 function isLTAvailable(t) {
   try {
     return t.document.documentElement.hasAttribute("data-lt-installed");
-  } catch (t) {}
+  } catch (t) { }
   return !1;
 }
 function isRuntimeConnected() {
@@ -467,9 +467,9 @@ const isProductionEnvironment = (() => {
   let t;
   return () => (
     void 0 === t &&
-      (t = BrowserDetector.isFirefox()
-        ? !browser.runtime.id.match("temporary-addon")
-        : "update_url" in browser.runtime.getManifest()),
+    (t = BrowserDetector.isFirefox()
+      ? !browser.runtime.id.match("temporary-addon")
+      : "update_url" in browser.runtime.getManifest()),
     t
   );
 })();
@@ -489,7 +489,7 @@ function getCurrentUrl() {
   if ("about:blank" === location.href || "about:srcdoc" === location.href)
     try {
       return window.parent.location.href;
-    } catch (t) {}
+    } catch (t) { }
   return location.href;
 }
 function getCurrentHostname() {
@@ -497,7 +497,7 @@ function getCurrentHostname() {
   if (t && t.hostname) return t.hostname.replace(/^www./, "");
   try {
     return window.parent.location.hostname.replace(/^www./, "");
-  } catch (t) {}
+  } catch (t) { }
   return "";
 }
 function getMainPageHostname() {
@@ -519,7 +519,7 @@ function getHostNameFromUrl(t) {
 }
 function getSubdomains(t) {
   const e = [t];
-  for (; t.split(".").length > 2; ) {
+  for (; t.split(".").length > 2;) {
     const n = t.indexOf(".");
     (t = t.substr(n + 1)), e.push(t);
   }
