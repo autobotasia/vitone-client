@@ -117,7 +117,7 @@
    },
    "contextMenuValidate": {
       "description": "Check text item in context menu",
-      "message": "Check spelling and grammar..."
+      "message": "Autobot"
    },
    "continue": {
       "description": "Link shown below the privacy note on first use",
