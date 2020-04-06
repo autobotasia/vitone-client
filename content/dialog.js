@@ -264,8 +264,8 @@ class Dialog {
                 ? ((o.textContent = Dialog.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
                   (o.style.color = config.COLORS.GRAMMAR.TITLE))
                 : ((o.textContent = Dialog.MESSAGES.HEADLINE_GRAMMAR_ERROR),
-                  (o.style.color = config.COLORS.GRAMMAR.TITLE)),
-          t.append(o);
+                  (o.style.color = config.COLORS.GRAMMAR.TITLE));
+        // t.append(o);
         const n = this._document.createElement("lt-div");
         if (
           ((n.className = "lt-dialog__error-text"),

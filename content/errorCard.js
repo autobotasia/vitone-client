@@ -107,8 +107,8 @@ class ErrorCard {
             ? ((t.textContent = ErrorCard.MESSAGES.HEADLINE_PUNCTUATION_ERROR),
               (t.style.color = config.COLORS.GRAMMAR.TITLE))
             : ((t.textContent = ErrorCard.MESSAGES.HEADLINE_GRAMMAR_ERROR),
-              (t.style.color = config.COLORS.GRAMMAR.TITLE)),
-      e.appendChild(t);
+              (t.style.color = config.COLORS.GRAMMAR.TITLE));
+    // e.appendChild(t);
     const r = this._document.createElement("lt-div");
     if (
       (r.classList.add("lt-errorcard__text"),

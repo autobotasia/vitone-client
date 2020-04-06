@@ -12,7 +12,7 @@ class TweaksManager {
     let t = null;
     try {
       t = new URL(e).hostname;
-    } catch (e) {}
+    } catch (e) { }
     if (!t) return TweaksManager.DEFAULT_TWEAKS;
     const a = Object.assign({}, TweaksManager.DEFAULT_TWEAKS),
       o = getSubdomains(t),
@@ -106,7 +106,7 @@ class TweaksManager {
             let t = null;
             try {
               t = e.contentWindow.document.documentElement;
-            } catch (e) {}
+            } catch (e) { }
             if (!t) return null;
             (g.width = t.clientWidth),
               (g.height = t.clientHeight),
@@ -145,35 +145,35 @@ class TweaksManager {
           a ||
           window.parent.location.href.includes("/owa/") ||
           !!window.parent.document.querySelector(".owa-font-compose");
-      } catch (e) {}
+      } catch (e) { }
       let o = !1;
       try {
         o =
           !!window.parent.document.title.match(/roundcube/i) ||
           !!window.parent.location.href.match(/_action=compose/i);
-      } catch (e) {}
+      } catch (e) { }
       return {
         isSignature: e =>
           t
             ? !!(
-                e.dataset &&
-                e.dataset.marker &&
-                e.dataset.marker.includes("_SIG_")
-              )
+              e.dataset &&
+              e.dataset.marker &&
+              e.dataset.marker.includes("_SIG_")
+            )
             : a
-            ? "signature" === e.id.toLowerCase()
-            : !!o && "_rc_sig" === e.id,
+              ? "signature" === e.id.toLowerCase()
+              : !!o && "_rc_sig" === e.id,
         isQuote: e =>
           t
             ? !!(
-                e.dataset &&
-                e.dataset.marker &&
-                e.dataset.marker.includes("_QUOTED_")
-              )
+              e.dataset &&
+              e.dataset.marker &&
+              e.dataset.marker.includes("_QUOTED_")
+            )
             : !!a &&
-              ("divRplyFwdMsg" === e.id ||
-                (!!e.previousElementSibling &&
-                  "divRplyFwdMsg" === e.previousElementSibling.id))
+            ("divRplyFwdMsg" === e.id ||
+              (!!e.previousElementSibling &&
+                "divRplyFwdMsg" === e.previousElementSibling.id))
       };
     },
     getRecipientInfo(e) {
@@ -190,7 +190,7 @@ class TweaksManager {
             return Promise.resolve({ address: e, fullName: t });
           }
         }
-      } catch (e) {}
+      } catch (e) { }
       return Promise.resolve({ address: "", fullName: "" });
     },
     isClickIgnored: e => !e.isTrusted,
@@ -218,7 +218,7 @@ class TweaksManager {
               o = TweaksManager._removeEmail(t);
             return Promise.resolve({ address: a, fullName: o });
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -257,8 +257,8 @@ class TweaksManager {
           e.classList.contains("richeditor-cover")
             ? null
             : TweaksManager.DEFAULT_TWEAKS.getHighlighterAppearance(
-                e
-              ).getZIndex(e, t)
+              e
+            ).getZIndex(e, t)
       })
     },
     {
@@ -275,7 +275,7 @@ class TweaksManager {
       isElementCompatible(e) {
         const t = /rotate\([1-9\-]/;
         let a = e.closest("[style*=rotate]");
-        for (; a && a !== e.ownerDocument.body; ) {
+        for (; a && a !== e.ownerDocument.body;) {
           if (a.style.transform && a.style.transform.match(t)) return !1;
           a = a.parentElement && a.parentElement.closest("[style*=rotate]");
         }
@@ -322,7 +322,7 @@ class TweaksManager {
                     command: "SET_GOOGLE_DOCS_PLUGIN_STATE",
                     value: e
                   }),
-                  a.getUIState().hasSeenGoogleDocsTeaser)
+                    a.getUIState().hasSeenGoogleDocsTeaser)
                 )
                   return;
                 if (e) return;
@@ -417,7 +417,7 @@ class TweaksManager {
               return Promise.resolve({ address: a, fullName: o });
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -440,9 +440,9 @@ class TweaksManager {
             ).getPosition(e, a, o, 15);
             return s && s.top && t
               ? Object.assign(s, {
-                  top: parseInt(s.top) - o.getDocumentScroll().top + "px",
-                  fixed: !0
-                })
+                top: parseInt(s.top) - o.getDocumentScroll().top + "px",
+                fixed: !0
+              })
               : s;
           }
         };
@@ -459,9 +459,9 @@ class TweaksManager {
           ).getPosition(e, t, a);
           return (
             "list item" === e.getAttribute("aria-label") &&
-              o &&
-              o.left &&
-              (o.left = parseInt(o.left) - 30 + "px"),
+            o &&
+            o.left &&
+            (o.left = parseInt(o.left) - 30 + "px"),
             o
           );
         }
@@ -530,7 +530,7 @@ class TweaksManager {
               return Promise.resolve({ address: t, fullName: a });
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -604,43 +604,43 @@ class TweaksManager {
           t = document.querySelector("#lt-addon-user-email");
         return (
           e &&
-            t &&
-            new StorageController(a => {
-              if (
-                (Tracker.trackEvent("Action", "auto_login:prepare"),
+          t &&
+          new StorageController(a => {
+            if (
+              (Tracker.trackEvent("Action", "auto_login:prepare"),
                 a.isUsedCustomServer())
-              )
-                return;
-              const { havePremiumAccount: o, username: s } = a.getSettings();
-              o
-                ? o &&
-                  t.value.toLowerCase() === s.toLowerCase() &&
-                  a.updateSettings({
-                    username: t.value,
-                    password: "",
-                    token: e.value
-                  })
-                : (a.updateSettings({
-                    havePremiumAccount: !0,
-                    username: t.value,
-                    password: "",
-                    token: e.value,
-                    knownEmail: t.value
-                  }),
-                  Tracker.trackEvent("Action", "auto_login:success")),
-                a.checkForPaidSubscription().catch(e => {
-                  Tracker.trackError(
-                    "js",
-                    `Error checking paid subscripton: ${e && e.message}`
-                  );
-                });
-            }),
+            )
+              return;
+            const { havePremiumAccount: o, username: s } = a.getSettings();
+            o
+              ? o &&
+              t.value.toLowerCase() === s.toLowerCase() &&
+              a.updateSettings({
+                username: t.value,
+                password: "",
+                token: e.value
+              })
+              : (a.updateSettings({
+                havePremiumAccount: !0,
+                username: t.value,
+                password: "",
+                token: e.value,
+                knownEmail: t.value
+              }),
+                Tracker.trackEvent("Action", "auto_login:success")),
+              a.checkForPaidSubscription().catch(e => {
+                Tracker.trackError(
+                  "js",
+                  `Error checking paid subscripton: ${e && e.message}`
+                );
+              });
+          }),
           location.href.includes("/webextension/upgrade") &&
-            new StorageController(e => {
-              const { premiumClicks: t } = e.getStatistics();
-              e.updateStatistics({ premiumClicks: t + 1 }),
-                Tracker.trackEvent("Action", "pricing_table:view");
-            }),
+          new StorageController(e => {
+            const { premiumClicks: t } = e.getStatistics();
+            e.updateStatistics({ premiumClicks: t + 1 }),
+              Tracker.trackEvent("Action", "pricing_table:view");
+          }),
           TweaksManager.DEFAULT_TWEAKS.init()
         );
       },
@@ -691,7 +691,7 @@ class TweaksManager {
               return Promise.resolve({ address: t, fullName: a });
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -709,13 +709,13 @@ class TweaksManager {
             );
             if (e) {
               const t = TweaksManager._anonymizeEmail(
-                  e.dataset.yabbleName || ""
-                ),
+                e.dataset.yabbleName || ""
+              ),
                 a = TweaksManager._removeEmail(e.dataset.yabbleName || "");
               return Promise.resolve({ address: t, fullName: a });
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       },
       isClickIgnored(e) {
@@ -743,7 +743,7 @@ class TweaksManager {
               ),
               fullName: e.innerText.trim()
             });
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -767,7 +767,7 @@ class TweaksManager {
               return Promise.resolve({ address: a, fullName: o });
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       },
       getParsingDetector: e => ({
@@ -830,10 +830,10 @@ class TweaksManager {
               let o = TweaksManager._anonymizeEmail(e);
               return (
                 o.includes("@") ||
-                  (o = `${a} <${a
-                    .split(" ")
-                    .join(".")
-                    .toLowerCase()}@replaced.domain>`),
+                (o = `${a} <${a
+                  .split(" ")
+                  .join(".")
+                  .toLowerCase()}@replaced.domain>`),
                 Promise.resolve({ address: o, fullName: a })
               );
             }
@@ -848,16 +848,16 @@ class TweaksManager {
                 let o = TweaksManager._anonymizeEmail(t);
                 return (
                   o.includes("@") ||
-                    (o = `${a} <${a
-                      .split(" ")
-                      .join(".")
-                      .toLowerCase()}@replaced.domain>`),
+                  (o = `${a} <${a
+                    .split(" ")
+                    .join(".")
+                    .toLowerCase()}@replaced.domain>`),
                   Promise.resolve({ address: o, fullName: a })
                 );
               }
             }
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -879,10 +879,10 @@ class TweaksManager {
         isQuote: e =>
           Boolean(
             "DIV" === e.nodeName &&
-              e.previousElementSibling &&
-              "BR" === e.previousElementSibling.nodeName &&
-              e.textContent &&
-              e.textContent.startsWith("-----")
+            e.previousElementSibling &&
+            "BR" === e.previousElementSibling.nodeName &&
+            e.textContent &&
+            e.textContent.startsWith("-----")
           )
       })
     },
@@ -925,10 +925,10 @@ class TweaksManager {
           ).getPosition(e, t, a);
           return (
             o &&
-              o.top &&
-              "txtSource" === e.id &&
-              document.querySelector("#lnkSpeller:not(.bottom)") &&
-              (o.top = parseInt(o.top) - 28 + "px"),
+            o.top &&
+            "txtSource" === e.id &&
+            document.querySelector("#lnkSpeller:not(.bottom)") &&
+            (o.top = parseInt(o.top) - 28 + "px"),
             o
           );
         }
@@ -949,25 +949,25 @@ class TweaksManager {
           "[data-view-context='message-pane'], [data-view-context='threads-flexpane']"
         ) && e.classList.contains("ql-editor")
           ? {
-              isVisible: e => !0,
-              getPosition(e, t, a) {
-                let o = parseInt(a.getStyle(e, "padding-top")),
-                  s = parseInt(a.getStyle(e, "padding-bottom"));
-                const n = a.getBorderBox(e);
-                o > 0 && 0 === s && ((s = o), (n.bottom += o), (n.height += o));
-                const r = Math.max(
-                    parseInt(a.getStyle(e, "padding-right")) + 2,
-                    38
-                  ),
-                  i = parseInt(a.getStyle(e, "line-height")) + o + s;
-                return {
-                  fixed: !1,
-                  left: Math.round(n.right - r - t.width) + "px",
-                  top:
-                    Math.round(n.bottom - t.height + (t.height - i) / 2) + "px"
-                };
-              }
+            isVisible: e => !0,
+            getPosition(e, t, a) {
+              let o = parseInt(a.getStyle(e, "padding-top")),
+                s = parseInt(a.getStyle(e, "padding-bottom"));
+              const n = a.getBorderBox(e);
+              o > 0 && 0 === s && ((s = o), (n.bottom += o), (n.height += o));
+              const r = Math.max(
+                parseInt(a.getStyle(e, "padding-right")) + 2,
+                38
+              ),
+                i = parseInt(a.getStyle(e, "line-height")) + o + s;
+              return {
+                fixed: !1,
+                left: Math.round(n.right - r - t.width) + "px",
+                top:
+                  Math.round(n.bottom - t.height + (t.height - i) / 2) + "px"
+              };
             }
+          }
           : TweaksManager.DEFAULT_TWEAKS.getToolbarAppearance(e)
     },
     {
@@ -1084,7 +1084,7 @@ class TweaksManager {
               a = TweaksManager._anonymizeEmail(e.getAttribute("title") || "");
             return Promise.resolve({ address: `${t} <${a}>`, fullName: t });
           }
-        } catch (e) {}
+        } catch (e) { }
         return Promise.resolve({ address: "", fullName: "" });
       }
     },
@@ -1115,9 +1115,9 @@ class TweaksManager {
             }
             return o && n && n.left && n.top
               ? Object.assign(n, {
-                  left: parseInt(n.left) + 3 + "px",
-                  top: parseInt(n.top) + 5 + "px"
-                })
+                left: parseInt(n.left) + 3 + "px",
+                top: parseInt(n.top) + 5 + "px"
+              })
               : n;
           }
         };
