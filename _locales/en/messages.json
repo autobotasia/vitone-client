@@ -15,11 +15,11 @@
    },
    "appDesc": {
       "description": "The description of the application, displayed in the web store.",
-      "message": "Check your texts for spelling and grammar problems everywhere on the web"
+      "message": "Chương trình tự động thêm dấu cho Tiếng Việt và chỉnh sửa lỗi cú pháp"
    },
    "appName": {
       "description": "The name of the application, displayed in the web store.",
-      "message": "Grammar and Spell Checker - LanguageTool"
+      "message": "Autobot"
    },
    "appStoreDesc1": {
       "description": "Description item 1 in Google Chrome Web Store (does not appear in the extension itself)",
@@ -949,27 +949,27 @@
    },
    "statusIconEnableLT": {
       "description": "Shown when hovering over the status icon (not the toolbar one) in disabled state",
-      "message": "Enable LanguageTool - Spelling and Grammar Check"
+      "message": "Bật Autobot"
    },
    "statusIconError": {
       "description": "Shown when hovering over the status icon (not the toolbar one) in error state",
-      "message": "Error"
+      "message": "Lỗi"
    },
    "statusIconMoreErrors": {
       "description": "Shown when hovering over the status icon (not the toolbar one) in incomplete result state",
-      "message": "Results are incomplete: Text checking was stopped due to too many errors."
+      "message": "Không có kết quả: Đoạn văn bản không thể kiểm tra do có lỗi."
    },
    "statusIconPermissionRequired": {
       "description": "Shown when hover over the status icon (not the toolbar one) in permission required state (i.e. user has not confirmed privacy dialog on first start)",
-      "message": "Cannot check text - confirm privacy policy first"
+      "message": "Không thể kiểm tra - Hãy xác nhận quyền sử dụng"
    },
    "statusIconReload": {
       "description": "Shown when hovering over the status icon (not the toolbar one) in reload needed state",
-      "message": "The extension has been updated. Please reload page to enable spell and grammar checking."
+      "message": "Phần mở rộng đã có phiên bản mới. Hãy tải lại trang để cập nhật nội dung mới nhất."
    },
    "statusIconToolTip": {
       "description": "Shown when hovering over the status icon (not the toolbar one)",
-      "message": "LanguageTool - Spelling and Grammar Check"
+      "message": "Autobot"
    },
    "suggestionError": {
       "description": "Type of error (spelling error, style suggestion, grammar error, ...)",
