@@ -508,10 +508,10 @@ html:not(.__lt-dummy-1):not(.__lt-dummy-2):not(.__lt-dummy-3):not(.__lt-dummy-4)
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     left: 33px !important;
-    bottom: -4px !important;
+    top: -4px !important;
     display: flex !important;
     flex-direction: column !important;
-    height: 400px !important;
+    height: 260px !important;
     min-height: 145px !important;
     max-height: 65vh !important; }
   @media only screen and (max-width: 340px) {
@@ -846,7 +846,7 @@ html:not(.__lt-dummy-1):not(.__lt-dummy-2):not(.__lt-dummy-3):not(.__lt-dummy-4)
   html:not(.__lt-dummy-1):not(.__lt-dummy-2):not(.__lt-dummy-3):not(.__lt-dummy-4):not(.__lt-dummy-5):not(.__lt-dummy-6):not(.__lt-dummy-7) lt-dialog .lt-dialog__error-item,
   html:not(.__lt-dummy-1):not(.__lt-dummy-2):not(.__lt-dummy-3):not(.__lt-dummy-4):not(.__lt-dummy-5):not(.__lt-dummy-6):not(.__lt-dummy-7) lt-dialog .lt-dialog__ignored-errors-item {
     margin: 14px 0 !important;
-    padding: 8px 12px !important;
+    padding: 16px 12px !important;
     background: #fff !important;
     font-size: 12px !important;
     line-height: 18px !important; }
