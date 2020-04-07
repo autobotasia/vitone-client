@@ -95,7 +95,7 @@ function isRectsIntersect(t, e) {
 }
 function isPointInsideRect(t, e, n) {
   return (
-    void 0 === n && ((e.y <= t.top || e.y >= t.bottom ? n = t.top : n = e.y), (e = e.x)),
+    void 0 === n && ((e.y <= t.top ? n = t.top : n = e.y), (e = e.x)),
     t.left <= e && e <= t.right && t.top <= n && n <= t.bottom
   );
 }
