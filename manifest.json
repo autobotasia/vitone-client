@@ -93,6 +93,7 @@
     "storage",
     "contextMenus"
   ],
+  "homepage_url": "https://autobot.asia/",
   "short_name": "Autobot",
   "update_url": "https://clients2.google.com/service/update2/crx",
   "version": "2.3.2",
