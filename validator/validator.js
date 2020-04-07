@@ -6,7 +6,6 @@ browser.runtime.sendMessage({
     command: "VALIDATOR_LOADED",
     id: id
 }).then(t => {
-    var bkg = chrome.extension.getBackgroundPage();
     bkg.console.log("t.text", t.text);
     let dataToSend = {}
     dataToSend.metaData = { EmailToAddress: "" }
@@ -18,11 +17,9 @@ browser.runtime.sendMessage({
     xmlhttp.open("POST", "http://ai.nccsoft.vn:8888/check", true);
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.status == 200) {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
             let data = JSON.parse(xmlhttp.responseText);
-            bkg.console.log("\n\n\n")
-            bkg.console.log("data", data)
             let replacements = data.matches.replacements
             if(replacements.length > 0) {
                 statusBox.classList.add("validator__status-box--has-errors")
