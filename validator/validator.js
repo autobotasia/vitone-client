@@ -13,7 +13,7 @@ browser.runtime.sendMessage({
     dataToSend.text = [
         { text: t.text, offset: 0 }
     ]
-    
+    const divMainContent = document.getElementById("div-main-content");
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "http://ai.nccsoft.vn:8888/check", true);
     xmlhttp.setRequestHeader("Content-Type", "application/json");
@@ -27,7 +27,6 @@ browser.runtime.sendMessage({
             if(replacements.length > 0) {
                 statusBox.classList.add("validator__status-box--has-errors")
                 replacements.forEach(ele => {
-                    const divMainContent = document.getElementById("div-main-content");
                     divMainContent.textContent = ""
                     const p = document.createElement("p")
                     const tagH4 = document.createElement("h4")
@@ -38,6 +37,11 @@ browser.runtime.sendMessage({
                     p.appendChild(tagP)
                     divMainContent.appendChild(p)
                 })
+            } else {
+                divMainContent.textContent = ""
+                const tagH4 = document.createElement("h4")
+                tagH4.textContent = "Không tìm thấy lỗi"
+                divMainContent.appendChild(tagH4)
             }
         }
     }
