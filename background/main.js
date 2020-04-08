@@ -355,7 +355,7 @@ class BackgroundApp {
         }), BackgroundApp._updateUninstallURL(getHostNameFromUrl(t.metaData.url)),
             Promise.all([
                 // Validator.validate(t.text, t.forceLanguage ? t.language : null, r, t.metaData, t.hasUserChangedLanguage),
-                Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage)]).then(([a]) => {
+                Validator.partialValidate(t.changedParagraphs, t.language, r, t.metaData, !t.forceLanguage, t)]).then(([a]) => {
                     var bkg = chrome.extension.getBackgroundPage();
                     const n = e.language || t.language,
                         o = n && n.name === BackgroundApp.UNSUPPORTED_LANGUAGE_NAME;
