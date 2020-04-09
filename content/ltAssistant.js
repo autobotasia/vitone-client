@@ -116,7 +116,6 @@ class LTAssistant {
     static _getTextChanges(e, t, n) {
         const r = getParagraphsDiff(e, t),
             i = [];
-        let k = [];
         for (const e of n) {
             const t = Object.assign({}, e),
                 n = t.offset,
@@ -142,8 +141,7 @@ class LTAssistant {
                         t.offset += e.newOffset - e.oldOffset
                     }
                 }
-            k.push(t);
-            o && i.push(...k)
+            o && i.push(t)
         }
         const s = r.filter(e => e.oldText !== e.newText && null !== e.newText).map(e => ({
             text: e.newText,
@@ -151,7 +149,7 @@ class LTAssistant {
         }));
         return {
             changedParagraphs: s,
-            nonAffectedErrors: i.length ? i : k,
+            nonAffectedErrors: i,
             isAllTextChanged: s.map(e => e.text).join("\n") === t
         }
     }
