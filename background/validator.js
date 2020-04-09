@@ -36,28 +36,50 @@ class Validator {
     for (const t of Validator.IGNORE_ASCII_SMILEYS_REGEXPS) e = e.replace(t, (e, t, r) => `${t}${"\ufeff".repeat(r.length)}`);
     return e
   }
-  static _getRequestData(e, t, r, a) {
+  static _tranformDataRequest(e, t, r, a, text) {
+    let array = text.text.split("\n")
+    let arrayTosend = []
+    let arrayValid = []
+    let fromIndex = 0
+    array.forEach((ele, index) => {
+      let arrayWordSplit = ele.split(" ")
+      let indexOfEle = text.text.indexOf(ele, fromIndex)
+      let textValid = {
+        text: ele,
+        offset: indexOfEle
+      }
+      arrayValid.push(textValid)
+
+      arrayWordSplit.forEach(word => {
+        if(word) {
+          let indexOfWord = text.text.indexOf(word, fromIndex)
+          let textSend = {
+            text: word,
+            offset: index > 0 ? indexOfWord + 1 * index : indexOfWord
+          }
+          fromIndex = fromIndex + word.length + 1
+          arrayTosend.push(textSend)
+        }
+      })
+    })
+
     const g = {
-      text: e,
+      text: arrayTosend,
       metaData: {
         EmailToAddress: a.recipientInfo.address
       }
     };
-    return JSON.stringify(g)
+    return { body: g, valid: arrayValid}
   }
-  static _getValidationRequestData(e, t, r, a) {
-    const s = this._getRequestData(e, t, r, a);
-    return this._getRequestData(e, t, r, a);
+  static _getValidationRequestData(e, t, r, a, text) {
+    const o = this._tranformDataRequest(e, t, r, a, text);
+    return o.body;
   }
   static _getPartialValidationRequestData(e, t, r, a, s) {
-    const o = this._getRequestData(e, t, r, a);
-    return this._getRequestData(e, t, r, a);
+    const o = this._tranformDataRequest(e, t, r, a, text);
+    return o.body;
   }
   static _sendRequest(e, t, r = config.REQUEST_TIMEOUT) {
-    var bkg = chrome.extension.getBackgroundPage();
-    bkg.console.log('===========_sendRequest============', JSON.stringify(e));
-    bkg.console.log('===========_sendRequest 2============', JSON.stringify(t));
-
     const a = fetch(e, t).catch(t => {
       throw "AbortError" === t.name ? {
         reason: "AbortError",
@@ -207,8 +229,6 @@ class Validator {
     })
   }
   static _processResponse(e, t, r, a) {
-    var bkg = chrome.extension.getBackgroundPage();
-    bkg.console.log("======_processResponse==============", JSON.stringify(e), JSON.stringify(t));
     let s = this._transformMatches(e.matches, t, e.language, a);
     s = this._adjustErrors(s, t, getHostNameFromUrl(r.url), r.recipientInfo.fullName);
     let o = [];
@@ -249,9 +269,6 @@ class Validator {
     return r
   }
   static validate(e, t, r, a, s = !1) {
-    var bkg = chrome.extension.getBackgroundPage();
-    bkg.console.log("\n\n\n", "Validate", "\n\n\n")
-
     if (!(e = this._ignoreText(e)).trim() || /^( *\n)* *$/g.test(e)) return Promise.resolve({
       language: t,
       errors: [],
@@ -322,9 +339,7 @@ class Validator {
     })
     return result
   }
-  static partialValidate(e, t, r, a, s = !1) {
-    var bkg = chrome.extension.getBackgroundPage();
-    bkg.console.log("\n\n\n", "partialValidate", "\n\n\n")
+  static partialValidate(e, t, r, a, s = !1, text) {
     if (e.forEach(e => { e.text = this._ignoreText(e.text) }), 0 === e.length) {
       return Promise.resolve({
         language: t,
@@ -341,24 +356,23 @@ class Validator {
         isIncompleteResult: !1
       });
     }
+    var dataTransfrom = Validator._tranformDataRequest(e, t, r, a, text)
     const o = `http://ai.nccsoft.vn:8888/check`,
       i = e.map(e => e.text).join("\n\n"),
       n = {
         method: "post",
         mode: 'cors',
-        body: Validator._getValidationRequestData(e, t, r, a),
+        body: JSON.stringify(dataTransfrom.body),
         headers: {
           'Content-Type': 'application/json'
         },
       };
     return this._sendRequest(o, n).then(t => {
-      bkg.console.log("\n\n\n", t, "\n\n\n")
       t = this._transformResponse(t)
-      bkg.console.log("\n\n\n", "tttttttttttttttttttt", t, "\n\n\n")
       const {
         errors: r,
         hiddenErrors: s
-      } = this._processResponse(t, i, a, !0), o = this._correctErrorOffsets(e, r), n = this._correctErrorOffsets(e, s);
+      } = this._processResponse(t, i, a, !0), o = this._correctErrorOffsets(dataTransfrom.valid, r), n = this._correctErrorOffsets(dataTransfrom.valid, s);
       return {
         language: {
           code: t.language.code,
