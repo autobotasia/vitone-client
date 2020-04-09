@@ -6,7 +6,6 @@ browser.runtime.sendMessage({
     command: "VALIDATOR_LOADED",
     id: id
 }).then(t => {
-    bkg.console.log("t.text", t.text);
     let dataToSend = {}
     dataToSend.metaData = { EmailToAddress: "" }
     dataToSend.text = [

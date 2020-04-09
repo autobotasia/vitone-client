@@ -40,26 +40,28 @@ class Validator {
     let array = text.text.split("\n")
     let arrayTosend = []
     let arrayValid = []
-    // if(e.length == 1 && e[0].text.length != text.text.length) {
-    //   e[0].offset = 0
-    //   arrayTosend = e
-    // } else {
-      let fromIndex = 0
-      array.forEach((ele, index) => {
-        let indexOfEle = text.text.indexOf(ele, fromIndex)
-        let textValid = {
-          text: ele,
-          offset: indexOfEle
+    let fromIndex = 0
+    array.forEach((ele, index) => {
+      let arrayWordSplit = ele.split(" ")
+      let indexOfEle = text.text.indexOf(ele, fromIndex)
+      let textValid = {
+        text: ele,
+        offset: indexOfEle
+      }
+      arrayValid.push(textValid)
+
+      arrayWordSplit.forEach(word => {
+        if(word) {
+          let indexOfWord = text.text.indexOf(word, fromIndex)
+          let textSend = {
+            text: word,
+            offset: index > 0 ? indexOfWord + 1 * index : indexOfWord
+          }
+          fromIndex = fromIndex + word.length + 1
+          arrayTosend.push(textSend)
         }
-        arrayValid.push(textValid)
-        let textSend = {
-          text: ele,
-          offset: index > 0 ? indexOfEle + 1 * index : indexOfEle
-        }
-        fromIndex = fromIndex + ele.length + 1
-        arrayTosend.push(textSend)
       })
-    // }
+    })
 
     const g = {
       text: arrayTosend,
