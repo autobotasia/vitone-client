@@ -10,93 +10,93 @@ class LTAssistant {
             capitalization: !0,
             supported: t,
             unsupportedMessage: n
-        }), 
-        void browser.runtime.onMessage.addListener(this._onMessage);
-        this._validateInstanceDebounce = new Debounce(bindAndCatch(this._validateInstance, this), 
-        config.VALIDATION_DEBOUNCE_TIMEOUT), this._onDocumentClick = bindAndCatch(this._onDocumentClick, this), 
-        this._onDocumentFocus = bindAndCatch(this._onDocumentFocus, this), 
-        this._onTextChanged = bindAndCatch(this._onTextChanged, this), 
-        this._onInputScroll = bindAndCatch(this._onInputScroll, this), 
-        this._onBlockClicked = bindAndCatch(this._onBlockClicked, this), 
-        this._onPermissionRequiredIconClicked = bindAndCatch(this._onPermissionRequiredIconClicked, this), 
-        this._onToggleDialog = bindAndCatch(this._onToggleDialog, this), 
-        this._onPremiumIconVisible = bindAndCatch(this._onPremiumIconVisible, this), 
-        this._onLanguageChanged = bindAndCatch(this._onLanguageChanged, this), 
-        this._enableHere = bindAndCatch(this._enableHere, this), 
-        this._enableEverywhere = bindAndCatch(this._enableEverywhere, this), 
-        this._onErrorSelected = bindAndCatch(this._onErrorSelected, this), 
-        this._onTurnOffClicked = bindAndCatch(this._onTurnOffClicked, this), 
-        this._onOptionsOpen = bindAndCatch(this._onOptionsOpen, this), 
-        this._onAddToDictionaryClicked = bindAndCatch(this._onAddToDictionaryClicked, this), 
-        this._onDialogDestroyed = bindAndCatch(this._onDialogDestroyed, this), 
-        this._onFixSelected = bindAndCatch(this._onFixSelected, this), 
-        this._onIgnoreRuleClicked = bindAndCatch(this._onIgnoreRuleClicked, this), 
-        this._onTemporarilyIgnoreRule = bindAndCatch(this._onTemporarilyIgnoreRule, this), 
-        this._onTemporarilyIgnoreWord = bindAndCatch(this._onTemporarilyIgnoreWord, this), 
-        this._onErrorCardDestroyed = bindAndCatch(this._onErrorCardDestroyed, this), 
-        this._onSettingsChanged = bindAndCatch(this._onSettingsChanged, this), 
-        this._onUiStateChanged = bindAndCatch(this._onUiStateChanged, this), 
-        this._onShowFeedbackForm = bindAndCatch(this._onShowFeedbackForm, this), 
-        this._onPrivacySettingsChanged = bindAndCatch(this._onPrivacySettingsChanged, this), 
-        this._onDestroy = bindAndCatch(this.destroy, this), 
-        this._onMoreDetailsClicked = bindAndCatch(this._onMoreDetailsClicked, this), 
-        this._onBadgeClicked = bindAndCatch(this._onBadgeClicked, this), 
-        this._onLogoClicked = bindAndCatch(this._onLogoClicked, this), 
-        this._onPageHide = bindAndCatch(this._onPageHide, this), 
-        this._sendPageLoaded = bindAndCatch(this._sendPageLoaded, this), 
-        this._checkExtensionHealthInterval = window.setInterval(bindAndCatch(this._checkExtensionHealth, this),config.CHECK_EXTENSION_HEALTH_INTERVAL), 
-        document.addEventListener(LTAssistant.eventNames.destroy, this._onDestroy), 
-        window.addEventListener("pageshow", this._sendPageLoaded), 
-        window.addEventListener("pagehide", this._onPageHide), 
-        this._storageController = new StorageController(bindAndCatch(() => {
-            this._sendPageLoaded();
-            const e = document.querySelector(":focus");
-            e && this._initInstance(e, !0), 
-            document.body && hasFirefoxDesignMode(document.body) && this._initInstance(document.body, !0), 
-            window._ltLastActiveElement && (this._initInstance(window._ltLastActiveElement, !1), window._ltLastActiveElement = null), 
-            browser.runtime.onMessage.addListener(this._onMessage), document.addEventListener("click", this._onDocumentClick, !0), 
-            document.addEventListener("focus", this._onDocumentFocus, !0), 
-            BrowserDetector.isChromium() && window.innerHeight > 10 && (this._tinyMceInterval = window.setInterval(() => this._checkForIframeWithoutContentScripts(), 2e3)), 
-            window.frameElement && window.frameElement.ownerDocument && window.frameElement.ownerDocument.addEventListener("click", this._onDocumentClick, !0), 
-            document.addEventListener(InputAreaWrapper.eventNames.textChanged, this._onTextChanged), 
-            document.addEventListener(InputAreaWrapper.eventNames.scroll, this._onInputScroll), 
-            document.addEventListener(Highlighter.eventNames.blockClicked, this._onBlockClicked), 
-            document.addEventListener(Toolbar.eventNames.permissionRequiredIconClicked, this._onPermissionRequiredIconClicked), 
-            document.addEventListener(Toolbar.eventNames.toggleDialog, this._onToggleDialog), 
-            document.addEventListener(Toolbar.eventNames.notifyAboutPremiumIcon, this._onPremiumIconVisible), 
-            document.addEventListener(Dialog.eventNames.changeLanguage, this._onLanguageChanged), 
-            document.addEventListener(Dialog.eventNames.enableHere, this._enableHere), 
-            document.addEventListener(Dialog.eventNames.enableEverywhere, this._enableEverywhere), 
-            document.addEventListener(Dialog.eventNames.errorSelected, this._onErrorSelected), 
-            document.addEventListener(Dialog.eventNames.fixSelected, this._onFixSelected), 
-            document.addEventListener(Dialog.eventNames.turnOff, this._onTurnOffClicked), 
-            document.addEventListener(Dialog.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked), 
-            document.addEventListener(Dialog.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked), 
-            document.addEventListener(Dialog.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord), 
-            document.addEventListener(Dialog.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule), 
-            document.addEventListener(Dialog.eventNames.moreDetailsClicked, this._onMoreDetailsClicked), 
-            document.addEventListener(Dialog.eventNames.openOptions, this._onOptionsOpen), 
-            document.addEventListener(Dialog.eventNames.showFeedbackForm, this._onShowFeedbackForm), 
-            document.addEventListener(Dialog.eventNames.destroyed, this._onDialogDestroyed), 
-            document.addEventListener(ErrorCard.eventNames.fixSelected, this._onFixSelected), 
-            document.addEventListener(ErrorCard.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked), 
-            document.addEventListener(ErrorCard.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked), 
-            document.addEventListener(ErrorCard.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord), 
-            document.addEventListener(ErrorCard.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule), 
-            document.addEventListener(ErrorCard.eventNames.destroyed, this._onErrorCardDestroyed), 
-            document.addEventListener(ErrorCard.eventNames.moreDetailsClicked, this._onMoreDetailsClicked), 
-            document.addEventListener(ErrorCard.eventNames.badgeClicked, this._onBadgeClicked), 
-            document.addEventListener(ErrorCard.eventNames.logoClicked, this._onLogoClicked), 
-            this._storageController.addEventListener(StorageController.eventNames.settingsChanged, this._onSettingsChanged), 
-            this._storageController.addEventListener(StorageController.eventNames.privacySettingsChanged, this._onPrivacySettingsChanged), 
-            this._storageController.addEventListener(StorageController.eventNames.uiStateChanged, this._onUiStateChanged)
-        }, this))
+        }),
+            void browser.runtime.onMessage.addListener(this._onMessage);
+        this._validateInstanceDebounce = new Debounce(bindAndCatch(this._validateInstance, this),
+            config.VALIDATION_DEBOUNCE_TIMEOUT), this._onDocumentClick = bindAndCatch(this._onDocumentClick, this),
+            this._onDocumentFocus = bindAndCatch(this._onDocumentFocus, this),
+            this._onTextChanged = bindAndCatch(this._onTextChanged, this),
+            this._onInputScroll = bindAndCatch(this._onInputScroll, this),
+            this._onBlockClicked = bindAndCatch(this._onBlockClicked, this),
+            this._onPermissionRequiredIconClicked = bindAndCatch(this._onPermissionRequiredIconClicked, this),
+            this._onToggleDialog = bindAndCatch(this._onToggleDialog, this),
+            this._onPremiumIconVisible = bindAndCatch(this._onPremiumIconVisible, this),
+            this._onLanguageChanged = bindAndCatch(this._onLanguageChanged, this),
+            this._enableHere = bindAndCatch(this._enableHere, this),
+            this._enableEverywhere = bindAndCatch(this._enableEverywhere, this),
+            this._onErrorSelected = bindAndCatch(this._onErrorSelected, this),
+            this._onTurnOffClicked = bindAndCatch(this._onTurnOffClicked, this),
+            this._onOptionsOpen = bindAndCatch(this._onOptionsOpen, this),
+            this._onAddToDictionaryClicked = bindAndCatch(this._onAddToDictionaryClicked, this),
+            this._onDialogDestroyed = bindAndCatch(this._onDialogDestroyed, this),
+            this._onFixSelected = bindAndCatch(this._onFixSelected, this),
+            this._onIgnoreRuleClicked = bindAndCatch(this._onIgnoreRuleClicked, this),
+            this._onTemporarilyIgnoreRule = bindAndCatch(this._onTemporarilyIgnoreRule, this),
+            this._onTemporarilyIgnoreWord = bindAndCatch(this._onTemporarilyIgnoreWord, this),
+            this._onErrorCardDestroyed = bindAndCatch(this._onErrorCardDestroyed, this),
+            this._onSettingsChanged = bindAndCatch(this._onSettingsChanged, this),
+            this._onUiStateChanged = bindAndCatch(this._onUiStateChanged, this),
+            this._onShowFeedbackForm = bindAndCatch(this._onShowFeedbackForm, this),
+            this._onPrivacySettingsChanged = bindAndCatch(this._onPrivacySettingsChanged, this),
+            this._onDestroy = bindAndCatch(this.destroy, this),
+            this._onMoreDetailsClicked = bindAndCatch(this._onMoreDetailsClicked, this),
+            this._onBadgeClicked = bindAndCatch(this._onBadgeClicked, this),
+            this._onLogoClicked = bindAndCatch(this._onLogoClicked, this),
+            this._onPageHide = bindAndCatch(this._onPageHide, this),
+            this._sendPageLoaded = bindAndCatch(this._sendPageLoaded, this),
+            this._checkExtensionHealthInterval = window.setInterval(bindAndCatch(this._checkExtensionHealth, this), config.CHECK_EXTENSION_HEALTH_INTERVAL),
+            document.addEventListener(LTAssistant.eventNames.destroy, this._onDestroy),
+            window.addEventListener("pageshow", this._sendPageLoaded),
+            window.addEventListener("pagehide", this._onPageHide),
+            this._storageController = new StorageController(bindAndCatch(() => {
+                this._sendPageLoaded();
+                const e = document.querySelector(":focus");
+                e && this._initInstance(e, !0),
+                    document.body && hasFirefoxDesignMode(document.body) && this._initInstance(document.body, !0),
+                    window._ltLastActiveElement && (this._initInstance(window._ltLastActiveElement, !1), window._ltLastActiveElement = null),
+                    browser.runtime.onMessage.addListener(this._onMessage), document.addEventListener("click", this._onDocumentClick, !0),
+                    document.addEventListener("focus", this._onDocumentFocus, !0),
+                    BrowserDetector.isChromium() && window.innerHeight > 10 && (this._tinyMceInterval = window.setInterval(() => this._checkForIframeWithoutContentScripts(), 2e3)),
+                    window.frameElement && window.frameElement.ownerDocument && window.frameElement.ownerDocument.addEventListener("click", this._onDocumentClick, !0),
+                    document.addEventListener(InputAreaWrapper.eventNames.textChanged, this._onTextChanged),
+                    document.addEventListener(InputAreaWrapper.eventNames.scroll, this._onInputScroll),
+                    document.addEventListener(Highlighter.eventNames.blockClicked, this._onBlockClicked),
+                    document.addEventListener(Toolbar.eventNames.permissionRequiredIconClicked, this._onPermissionRequiredIconClicked),
+                    document.addEventListener(Toolbar.eventNames.toggleDialog, this._onToggleDialog),
+                    document.addEventListener(Toolbar.eventNames.notifyAboutPremiumIcon, this._onPremiumIconVisible),
+                    document.addEventListener(Dialog.eventNames.changeLanguage, this._onLanguageChanged),
+                    document.addEventListener(Dialog.eventNames.enableHere, this._enableHere),
+                    document.addEventListener(Dialog.eventNames.enableEverywhere, this._enableEverywhere),
+                    document.addEventListener(Dialog.eventNames.errorSelected, this._onErrorSelected),
+                    document.addEventListener(Dialog.eventNames.fixSelected, this._onFixSelected),
+                    document.addEventListener(Dialog.eventNames.turnOff, this._onTurnOffClicked),
+                    document.addEventListener(Dialog.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked),
+                    document.addEventListener(Dialog.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked),
+                    document.addEventListener(Dialog.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord),
+                    document.addEventListener(Dialog.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule),
+                    document.addEventListener(Dialog.eventNames.moreDetailsClicked, this._onMoreDetailsClicked),
+                    document.addEventListener(Dialog.eventNames.openOptions, this._onOptionsOpen),
+                    document.addEventListener(Dialog.eventNames.showFeedbackForm, this._onShowFeedbackForm),
+                    document.addEventListener(Dialog.eventNames.destroyed, this._onDialogDestroyed),
+                    document.addEventListener(ErrorCard.eventNames.fixSelected, this._onFixSelected),
+                    document.addEventListener(ErrorCard.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked),
+                    document.addEventListener(ErrorCard.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked),
+                    document.addEventListener(ErrorCard.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord),
+                    document.addEventListener(ErrorCard.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule),
+                    document.addEventListener(ErrorCard.eventNames.destroyed, this._onErrorCardDestroyed),
+                    document.addEventListener(ErrorCard.eventNames.moreDetailsClicked, this._onMoreDetailsClicked),
+                    document.addEventListener(ErrorCard.eventNames.badgeClicked, this._onBadgeClicked),
+                    document.addEventListener(ErrorCard.eventNames.logoClicked, this._onLogoClicked),
+                    this._storageController.addEventListener(StorageController.eventNames.settingsChanged, this._onSettingsChanged),
+                    this._storageController.addEventListener(StorageController.eventNames.privacySettingsChanged, this._onPrivacySettingsChanged),
+                    this._storageController.addEventListener(StorageController.eventNames.uiStateChanged, this._onUiStateChanged)
+            }, this))
     }
     static _isStartWithUppercase(e) {
         const t = e.charAt(0);
         return t === t.toUpperCase() && t !== t.toLowerCase()
     }
-    static "_toLowerсaseFirstChar" (e) {
+    static "_toLowerсaseFirstChar"(e) {
         return e.charAt(0).toLowerCase() + e.substr(1)
     }
     static _isErrorIgnoredByDictionary(e, t) {
@@ -194,7 +194,7 @@ class LTAssistant {
         let t = !1;
         try {
             t = !!e.location.href
-        } catch (e) {}
+        } catch (e) { }
         t && (e.__ltLoaded || "complete" !== e.document.readyState || e.document.documentElement && !e.document.documentElement.hasAttribute("data-lt-installed") && e.document.body && isTinyMCE(e.document.body) && (e.__ltLoaded = !0, loadContentScripts(e)))
     }
     _setDisplayedErrors(e, t) {
@@ -258,121 +258,121 @@ class LTAssistant {
         }
     }
     _initInstance(e, t = !0) {
-        e.parentElement && 
-        (
-            this._instances.some(t => t.targetElement === e) || 
-            this._getDomainState().isDisabled || 
-            this._behaviorTweaks.isElementCompatible(e) && 
+        e.parentElement &&
             (
-                this._disableOtherSpellCheckers(e), clearTimeout(this._initTimeout), 
-                this._initTimeout = window.setTimeout(() => {
-                    if (t && !hasFocus(e)) return void this._enableOtherSpellCheckers(e);
-                    const n = Math.round(99999 * Math.random()) + ":" + Date.now(),
-                    r = isCEElement(e) ? null : new Mirror(e),
-                    i = new InputAreaWrapper(e, r ? r.getCloneElement() : e, this._behaviorTweaks.getParsingDetector(e)),
-                    s = new Highlighter(e, i, r ? r.getCloneElement() : e, this._behaviorTweaks.getHighlighterAppearance(e), !!r),
-                    o = new Toolbar(e, this._behaviorTweaks.getToolbarAppearance(e), r),
-                    a = {
-                        id: n,
-                        group: location.pathname,
-                        targetElement: e,
-                        mirror: r,
-                        inputAreaWrapper: i,
-                        highlighter: s,
-                        toolbar: o,
-                        errorCard: null,
-                        dialog: null,
-                        requestStatus: REQUEST_STATUS.COMPLETED,
-                        isRemoteCheckAllowed: this._storageController.getPrivacySettings().allowRemoteCheck,
-                        isAutoCheckEnabled: this._getDomainState().isAutoCheckEnabled,
-                        isConnected: !0,
-                        isTyping: !1,
-                        isValidating: !1,
-                        isIncompleteResult: !1,
-                        isTextTooLong: !1,
-                        exception: null,
-                        language: null,
-                        forceLanguage: !1,
-                        isSupportedLanguage: !0,
-                        lastValidation: 0,
-                        validatedText: "",
-                        allErrors: [],
-                        displayedErrors: [],
-                        pendingErrors: [],
-                        allHiddenErrors: [],
-                        displayedHiddenErrors: [],
-                        displayedHiddenErrorCount: 0,
-                        pendingHiddenErrors: [],
-                        selectedErrorId: null,
-                        temporaryDisabledErrorId: null,
-                        ignoredRules: [],
-                        ignoredWords: [],
-                        tracking: {
-                            sawPremiumIcon: !1,
-                            hasEnoughText: !1,
-                            language: null,
-                            hasTracked: !1,
-                            textLength: 0
-                        }
-                    };
-                    this._instances.push(a), 
-                    this.updateState(a), 
-                    this._validateInstance(a), 
-                    onElementDisabled(e, () => this._destroyInstance(a)), 
-                    onElementRemoved(e, () => this._destroyInstance(a))
-                }, 150)
+                this._instances.some(t => t.targetElement === e) ||
+                this._getDomainState().isDisabled ||
+                this._behaviorTweaks.isElementCompatible(e) &&
+                (
+                    this._disableOtherSpellCheckers(e), clearTimeout(this._initTimeout),
+                    this._initTimeout = window.setTimeout(() => {
+                        if (t && !hasFocus(e)) return void this._enableOtherSpellCheckers(e);
+                        const n = Math.round(99999 * Math.random()) + ":" + Date.now(),
+                            r = isCEElement(e) ? null : new Mirror(e),
+                            i = new InputAreaWrapper(e, r ? r.getCloneElement() : e, this._behaviorTweaks.getParsingDetector(e)),
+                            s = new Highlighter(e, i, r ? r.getCloneElement() : e, this._behaviorTweaks.getHighlighterAppearance(e), !!r),
+                            o = new Toolbar(e, this._behaviorTweaks.getToolbarAppearance(e), r),
+                            a = {
+                                id: n,
+                                group: location.pathname,
+                                targetElement: e,
+                                mirror: r,
+                                inputAreaWrapper: i,
+                                highlighter: s,
+                                toolbar: o,
+                                errorCard: null,
+                                dialog: null,
+                                requestStatus: REQUEST_STATUS.COMPLETED,
+                                isRemoteCheckAllowed: this._storageController.getPrivacySettings().allowRemoteCheck,
+                                isAutoCheckEnabled: this._getDomainState().isAutoCheckEnabled,
+                                isConnected: !0,
+                                isTyping: !1,
+                                isValidating: !1,
+                                isIncompleteResult: !1,
+                                isTextTooLong: !1,
+                                exception: null,
+                                language: null,
+                                forceLanguage: !1,
+                                isSupportedLanguage: !0,
+                                lastValidation: 0,
+                                validatedText: "",
+                                allErrors: [],
+                                displayedErrors: [],
+                                pendingErrors: [],
+                                allHiddenErrors: [],
+                                displayedHiddenErrors: [],
+                                displayedHiddenErrorCount: 0,
+                                pendingHiddenErrors: [],
+                                selectedErrorId: null,
+                                temporaryDisabledErrorId: null,
+                                ignoredRules: [],
+                                ignoredWords: [],
+                                tracking: {
+                                    sawPremiumIcon: !1,
+                                    hasEnoughText: !1,
+                                    language: null,
+                                    hasTracked: !1,
+                                    textLength: 0
+                                }
+                            };
+                        this._instances.push(a),
+                            this.updateState(a),
+                            this._validateInstance(a),
+                            onElementDisabled(e, () => this._destroyInstance(a)),
+                            onElementRemoved(e, () => this._destroyInstance(a))
+                    }, 150)
+                )
             )
-        )
     }
     _validateInstance(e, t, n, r = !1) {
         if (!e.isRemoteCheckAllowed || !e.isAutoCheckEnabled) return;
         if (-1 === this._instances.indexOf(e)) return;
         void 0 === t && (t = e.inputAreaWrapper.getText(), n = LTAssistant._getTextChanges(e.validatedText, t, e.allErrors)), e.isTextTooLong = !1, e.exception = null;
         const { hasPaidSubscription: i } = this._storageController.getUIState();
-        if (!i && !this._storageController.isUsedCustomServer() && t.length > config.MAX_TEXT_LENGTH) 
-            return e.isValidating = !1, 
-                e.isTextTooLong = !0, 
-                e.allErrors = [], 
-                e.allHiddenErrors = [], 
-                this._setDisplayedErrors(e, e.allErrors), 
-                this._setHiddenErrors(e, e.allHiddenErrors), 
-                this._leaveTypingMode(e), 
-                this._highlight(e), 
-                this.updateState(e), 
-                void(e.validatedText = "");
-        e.isValidating = !0, 
-        e.lastValidation = Date.now(), 
-        e.isSupportedLanguage || (e.isSupportedLanguage = !0, e.forceLanguage || (e.language = null)), 
-        this.updateState(e), 
-        !e.forceLanguage && n.isAllTextChanged && (e.language = null), 
-        this._behaviorTweaks.getRecipientInfo(e.targetElement).then(i => {
-            const s = {
+        if (!i && !this._storageController.isUsedCustomServer() && t.length > config.MAX_TEXT_LENGTH)
+            return e.isValidating = !1,
+                e.isTextTooLong = !0,
+                e.allErrors = [],
+                e.allHiddenErrors = [],
+                this._setDisplayedErrors(e, e.allErrors),
+                this._setHiddenErrors(e, e.allHiddenErrors),
+                this._leaveTypingMode(e),
+                this._highlight(e),
+                this.updateState(e),
+                void (e.validatedText = "");
+        e.isValidating = !0,
+            e.lastValidation = Date.now(),
+            e.isSupportedLanguage || (e.isSupportedLanguage = !0, e.forceLanguage || (e.language = null)),
+            this.updateState(e),
+            !e.forceLanguage && n.isAllTextChanged && (e.language = null),
+            this._behaviorTweaks.getRecipientInfo(e.targetElement).then(i => {
+                const s = {
                     instanceId: e.id,
                     url: getCurrentUrl(),
                     recipientInfo: i
                 },
-                o = {
-                    command: "VALIDATE_TEXT",
-                    text: t,
-                    changedParagraphs: n.changedParagraphs,
-                    language: e.language,
-                    forceLanguage: e.forceLanguage,
-                    userLanguageCodes: getUserLanguageCodes(),
-                    elementLanguage: e.targetElement.lang,
-                    hasUserChangedLanguage: r,
-                    metaData: s
-                };
-            browser.runtime.sendMessage(o).then(e => {
-                e && "VALIDATION_COMPLETED" === e.command ? this._onValidationCompleted(e) : e && "VALIDATION_FAILED" === e.command && this._onValidationFailed(e)
-            }).catch(t => {
-                e.isValidating = !1, 
-                Tracker.trackError("message", t.message, o.command), 
-                (t.message && t.message.startsWith("Invocation of form runtime.connect(null, ) doesn't match definition runtime.connect") || t.message.startsWith("Extension context invalidated.")) && 
-                this._instances.forEach(e => {
-                    e.isConnected = !1, e.highlighter && e.highlighter.destroy()
-                }), this.updateState(e)
+                    o = {
+                        command: "VALIDATE_TEXT",
+                        text: t,
+                        changedParagraphs: n.changedParagraphs,
+                        language: e.language,
+                        forceLanguage: e.forceLanguage,
+                        userLanguageCodes: getUserLanguageCodes(),
+                        elementLanguage: e.targetElement.lang,
+                        hasUserChangedLanguage: r,
+                        metaData: s
+                    };
+                browser.runtime.sendMessage(o).then(e => {
+                    e && "VALIDATION_COMPLETED" === e.command ? this._onValidationCompleted(e) : e && "VALIDATION_FAILED" === e.command && this._onValidationFailed(e)
+                }).catch(t => {
+                    e.isValidating = !1,
+                        Tracker.trackError("message", t.message, o.command),
+                        (t.message && t.message.startsWith("Invocation of form runtime.connect(null, ) doesn't match definition runtime.connect") || t.message.startsWith("Extension context invalidated.")) &&
+                        this._instances.forEach(e => {
+                            e.isConnected = !1, e.highlighter && e.highlighter.destroy()
+                        }), this.updateState(e)
+                })
             })
-        })
     }
     _revalidateInstance(e, t, n = !1) {
         e.language = t, e.forceLanguage = n, e.validatedText = "", e.allErrors = [], e.displayedErrors = [], e.allHiddenErrors = [], e.displayedHiddenErrors = [], this._highlight(e), this._hideAllErrorCards(), this._validateInstance(e, void 0, void 0, n)
@@ -483,37 +483,37 @@ class LTAssistant {
         const t = e.detail.inputAreaWrapper, n = this._instances.find(e => e.inputAreaWrapper === t);
         if (!n) return;
         if (!n.isConnected || !n.isRemoteCheckAllowed || !n.isAutoCheckEnabled) return;
-        this._hideAllErrorCards(), 
-        this._enterTypingMode(n);
+        this._hideAllErrorCards(),
+            this._enterTypingMode(n);
         const r = e.detail.text;
-        if (n.exception = null, r.trim().length < config.MIN_TEXT_LENGTH) 
-            n.language = n.forceLanguage ? n.language : null, 
-            n.isValidating = !1, 
-            n.isTextTooLong = !1, 
-            n.allErrors = [], 
-            n.allHiddenErrors = [], 
-            this._setDisplayedErrors(n, n.allErrors), 
-            this._setHiddenErrors(n, n.allHiddenErrors), 
-            this._leaveTypingMode(n), 
-            this._highlight(n), 
-            this.updateState(n), 
-            n.validatedText = r,
-            this._validateInstanceDebounce.cancelCall();
-        else if (r === n.validatedText) 
-            n.isValidating = !1, 
-            this._setDisplayedErrors(n, n.allErrors), 
-            this._setHiddenErrors(n, n.allHiddenErrors), 
-            this._highlight(n), this.updateState(n), 
-            this._validateInstanceDebounce.cancelCall();
+        if (n.exception = null, r.trim().length < config.MIN_TEXT_LENGTH)
+            n.language = n.forceLanguage ? n.language : null,
+                n.isValidating = !1,
+                n.isTextTooLong = !1,
+                n.allErrors = [],
+                n.allHiddenErrors = [],
+                this._setDisplayedErrors(n, n.allErrors),
+                this._setHiddenErrors(n, n.allHiddenErrors),
+                this._leaveTypingMode(n),
+                this._highlight(n),
+                this.updateState(n),
+                n.validatedText = r,
+                this._validateInstanceDebounce.cancelCall();
+        else if (r === n.validatedText)
+            n.isValidating = !1,
+                this._setDisplayedErrors(n, n.allErrors),
+                this._setHiddenErrors(n, n.allHiddenErrors),
+                this._highlight(n), this.updateState(n),
+                this._validateInstanceDebounce.cancelCall();
         else {
             const e = LTAssistant._getTextChanges(n.validatedText, r, n.allErrors);
-            n.isValidating = !0, 
-            n.isTextTooLong = !1, 
-            this._setDisplayedErrors(n, e.nonAffectedErrors), 
-            this._setHiddenErrors(n, n.allHiddenErrors), 
-            this._highlight(n), 
-            this.updateState(n), 
-            Date.now() - n.lastValidation > config.INTERMEDIATE_VALIDATION_INTERVAL ? (this._validateInstanceDebounce.cancelCall(), this._validateInstance(n, r, e)) : this._validateInstanceDebounce.call(n, r, e)
+            n.isValidating = !0,
+                n.isTextTooLong = !1,
+                this._setDisplayedErrors(n, e.nonAffectedErrors),
+                this._setHiddenErrors(n, n.allHiddenErrors),
+                this._highlight(n),
+                this.updateState(n),
+                Date.now() - n.lastValidation > config.INTERMEDIATE_VALIDATION_INTERVAL ? (this._validateInstanceDebounce.cancelCall(), this._validateInstance(n, r, e)) : this._validateInstanceDebounce.call(n, r, e)
         }
     }
     _enterTypingMode(e) {
@@ -556,37 +556,37 @@ class LTAssistant {
         if (t)
             if (t.isValidating = !1, e.isUnsupportedLanguage) this._onUnsupportedLanguage(t, e);
             else if (e.language && !t.language && (t.language = e.language), e.text.length > config.MIN_TEXT_LENGTH && (t.tracking.language = e.language ? e.language.code : null, t.tracking.hasEnoughText = !0), t.tracking.textLength = Math.max(e.text.length, t.tracking.textLength), t.dialog && e.language && t.dialog.setCurrentLanguage(e.language.code), t.forceLanguage || !e.language || e.language.code.toLowerCase() === t.language.code.toLowerCase()) {
-            let n = t.allErrors.slice(0),
-                r = t.allHiddenErrors.slice(0);
-            n = n.filter(e => e.isPartialValidation), r = r.filter(e => e.isPartialValidation);
-            let i = LTAssistant._getTextChanges(t.validatedText, e.text, n),
-                s = LTAssistant._getTextChanges(t.validatedText, e.text, r);
-            n = LTAssistant._getRemainedErrors(i.nonAffectedErrors, i.changedParagraphs), r = LTAssistant._getRemainedErrors(s.nonAffectedErrors, s.changedParagraphs), n = n.concat(e.partialValidationErrors), r = r.concat(e.partialValidationHiddenErrors);
-            for (const t of e.validationErrors) n.some(e => e.offset === t.offset && e.length === t.length) || n.push(t);
-            for (const t of e.validationHiddenErrors) r.some(e => e.offset === t.offset && e.length === t.length) || r.push(t);
-            n.sort((e, t) => e.offset > t.offset ? 1 : -1);
-            for (let e = 0; e < n.length; e++) n[e].id = e + 1;
-            r.sort((e, t) => e.offset > t.offset ? 1 : -1);
-            for (let e = 0; e < r.length; e++) r[e].id = e + 1;
-            const o = t.inputAreaWrapper.getText();
-            i = LTAssistant._getTextChanges(e.text, o, n), s = LTAssistant._getTextChanges(e.text, o, r), t.validatedText = e.text, t.allErrors = n, t.allHiddenErrors = r, t.isIncompleteResult = e.isIncompleteResult, this._setDisplayedErrors(t, i.nonAffectedErrors), this._setHiddenErrors(t, s.nonAffectedErrors), t.pendingErrors.length || t.pendingHiddenErrors.length || this._leaveTypingMode(t), this._highlight(t), this.updateState(t)
-        } else this._revalidateInstance(t, e.language)
+                let n = t.allErrors.slice(0),
+                    r = t.allHiddenErrors.slice(0);
+                n = n.filter(e => e.isPartialValidation), r = r.filter(e => e.isPartialValidation);
+                let i = LTAssistant._getTextChanges(t.validatedText, e.text, n),
+                    s = LTAssistant._getTextChanges(t.validatedText, e.text, r);
+                n = LTAssistant._getRemainedErrors(i.nonAffectedErrors, i.changedParagraphs), r = LTAssistant._getRemainedErrors(s.nonAffectedErrors, s.changedParagraphs), n = n.concat(e.partialValidationErrors), r = r.concat(e.partialValidationHiddenErrors);
+                for (const t of e.validationErrors) n.some(e => e.offset === t.offset && e.length === t.length) || n.push(t);
+                for (const t of e.validationHiddenErrors) r.some(e => e.offset === t.offset && e.length === t.length) || r.push(t);
+                n.sort((e, t) => e.offset > t.offset ? 1 : -1);
+                for (let e = 0; e < n.length; e++) n[e].id = e + 1;
+                r.sort((e, t) => e.offset > t.offset ? 1 : -1);
+                for (let e = 0; e < r.length; e++) r[e].id = e + 1;
+                const o = t.inputAreaWrapper.getText();
+                i = LTAssistant._getTextChanges(e.text, o, n), s = LTAssistant._getTextChanges(e.text, o, r), t.validatedText = e.text, t.allErrors = n, t.allHiddenErrors = r, t.isIncompleteResult = e.isIncompleteResult, this._setDisplayedErrors(t, i.nonAffectedErrors), this._setHiddenErrors(t, s.nonAffectedErrors), t.pendingErrors.length || t.pendingHiddenErrors.length || this._leaveTypingMode(t), this._highlight(t), this.updateState(t)
+            } else this._revalidateInstance(t, e.language)
     }
     _onValidationFailed(e) {
         const t = this._instances.find(t => t.id === e.instanceId);
         if (t) {
             if (
-                t.isValidating = !1, 
-                t.isIncompleteResult = !1, 
-                t.exception = e.exception, 
-                t.validatedText = "", 
-                t.allErrors = [], 
-                t.displayedErrors = [], 
-                t.pendingErrors = [], 
-                t.allHiddenErrors = [], 
-                t.displayedHiddenErrors = [], 
-                t.pendingHiddenErrors = [], 
-                e && e.exception && void 0 !== e.exception.status) 
+                t.isValidating = !1,
+                t.isIncompleteResult = !1,
+                t.exception = e.exception,
+                t.validatedText = "",
+                t.allErrors = [],
+                t.displayedErrors = [],
+                t.pendingErrors = [],
+                t.allHiddenErrors = [],
+                t.displayedHiddenErrors = [],
+                t.pendingHiddenErrors = [],
+                e && e.exception && void 0 !== e.exception.status)
                 this._storageController.isUsedCustomServer() || Tracker.trackError("http", `${e.exception.status}: ${e.exception.response}`);
             else if (e && e.exception && e.exception.message) {
                 const n = e.exception;
@@ -742,8 +742,8 @@ class LTAssistant {
         if (!t) return;
         const n = t.targetElement.cloneNode(!1);
         try {
-            n.innerText = `${t.inputAreaWrapper.getText().length} chars, ${t.language?t.language.code:"unknown lang"}`
-        } catch (e) {}
+            n.innerText = `${t.inputAreaWrapper.getText().length} chars, ${t.language ? t.language.code : "unknown lang"}`
+        } catch (e) { }
         browser.runtime.sendMessage({
             command: "OPEN_FEEDBACK_FORM",
             url: getCurrentUrl(),
@@ -823,8 +823,8 @@ class LTAssistant {
             for (const n of t)
                 if (e.isDisabled) this._destroyInstance(n);
                 else if (e.isAutoCheckEnabled) {
-                !n.isAutoCheckEnabled && (n.isAutoCheckEnabled = !0, this._revalidateInstance(n, n.language))
-            } else e.isAutoCheckEnabled ? e.shouldCapitalizationBeChecked || this._revalidateInstance(n, n.language) : (n.isAutoCheckEnabled = !1, n.allErrors = [], n.displayedErrors = [], n.pendingErrors = [], n.allHiddenErrors = [], n.displayedHiddenErrors = [], n.pendingHiddenErrors = [], this._highlight(n), this.updateState(n), this._hideAllErrorCards(), this._hideAllDialogs())
+                    !n.isAutoCheckEnabled && (n.isAutoCheckEnabled = !0, this._revalidateInstance(n, n.language))
+                } else e.isAutoCheckEnabled ? e.shouldCapitalizationBeChecked || this._revalidateInstance(n, n.language) : (n.isAutoCheckEnabled = !1, n.allErrors = [], n.displayedErrors = [], n.pendingErrors = [], n.allHiddenErrors = [], n.displayedHiddenErrors = [], n.pendingHiddenErrors = [], this._highlight(n), this.updateState(n), this._hideAllErrorCards(), this._hideAllDialogs())
         }
         e.disabledDomainsCapitalization && this._instances.forEach(e => {
             this._revalidateInstance(e, e.language)
@@ -881,47 +881,47 @@ class LTAssistant {
         });
         try {
             browser.runtime.onMessage.removeListener(this._onMessage)
-        } catch (e) {}
-        document.removeEventListener("click", this._onDocumentClick, !0), 
-        document.removeEventListener("focus", this._onDocumentFocus, !0), 
-        window.frameElement && window.frameElement.ownerDocument && window.frameElement.ownerDocument.removeEventListener("click", this._onDocumentClick, !0), 
-        document.removeEventListener(InputAreaWrapper.eventNames.textChanged, this._onTextChanged), 
-        document.removeEventListener(InputAreaWrapper.eventNames.scroll, this._onInputScroll), 
-        document.removeEventListener(Highlighter.eventNames.blockClicked, this._onBlockClicked), 
-        document.removeEventListener(Toolbar.eventNames.permissionRequiredIconClicked, this._onPermissionRequiredIconClicked), 
-        document.removeEventListener(Toolbar.eventNames.toggleDialog, this._onToggleDialog), 
-        document.removeEventListener(Toolbar.eventNames.notifyAboutPremiumIcon, this._onPremiumIconVisible), 
-        document.removeEventListener(Dialog.eventNames.changeLanguage, this._onLanguageChanged), 
-        document.removeEventListener(Dialog.eventNames.enableHere, this._enableHere), 
-        document.removeEventListener(Dialog.eventNames.enableEverywhere, this._enableEverywhere), 
-        document.removeEventListener(Dialog.eventNames.errorSelected, this._onErrorSelected), 
-        document.removeEventListener(Dialog.eventNames.fixSelected, this._onFixSelected), 
-        document.removeEventListener(Dialog.eventNames.turnOff, this._onTurnOffClicked), 
-        document.removeEventListener(Dialog.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked), 
-        document.removeEventListener(Dialog.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked), 
-        document.removeEventListener(Dialog.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord), 
-        document.removeEventListener(Dialog.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule), 
-        document.removeEventListener(Dialog.eventNames.moreDetailsClicked, this._onMoreDetailsClicked), 
-        document.removeEventListener(Dialog.eventNames.openOptions, this._onOptionsOpen), 
-        document.removeEventListener(Dialog.eventNames.showFeedbackForm, this._onShowFeedbackForm), 
-        document.removeEventListener(Dialog.eventNames.destroyed, this._onDialogDestroyed), 
-        document.removeEventListener(ErrorCard.eventNames.fixSelected, this._onFixSelected), 
-        document.removeEventListener(ErrorCard.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked), 
-        document.removeEventListener(ErrorCard.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked), 
-        document.removeEventListener(ErrorCard.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord), 
-        document.removeEventListener(ErrorCard.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule), 
-        document.removeEventListener(ErrorCard.eventNames.destroyed, this._onErrorCardDestroyed), 
-        document.removeEventListener(ErrorCard.eventNames.moreDetailsClicked, this._onMoreDetailsClicked), 
-        document.removeEventListener(ErrorCard.eventNames.badgeClicked, this._onBadgeClicked), 
-        document.removeEventListener(ErrorCard.eventNames.logoClicked, this._onLogoClicked), 
-        window.removeEventListener("pageshow", this._sendPageLoaded), 
-        window.removeEventListener("pagehide", this._onPageHide), 
-        this._storageController && this._storageController.destroy(), 
-        clearTimeout(this._initTimeout), clearInterval(this._checkExtensionHealthInterval),
-        clearInterval(this._tinyMceInterval), 
-        this._validateInstanceDebounce && this._validateInstanceDebounce.cancelCall(), 
-        document.documentElement && document.documentElement.removeAttribute("data-lt-installed"), 
-        this._options.onDestroy && this._options.onDestroy()
+        } catch (e) { }
+        document.removeEventListener("click", this._onDocumentClick, !0),
+            document.removeEventListener("focus", this._onDocumentFocus, !0),
+            window.frameElement && window.frameElement.ownerDocument && window.frameElement.ownerDocument.removeEventListener("click", this._onDocumentClick, !0),
+            document.removeEventListener(InputAreaWrapper.eventNames.textChanged, this._onTextChanged),
+            document.removeEventListener(InputAreaWrapper.eventNames.scroll, this._onInputScroll),
+            document.removeEventListener(Highlighter.eventNames.blockClicked, this._onBlockClicked),
+            document.removeEventListener(Toolbar.eventNames.permissionRequiredIconClicked, this._onPermissionRequiredIconClicked),
+            document.removeEventListener(Toolbar.eventNames.toggleDialog, this._onToggleDialog),
+            document.removeEventListener(Toolbar.eventNames.notifyAboutPremiumIcon, this._onPremiumIconVisible),
+            document.removeEventListener(Dialog.eventNames.changeLanguage, this._onLanguageChanged),
+            document.removeEventListener(Dialog.eventNames.enableHere, this._enableHere),
+            document.removeEventListener(Dialog.eventNames.enableEverywhere, this._enableEverywhere),
+            document.removeEventListener(Dialog.eventNames.errorSelected, this._onErrorSelected),
+            document.removeEventListener(Dialog.eventNames.fixSelected, this._onFixSelected),
+            document.removeEventListener(Dialog.eventNames.turnOff, this._onTurnOffClicked),
+            document.removeEventListener(Dialog.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked),
+            document.removeEventListener(Dialog.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked),
+            document.removeEventListener(Dialog.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord),
+            document.removeEventListener(Dialog.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule),
+            document.removeEventListener(Dialog.eventNames.moreDetailsClicked, this._onMoreDetailsClicked),
+            document.removeEventListener(Dialog.eventNames.openOptions, this._onOptionsOpen),
+            document.removeEventListener(Dialog.eventNames.showFeedbackForm, this._onShowFeedbackForm),
+            document.removeEventListener(Dialog.eventNames.destroyed, this._onDialogDestroyed),
+            document.removeEventListener(ErrorCard.eventNames.fixSelected, this._onFixSelected),
+            document.removeEventListener(ErrorCard.eventNames.addToDictionaryClicked, this._onAddToDictionaryClicked),
+            document.removeEventListener(ErrorCard.eventNames.ignoreRuleClicked, this._onIgnoreRuleClicked),
+            document.removeEventListener(ErrorCard.eventNames.temporarilyIgnoreWordClicked, this._onTemporarilyIgnoreWord),
+            document.removeEventListener(ErrorCard.eventNames.temporarilyIgnoreRuleClicked, this._onTemporarilyIgnoreRule),
+            document.removeEventListener(ErrorCard.eventNames.destroyed, this._onErrorCardDestroyed),
+            document.removeEventListener(ErrorCard.eventNames.moreDetailsClicked, this._onMoreDetailsClicked),
+            document.removeEventListener(ErrorCard.eventNames.badgeClicked, this._onBadgeClicked),
+            document.removeEventListener(ErrorCard.eventNames.logoClicked, this._onLogoClicked),
+            window.removeEventListener("pageshow", this._sendPageLoaded),
+            window.removeEventListener("pagehide", this._onPageHide),
+            this._storageController && this._storageController.destroy(),
+            clearTimeout(this._initTimeout), clearInterval(this._checkExtensionHealthInterval),
+            clearInterval(this._tinyMceInterval),
+            this._validateInstanceDebounce && this._validateInstanceDebounce.cancelCall(),
+            document.documentElement && document.documentElement.removeAttribute("data-lt-installed"),
+            this._options.onDestroy && this._options.onDestroy()
     }
 }
 LTAssistant.eventNames = {
