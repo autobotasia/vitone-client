@@ -3,34 +3,34 @@ class InputAreaWrapper {
   constructor(e, t, n) {
     if (
       ((this._inputAreaObserver = null),
-      (this._scrollToInterval = null),
-      (this._inputArea = e),
-      (this._ceElement = t),
-      (this._ceElementInspector = new CEElementInspector(
-        t,
-        n,
-        "TEXTAREA" !== this._inputArea.tagName
-      )),
-      (this._domMeasurement = new DomMeasurement(
-        this._inputArea.ownerDocument
-      )),
-      this._updateTextChunks(),
-      (this._currentText = this.getText()),
-      (this._scrollToInterval = null),
-      (this._onScroll = bindAndCatch(this._onScroll, this)),
-      (this._onBlur = bindAndCatch(this._onBlur, this)),
-      (this._onPaste = bindAndCatch(this._onPaste, this)),
-      (this._onClick = bindAndCatch(this._onClick, this)),
-      (this._onInput = bindAndCatch(this._onInput, this)),
-      this._inputArea.addEventListener("scroll", this._onScroll),
-      "BODY" === this._inputArea.nodeName &&
+        (this._scrollToInterval = null),
+        (this._inputArea = e),
+        (this._ceElement = t),
+        (this._ceElementInspector = new CEElementInspector(
+          t,
+          n,
+          "TEXTAREA" !== this._inputArea.tagName
+        )),
+        (this._domMeasurement = new DomMeasurement(
+          this._inputArea.ownerDocument
+        )),
+        this._updateTextChunks(),
+        (this._currentText = this.getText()),
+        (this._scrollToInterval = null),
+        (this._onScroll = bindAndCatch(this._onScroll, this)),
+        (this._onBlur = bindAndCatch(this._onBlur, this)),
+        (this._onPaste = bindAndCatch(this._onPaste, this)),
+        (this._onClick = bindAndCatch(this._onClick, this)),
+        (this._onInput = bindAndCatch(this._onInput, this)),
+        this._inputArea.addEventListener("scroll", this._onScroll),
+        "BODY" === this._inputArea.nodeName &&
         window.addEventListener("scroll", this._onScroll),
-      this._inputArea.addEventListener("blur", this._onBlur),
-      this._inputArea.addEventListener("paste", this._onPaste),
-      this._inputArea.addEventListener("click", this._onClick),
-      (this._scrollTop = this._inputArea.scrollTop),
-      (this._scrollLeft = this._inputArea.scrollLeft),
-      isCEElement(this._inputArea))
+        this._inputArea.addEventListener("blur", this._onBlur),
+        this._inputArea.addEventListener("paste", this._onPaste),
+        this._inputArea.addEventListener("click", this._onClick),
+        (this._scrollTop = this._inputArea.scrollTop),
+        (this._scrollLeft = this._inputArea.scrollLeft),
+        isCEElement(this._inputArea))
     ) {
       this._inputAreaObserver = new MutationObserver(this._onInput);
       const e = {
@@ -48,7 +48,7 @@ class InputAreaWrapper {
   }
   static _indexWithZWS(e, t) {
     let n = 0;
-    for (; t > 0 && n < e.length; ) e[n] !== InputAreaWrapper.ZWS && t--, n++;
+    for (; t > 0 && n < e.length;) e[n] !== InputAreaWrapper.ZWS && t--, n++;
     return n;
   }
   static _appendTrailingLineBreak(e) {
@@ -74,27 +74,32 @@ class InputAreaWrapper {
     let n = Promise.resolve();
     return (
       t &&
-        (n = n
-          .then(() =>
-            InputAreaWrapper._simulateSelection(e.textNode.parentNode)
-          )
-          .then(() => wait())),
+      (n = n
+        .then(() =>
+          InputAreaWrapper._simulateSelection(e.textNode.parentNode)
+        )
+        .then(() => wait())),
       (n = n
         .then(() => {
           const t = InputAreaWrapper._indexWithZWS(
-              e.textNode.nodeValue,
-              e.offset
-            ),
+            e.textNode.nodeValue,
+            e.offset
+          ),
             n = InputAreaWrapper._indexWithZWS(
               e.textNode.nodeValue,
               e.offset + e.length
             );
           InputAreaWrapper._selectText(e.textNode, t, n);
         })
-        .then(() => document.execCommand("insertText", !1, e.replacementText))),
+        .then(() => {
+          document.querySelectorAll("span[data-text='true']").forEach(function (element) {
+            element.innerText = element.innerText.replace(element.innerText, e.replacementText);
+          });
+          // document.execCommand("insertText", !1, e.replacementText) 
+        })),
       BrowserDetector.isFirefox() &&
-        e.replacementText.includes(InputAreaWrapper.NBSP) &&
-        (n = n.then(() => (e.textNode.nodeValue = e.newText))),
+      e.replacementText.includes(InputAreaWrapper.NBSP) &&
+      (n = n.then(() => (e.textNode.nodeValue = e.newText))),
       n
     );
   }
@@ -115,13 +120,13 @@ class InputAreaWrapper {
       } else
         isTextNode(s) &&
           ((r = s.nodeValue),
-          (i = this._ceElementInspector.getParsedText(s)) &&
+            (i = this._ceElementInspector.getParsedText(s)) &&
             this._ceElementInspector.isLastTextInParagraph(s) &&
             this._ceElementInspector.isParagraphEndsWithLineBreak(s) &&
             (i = InputAreaWrapper._appendTrailingLineBreak(i)));
       if (
         (t.push({ node: s, rawText: r, parsedText: i }),
-        (n += i.length) > config.MAX_TEXT_LENGTH_PREMIUM)
+          (n += i.length) > config.MAX_TEXT_LENGTH_PREMIUM)
       )
         break;
       e.next();
@@ -157,15 +162,15 @@ class InputAreaWrapper {
     if (
       ("BODY" === this._inputArea.nodeName
         ? ((e =
-            (document.body && document.body.scrollTop) ||
-            (document.documentElement && document.documentElement.scrollTop) ||
-            0),
+          (document.body && document.body.scrollTop) ||
+          (document.documentElement && document.documentElement.scrollTop) ||
+          0),
           (t =
             (document.body && document.body.scrollLeft) ||
             (document.documentElement && document.documentElement.scrollLeft) ||
             0))
         : ((e = this._inputArea.scrollTop), (t = this._inputArea.scrollLeft)),
-      this._scrollTop === e && this._scrollLeft === t)
+        this._scrollTop === e && this._scrollLeft === t)
     )
       return;
     (this._scrollTop = e), (this._scrollLeft = t);
@@ -296,9 +301,9 @@ class InputAreaWrapper {
       return this._inputArea !== document.activeElement
         ? null
         : {
-            start: this._inputArea.selectionStart,
-            end: this._inputArea.selectionEnd
-          };
+          start: this._inputArea.selectionStart,
+          end: this._inputArea.selectionEnd
+        };
     {
       const e = window.getSelection();
       if (!e.anchorNode) return null;
@@ -313,8 +318,8 @@ class InputAreaWrapper {
   setSelection(e) {
     if (
       (void 0 === e.end && (e.end = e.start),
-      this._inputArea.focus(),
-      isTextArea(this._inputArea) || isTextInput(this._inputArea))
+        this._inputArea.focus(),
+        isTextArea(this._inputArea) || isTextInput(this._inputArea))
     )
       (this._inputArea.selectionStart = e.start),
         (this._inputArea.selectionEnd = e.end);
@@ -364,8 +369,8 @@ class InputAreaWrapper {
         (this._inputArea.scrollTop = e),
           (this._inputArea.scrollLeft = t),
           _ >= n &&
-            this._scrollToInterval &&
-            (this._scrollToInterval.destroy(), (this._scrollToInterval = null));
+          this._scrollToInterval &&
+          (this._scrollToInterval.destroy(), (this._scrollToInterval = null));
       }, InputAreaWrapper.SCROLL_TO_FRAME_INTERVAL);
     } else if (isCEElement(this._inputArea)) {
       const t = this._getTextPosition(e);
