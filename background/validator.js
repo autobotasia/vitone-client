@@ -42,7 +42,7 @@ class Validator {
     let arrayValid = []
     let fromIndex = 0
     array.forEach((ele, index) => {
-      let arrayWordSplit = ele.split(" ")
+      // let arrayWordSplit = ele.split(" ")
       let indexOfEle = text.text.indexOf(ele, fromIndex)
       let textValid = {
         text: ele,
@@ -50,17 +50,17 @@ class Validator {
       }
       arrayValid.push(textValid)
 
-      arrayWordSplit.forEach(word => {
-        if(word) {
-          let indexOfWord = text.text.indexOf(word, fromIndex)
+      // arrayWordSplit.forEach(word => {
+        // if(word) {
+          // let indexOfWord = text.text.indexOf(word, fromIndex)
           let textSend = {
-            text: word,
-            offset: index > 0 ? indexOfWord + 1 * index : indexOfWord
-          }
-          fromIndex = fromIndex + word.length + 1
+            text: ele,
+            offset: index > 0 ? indexOfEle + 1 * index : indexOfEle,
+          };
+          fromIndex = fromIndex + ele.length + 1;
           arrayTosend.push(textSend)
-        }
-      })
+        // }
+      // })
     })
 
     const g = {
